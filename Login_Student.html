@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title> Login Student </title>
+
+        <style>
+            body {
+                background-color: #6299c7; 
+            }
+        </style>
+    </head>
+
+    <br><br><br><br><br><br><br><br>
+
+    <body>
+        <center>
+            <h1> <i>Login Here</i> </h1>
+            <br>
+
+            <form action = "" method = "get">
+                <!-- ID field -->
+                <div>
+                    <label style="padding-right: 10px;"> ID </label>
+                    <input type = "text" 
+                    required placeholder = "write your ID"
+                    name = "ID"
+                    style = "width: 170px;">
+                </div>
+
+                <br>
+                <!-- Password field -->
+                <div>
+                    <label style="padding-right: 10px;"> Password </label>
+                    <input type = "password" 
+                    required placeholder = "write a strong password"
+                    name = "pass"
+                    minlength = "8"
+                    maxlength = "15"
+                    style = "width: 170;">
+                </div>
+
+                <br>
+                <input type = "submit" value = "Login" style="margin-right: 20px;">
+                <input type = "reset" value = "Reset"> 
+
+            </form>
+        </center>
+    </body>
+</html>
