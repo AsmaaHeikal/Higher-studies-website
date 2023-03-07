@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title> Register in Courses </title>
+
+        <style>
+            body {
+                background-color: #6194bd; 
+            }
+        </style>
+    </head>
+
+    <br><br><br><br><br>
+
+    <body>
+        <center>
+            <h1> Register in Courses </h1>
+            <br>
+            <form>
+                <!-- name field -->
+                <div>
+                    <label style="padding-right: 10px;"> Student Name </label>
+                    <input type = "text" value = "Frank Castle">
+                 </div>
+                 <br>
+                <!-- ID field -->
+                <div>
+                    <label style = "padding-right: 30px;"> Student ID </label>
+                    <input type = "text" value = "20181111">
+                 </div>
+                <!-- Department Field -->
+                <h3> Choose Your Department </h3>
+                <div>
+                    <input type = "radio" name = "option" required>
+                    <label for = "CS" style = "padding-right: 53px;"> Computer Science (CS) </label>
+                </div> 
+                <div>
+                    <input type = "radio"name = "option" required>
+                    <label for = "IS" style = "padding-right: 50px;"> Information System (IS) </label>
+                </div> 
+                <div>
+                    <input type = "radio" name = "option" required>
+                    <label for = "OR" style = "padding-right: 42px;"> Operation Research (OR) </label>
+                </div>
+                <div>
+                    <input type = "radio" name = "option" required>
+                    <label for = "IT" style = "padding-right: 20px;"> Information Technology (IT) </label>
+                </div>  
+                <!-- Courses field -->
+                <h3> Choose Three courses </h3>
+                <label for = "course" style = "padding-right: 10px;"> Choose Courses </label>
+                <select name = "course" multiple size = "3" style="width: 200px; height: 280px;">
+                    <!-- CS courses -->
+                    <optgroup label = "CS"> 
+                        <option value = "1"> Algorithms </option>
+                        <option value = "2"> Operating Systems </option>
+                        <option value = "3"> Software Engineering </option>
+                    </optgroup>
+                    <!-- IS courses -->
+                    <optgroup label = "IS"> 
+                        <option value = "4"> Algorithms </option>
+                        <option value = "5"> System Analysis </option>
+                        <option value = "6"> Database </option>
+                    </optgroup>  
+                    <!-- OR courses -->
+                    <optgroup label = "OR"> 
+                        <option value = "7"> Algorithms </option>
+                        <option value = "8"> Decision Support </option>
+                        <option value = "9"> Data Comunication </option>
+                    </optgroup>
+                    <!-- IT courses -->
+                    <optgroup label = "IT"> 
+                        <option value = "10"> Algorithms </option>
+                        <option value = "11"> Signals </option>
+                        <option value = "12"> Computer Architecture </option>
+                    </optgroup>                                                             
+                </select>
+
+                <br><br>
+                <input type = "submit" value = "Save" style="margin-right: 60px;">
+                <input type = "reset" value = "Reset">        
+            </form>
+        </center>
+    </body>
+</html>
