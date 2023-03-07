@@ -1,0 +1,76 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title>Edit Student</title>
+  
+</head>
+<body>
+    <h1><b>Edit Student</b></h1>
+    
+    <h3>
+        <div>
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="student name" placeholder="Student Name" required autofocus>
+        </div>
+        <p></p>
+        <div>
+            <label for="id">ID:</label>
+            <input type="text" id="id" name="student id" placeholder="Student ID" required>
+        </div>
+        <p></p>
+        <div>
+            <label for="gpa">GPA</label>
+            <input type="text" id="GPA" name="GPA" placeholder="GPA" required>
+        </div>
+        <p></p>
+        <div>
+            <label for="department">Department:</label>
+            <select name="department" id="department">
+                <optgroup label="department">
+                    <option value="G">General</option>
+                    <option value="IS">Information Systems</option>
+                    <option value="CS">Computer Science</option>
+                    <option value="AI">Artificial Intelligence</option>
+                    <option value="DS">Decision Support</option>
+                    <option value="OR">Operations Research</option>
+                    <option value="OR">cyber Security</option>
+                </optgroup>
+            </select>
+        </div>
+        <br>
+        <div>
+            <label for="DateOfBirth">Date Of Birth:</label>
+            <input type="date" name="dateOfBirth" id="DateOfBirth" required>
+        </div>
+        <br>
+
+        <div>
+            <label>Gender:</label>
+            <input id="1" type="radio" name="gender" value="M" checked="true">
+            <label for="1">Male</label>
+            <input id="2" type="radio" name="gender" value="F">
+            <label for="2">Female</label>
+        </div>
+
+
+        <br>
+        <div>
+            <label>Status:</label>
+            <input id="1" type="radio" name="status" value="active" checked="true">
+            <label for="1">Active</label>
+            <input id="2" type="radio" name="status" value="inactive">
+            <label for="2">Inactive</label>
+        </div>
+        <br>
+    </h3>
+    <h4>
+        <b>
+            <div>
+                <button type="edit"> <span> Edit</span> </button>
+            </div>
+        </b>
+    </h4>
+</body>
+</html>
