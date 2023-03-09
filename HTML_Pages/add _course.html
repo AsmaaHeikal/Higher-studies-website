@@ -1,0 +1,99 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title>Add Course</title>
+</head>
+<body>
+    <!-- header -->
+    <header id="website-header">
+        <img src="" alt="">
+        <span>FCAI CU</span>
+        <div>
+            <a href="home.html"> Home</a>
+            <!-- Login  -->
+            <div class="dropdown-menu">
+                <a href="">Login</a>
+                <div class = "dropdown-content">
+                    <a href="login_student.html"><span> Student</span></a>
+                    <a href="login_admin.html"><span> Admin</span></a>
+                </div>
+            </div>
+
+            <!-- Dropdown Menu -->
+            <div class="dropdown-menu">
+                <a href="">Menu</a>
+                <div class="dropdown-content">
+                    <!-- For Student -->
+                    <a href="register_in_courses.html" class = "student-only"><span> Register in a Course</span></a>
+                    <a href="registered_courses.html" class = "student-only"><span>Registered Courses</span></a>
+
+                    <!-- For Admin -->
+                    <a href="add_Student.html" class = "admin-only"><span> Add a Student</span></a>
+                    <a href="search.html" class = "admin-only"><span>Search in Students</span></a>
+                    <a href="edit_student.html" class = "admin-only"><span>Edit Student</span></a>
+                </div>
+            </div>
+
+        </div>
+    </header>
+
+    <h1><b>Add Course</b> </h1>
+    <h3>
+        <div>
+            <label for="course name">Course Name:</label>
+            <input type="text" id="course name" name="Course name" placeholder="Course Name" required autofocus>
+        </div>
+        <p></p>
+        <div>
+            <label for="course ID">Course ID:</label>
+            <input type="text" id="course ID" name="Course ID" placeholder="Course ID" required autofocus>
+        </div>
+        <p></p>
+        <div>
+            <label for="course Hours">Course Hours:</label>
+            <input type="text" id="course Hours" name="Course Hours" placeholder="Course Hours" required autofocus>
+        </div>
+        <div>
+            <p></p>
+        <div>
+            <label for="department">Department:</label>
+            <select name="department" id="department">
+                <optgroup label="department">
+                    <option value="G">General</option>
+                    <option value="IS">Information Systems</option>
+                    <option value="CS">Computer Science</option>
+                    <option value="AI">Artificial Intelligence</option>
+                    <option value="DS">Decision Support</option>
+                    <option value="OR">Operations Research</option>
+                    <option value="OR">cyber Security</option>
+                </optgroup>
+            </select>
+        </div>
+        <p></p>
+        <div>
+            <label for="Course prerequisite">Course prerequisite:</label>
+            <select name="Course prerequisite" id="Course prerequisite">
+                <optgroup label="Course prerequisite">
+                    <option value="G">None</option>
+                    <option value="M1">Math1</option>
+                    <option value="M2">Math2</option>
+                    <option value="SW1">Software Engineering-1</option>
+                </optgroup>
+            </select>
+        </div>
+        <p></p>
+        <div>
+            <button type="add"> <span>Add Course</span> </button>
+        </div>
+    </h3>
+
+    <!-- footer Section -->
+    <footer>
+        <div>
+            <span>Copyright © 2004-2015 Faculty of Computers and Artificial Intelligence 5 Dr. Ahmed Zewail Street, Postal Code: 12613, Orman, Giza, Egypt.</span>
+        </div>
+    </footer>
+</body>
+</html>

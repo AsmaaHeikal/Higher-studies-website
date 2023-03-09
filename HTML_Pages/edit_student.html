@@ -1,14 +1,12 @@
-<!DOCTYPE html>
-<html>
+﻿<!DOCTYPE html>
 
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
 <head>
-    <meta charset="UTF-8" />
-    <title>Add Student</title>
-    <meta name="description" content="Add Student Page." />
+    <meta charset="utf-8" />
+    <title>Edit Student</title>
+  
 </head>
-
 <body>
-
     <!-- header -->
     <header id="website-header">
         <img src="" alt="">
@@ -41,19 +39,37 @@
 
         </div>
     </header>
-
-    <div>
-        <h1>Add Student</h1>
-    </div>
-    <form action="" method="post">
+    <h1><b>Edit Student</b></h1>
+    
+    <h3>
         <div>
             <label for="name">Name:</label>
             <input type="text" id="name" name="student name" placeholder="Student Name" required autofocus>
         </div>
-        <br>
+        <p></p>
         <div>
             <label for="id">ID:</label>
             <input type="text" id="id" name="student id" placeholder="Student ID" required>
+        </div>
+        <p></p>
+        <div>
+            <label for="gpa">GPA</label>
+            <input type="text" id="GPA" name="GPA" placeholder="GPA" required>
+        </div>
+        <p></p>
+        <div>
+            <label for="department">Department:</label>
+            <select name="department" id="department">
+                <optgroup label="department">
+                    <option value="G">General</option>
+                    <option value="IS">Information Systems</option>
+                    <option value="CS">Computer Science</option>
+                    <option value="AI">Artificial Intelligence</option>
+                    <option value="DS">Decision Support</option>
+                    <option value="OR">Operations Research</option>
+                    <option value="OR">cyber Security</option>
+                </optgroup>
+            </select>
         </div>
         <br>
         <div>
@@ -61,17 +77,7 @@
             <input type="date" name="dateOfBirth" id="DateOfBirth" required>
         </div>
         <br>
-        <div>
-            <label for="university">University:</label>
-            <select name="university" id="university">
-                <optgroup label="University">
-                    <option value="1">Cairo University</option>
-                    <option value="2">Ain Shams University</option>
-                    <option value="3">Helwan University</option>
-                </optgroup>
-            </select>
-        </div>
-        <br>
+
         <div>
             <label>Gender:</label>
             <input id="1" type="radio" name="gender" value="M" checked="true">
@@ -79,17 +85,8 @@
             <input id="2" type="radio" name="gender" value="F">
             <label for="2">Female</label>
         </div>
-        <br>
-        <div>
-            <label for="department">Department:</label>
-            <select name="department" id="department">
-                <optgroup label="department">
-                    <option value="CS">Computer Science</option>
-                    <option value="IS">Information Systems</option>
-                    <option value="OR">Operations Research</option>
-                </optgroup>
-            </select>
-        </div>
+
+
         <br>
         <div>
             <label>Status:</label>
@@ -99,28 +96,14 @@
             <label for="2">Inactive</label>
         </div>
         <br>
-        <div>
-            <label>Courses:</label>
-        </div>
-        <div>
-            <input id="c1" type="checkbox" name="courses" value="Course1" checked>
-            <label for="c1">Course1</label>
-        </div>
-        <div>
-            <input id="c2" type="checkbox" name="courses" value="Course2" checked>
-            <label for="c2">Course2</label>
-        </div>
-        <div>
-            <input id="c3" type="checkbox" name="courses" value="Course3" checked>
-            <label for="c3">Course3</label>
-        </div>
-        <br>
-        <div>
-            <button type="reset"> <span> Reset</span> </button>
-            <button type="submit"> <span>Submit</span></button>
-        </div>
-        </div>
-    </form>
+    </h3>
+    <h4>
+        <b>
+            <div>
+                <button type="edit"> <span> Edit</span> </button>
+            </div>
+        </b>
+    </h4>
 
     <!-- footer Section -->
     <footer>
@@ -129,5 +112,4 @@
         </div>
     </footer>
 </body>
-
 </html>
