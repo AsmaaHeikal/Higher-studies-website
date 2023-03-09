@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- style for make the table mor readable and centered it on the page-->
+    <style>
+		.table-container {
+			margin: auto;
+			width: 80%;
+		}
+		table {
+			width: 100%;
+			border-collapse: collapse;
+		}
+		th, td {
+			padding: 8px;
+			text-align:center;
+			border-bottom: 1px solid #ddd;
+		}
+		th {
+			background-color: #f2f2f2;
+		}
+        
+	</style>
+
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- this for header section (top of the page) -->
+    <header>
+        <pre>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        </pre>
+    </header>
+    <!-- div for content of the page -->
+    <form method="get">
+    <div class ="table-container">
+        <div style=
+        "margin:auto;
+         width: 70%;">
+
+            <input type = "search" placeholder="Enter the name or ID"  name = "keyword" style=
+            "margin: auto;
+             width: 60%;" >
+
+            <label>sort by</label>
+            <select id = "Students" name = "priority">
+                <option value ="None" selected> </option>
+                <option value ="name">Name</option>
+                <option value ="ID">ID</option>
+                <option value ="hours">Total hours</option>
+                <option value ="GPA">GPA</option>
+            </select>
+        </div>
+
+        <!-- table for displaying content of the Students -->
+        <div>
+            <table>
+                <thead>
+                    <tr>
+                        <!-- some default data -->
+                        <th>Name</th>
+                        <th>Student ID</th>
+                        <th>Total hours</th>
+                        <th>GPA</th>
+                        <th>Email</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- some examples to be showen on the page-->
+                    <tr>
+                        <td>Mohamed Ali</td>
+                        <td>001</td>
+                        <td>30</td>
+                        <td>3.5</td>
+                        <td>Mohamed@gmail.com</td>
+                    </tr>
+                    <tr>
+                        <td>Amr yasser</td>
+                        <td>002</td>
+                        <td>37</td>
+                        <td>3.8</td>
+                        <td>Amr@gmail.com</td>
+                    </tr>
+                    <tr>
+                        <td>abdelrahman mohamed</td>
+                        <td>003</td>
+                        <td>37</td>
+                        <td>3.7</td>
+                        <td>abdelrahman@gmail.com</td>
+                    </tr>
+                    <tr>
+                        <td>sami ashraf</td>
+                        <td>004</td>
+                        <td>40</td>
+                        <td>3.85</td>
+                        <td>sami@gmail.com</td>
+                    </tr>
+                    <tr>
+                        <td>omar ahmed</td>
+                        <td>005</td>
+                        <td>32</td>
+                        <td>3.7</td>
+                        <td>omar@gmail.com</td>
+                    </tr>
+
+                    <tr>
+                        <td>youssef anwar</td>
+                        <td>006</td>
+                        <td>27</td>
+                        <td>4.0</td>
+                        <td>youssef@gmail.com</td>
+                    </tr>
+                </tbody>
+            </table>
+        
+        </div>
+        <!-- button to delete student 
+             we should put link in <a>
+                -->
+        <button class = "delete"> <a>Delete</a></button>
+        <button class = "edit"> <a>Edit</a></button>
+    </div>
+    </form>
+
+    <!-- this is for footer sections (end of the page) -->
+    <footer>
+        <pre>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+            
+        </pre>
+
+    </footer>
+    
+</body>
+</html>
