@@ -2,48 +2,38 @@
 <html>
     <head>
         <title> Login Admin </title>
-
-        <style>
-            body {
-                background-color: #6299c7; 
-            }
-        </style>
     </head>
 
-    <br><br><br><br><br><br><br><br>
-
     <body>
-        <center>
-            <h1> <i>Login Here</i> </h1>
+        <h1> <i>Login Here</i> </h1>
+        <br>
+
+        <form action = "" method = "get">
+            <!-- Username field -->
+            <div>
+                <label style="padding-right: 10px;"> Username </label>
+                <input type = "text" 
+                required placeholder = "write your username"
+                name = "ID"
+                style = "width: 170px;">
+            </div>
+
             <br>
+            <!-- Password field -->
+            <div>
+                <label style="padding-right: 10px;"> Password </label>
+                <input type = "password" 
+                required placeholder = "write a strong password"
+                name = "pass"
+                minlength = "8"
+                maxlength = "15"
+                style = "width: 170;">
+            </div>
 
-            <form action = "" method = "get">
-                <!-- Username field -->
-                <div>
-                    <label style="padding-right: 10px;"> Username </label>
-                    <input type = "text" 
-                    required placeholder = "write your username"
-                    name = "ID"
-                    style = "width: 170px;">
-                </div>
+            <br>
+            <input type = "submit" value = "Login" style="margin-right: 20px;">
+            <input type = "reset" value = "Reset"> 
 
-                <br>
-                <!-- Password field -->
-                <div>
-                    <label style="padding-right: 10px;"> Password </label>
-                    <input type = "password" 
-                    required placeholder = "write a strong password"
-                    name = "pass"
-                    minlength = "8"
-                    maxlength = "15"
-                    style = "width: 170;">
-                </div>
-
-                <br>
-                <input type = "submit" value = "Login" style="margin-right: 20px;">
-                <input type = "reset" value = "Reset"> 
-
-            </form>
-        </center>
+        </form>
     </body>
 </html>
