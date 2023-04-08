@@ -1,31 +1,28 @@
-let header = `<img src="" alt="">
-<span>FCAI CU</span>
-<div>
-    <a href="home.html"> Home</a>
-    <!-- Login  -->
-    <div class="dropdown-menu">
+let header = ` <nav>
+<img src="" alt="">
+<h2><span>FCAI CU</span></h2>
+<ul id="right">
+    <li> <a href="home.html">Home</a></li>
+    <li>
         <a href="">Login</a>
-        <div class = "dropdown-content">
-            <a href="login_student.html"><span> Student</span></a>
-            <a href="login_admin.html"><span> Admin</span></a>
-        </div>
-    </div>
+        <ul class = "dropdown-content">
+            <li><a href="login_student.html">Student</a></li>
+            <li><a href="login_admin.html">Admin</a></li>
+        </ul>
+    </li>
 
-    <!-- Dropdown Menu -->
-    <div class="dropdown-menu">
+    <li>
         <a href="">Menu</a>
-        <div class="dropdown-content">
-            <!-- For Student -->
-            <a href="register_in_courses.html" class = "student-only"><span> Register in a Course</span></a>
-            <a href="registered_courses.html" class = "student-only"><span>Registered Courses</span></a>
+        <ul class = "dropdown-content">
+            <li class = "student-only"><a href="register_in_courses.html">Register in a Course</a></li>
+            <li class = "student-only"><a href="registered_courses.html">Registered Courses</a></li>
+            <li class = "admin-only"><a href="add_Student.html">Add a Student</a></li>
+            <li class = "admin-only"><a href="search.html">Search in Students</a></li>
+            <li class = "admin-only"><a href="edit_student.html">Edit Student</a></li>
+        </ul>
+    </li>
 
-            <!-- For Admin -->
-            <a href="add_Student.html" class = "admin-only"><span> Add a Student</span></a>
-            <a href="search.html" class = "admin-only"><span>Search in Students</span></a>
-            <a href="edit_student.html" class = "admin-only"><span>Edit Student</span></a>
-        </div>
-    </div>
-
-</div>`;
+</ul>
+</nav>`;
 
 document.getElementById('website-header').innerHTML = header;
