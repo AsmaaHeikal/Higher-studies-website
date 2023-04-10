@@ -1,0 +1,105 @@
+:root {
+    --main-color:#3e5c6e;
+    --main-font: 'Poppins';
+    --button-links-hover-color:#2f4858;
+    --gradient-background-color: linear-gradient(to right, #33658a, #427598, #5284a7, #6195b5, #71a5c4, #70a2bf, #709fbb, #6f9cb6, #5e869d, #4e7186, #3e5c6e, #2f4858);
+  }
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+    background-image: var(--gradient-background-color);
+    /* background: var(--main-color); */
+    font-family:  var(--main-font);
+}
+
+.content {
+    background-color: #fff;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+#table-container {
+    width: 90%;
+    margin: auto;
+    border: 1px solid #ccc;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 4px;
+    overflow: hidden;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+thead {
+    background-color: #f7f7f7;
+    font-weight: bold;
+}
+
+th,
+td {
+    padding: 12px 15px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+table tr td:first-child {
+    width: 200px;
+}
+
+tr:hover .button-container {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+.button-container {
+    opacity: 0;
+    transform: translateX(10px);
+    transition: all 0.3s ease-in-out;
+    display: flex;
+    justify-content: center;
+}
+
+.search-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+
+.search-container> input[type=search]{
+    flex: 0.6;
+    margin-right: 10px;
+}
+
+#Students {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+}
+
+#Students + label {
+    margin-left: -10px;
+}
+
+
+button {
+    margin: 0 5px;
+    padding: 5px 10px;
+    border: none;
+    border-radius: 4px;
+    background-color: var(--gradient-background-color);
+    cursor: pointer;
+}
+
+button:hover {
+    background-color : var(--button-links-hover-color);
+}
