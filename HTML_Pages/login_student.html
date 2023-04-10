@@ -5,45 +5,33 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="/css/main.css">
-    <script defer src="/js/header.js"></script>
-    <script defer src="/js/footer.js"></script>
+        <link rel="stylesheet" href="Login_Student.css">
+        <script defer src="/js/header.js"></script>
+        <script defer src="/js/footer.js"></script>
         <title> Login Student </title>
     </head>
 
     <body>
-
          <!-- header -->
         <header id="website-header"></header>
-        <h1> <i>Login Here</i> </h1>
-        <br>
-
-        <form action = "" method = "get">
-            <!-- ID field -->
-            <div>
-                <label style="padding-right: 10px;"> ID </label>
-                <input type = "text" 
-                required placeholder = "write your ID"
-                name = "ID"
-                style = "width: 170px;">
-            </div>
-
-            <br>
-            <!-- Password field -->
-            <div>
-                <label style="padding-right: 10px;"> Password </label>
-                <input type = "password" 
-                required placeholder = "write a strong password"
-                name = "pass"
-                minlength = "8"
-                maxlength = "15"
-                style = "width: 170;">
-            </div>
-
-            <br>
-            <input type = "submit" value = "Login" style="margin-right: 20px;">
-            <input type = "reset" value = "Reset"> 
-
-        </form>
+        <!-- ID -->
+        <div class = "center">
+            <h1> Login Here </h1>
+            <form method = "post" > 
+                <div class = "txt_field">
+                    <input type = "text" required>
+                    <span></span>
+                    <label> ID </label>
+                </div>
+        <!-- Password -->
+        <div class = "txt_field">
+            <input type = "password" required>
+            <span></span>
+            <label> Password </label>
+        </div>
+        <input type = "submit" value = "Login">
+            </form>
+        </div>
         <!-- footer Section -->
         <footer id = "website-footer"></footer>
     </body>
