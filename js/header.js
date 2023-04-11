@@ -19,6 +19,7 @@ let header = ` <nav>
             <li class = "admin-only"><a href="add_Student.html">Add a Student</a></li>
             <li class = "admin-only"><a href="search.html">Search in Students</a></li>
             <li class = "admin-only"><a href="edit_student.html">Edit Student</a></li>
+            <li class = "admin-only"><a href="add _course.html">Add Course</a></li>
         </ul>
     </li>
 
