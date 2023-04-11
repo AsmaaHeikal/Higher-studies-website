@@ -4,7 +4,8 @@
 :root {
   --main-color:#3e5c6e;
   --main-font: 'Poppins';
-  --button-links-hover-color:#2f4858;
+  --links-hover-color:#2f4858;
+  --main-box-shadow:  0 0 7px rgba(0, 0, 0.5);
   --gradient-background-color: linear-gradient(to right, #33658a, #427598, #5284a7, #6195b5, #71a5c4, #70a2bf, #709fbb, #6f9cb6, #5e869d, #4e7186, #3e5c6e, #2f4858);
 }
 
@@ -20,8 +21,7 @@ html{
 }
 
 body{
-    background-image: var(--gradient-background-color);
-    /* background: var(--main-color); */
+    background: var(--main-color);
     font-family:  var(--main-font);
     position: relative;
     min-height: 100%;
@@ -87,6 +87,7 @@ body{
   position: absolute;
   color: #fff;
 }
+
 /* Style for the dropdown menus */
 #website-header nav ul li:hover .dropdown-content {
   display: block;
@@ -94,6 +95,7 @@ body{
   box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
   background-color: var(--main-color);
 }
+
 /* Style for the dropdown links */
 #website-header .dropdown-content li  {
   color: #fff;
@@ -103,10 +105,8 @@ body{
 }
 
 
-/* Style for the hover link */
-
 #website-header nav ul a:hover   {
-  color: var(--button-links-hover-color);
+  color: var(--links-hover-color);
   transition: 0.3s;
 }
 
@@ -128,7 +128,22 @@ body{
 }
 
 
+v
+.btn:hover{
+  /* background: #5e8aa5; */
+  background: var(--main-color);
+  transition: all 0.4s;
+}
 
+.btn:active, .btn:focus, .btn:hover{
+  box-shadow: var(--main-box-shadow);
+  transition: all 0.4;
+  transform: scale(1.1);
+
+}
+
+
+/* Footer Styling */
 #website-footer{
     text-align: center;
     height: 10%;
