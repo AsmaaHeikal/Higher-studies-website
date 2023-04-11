@@ -19,8 +19,8 @@ html{
 }
 
 body{
-    background-image: var(--gradient-background-color);
-    /* background: var(--main-color); */
+    /* background-image: var(--gradient-background-color); */
+    background: var(--main-color);
     font-family:  var(--main-font);
     position: relative;
     min-height: 100%;
