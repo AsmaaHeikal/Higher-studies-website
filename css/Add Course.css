@@ -1,29 +1,9 @@
 #AddC{
-    width: 50%;
-    height: 60px;
-    border: 1px solid;
-    text-decoration: none;
-    background: #3e5c6e;
-    cursor: pointer;
-    border-radius: 25px;
-    font-size: 18px;
-    color: #fffcfc;
-    font-weight: 500;
     margin-left: 110px;
-    cursor: pointer;
-    outline: none;
-    transition: .5s;
-}
-#AddC:hover{
-    background: #5e8aa5;
-    transition: all 0.4s;
 }
 .mainDive .pageTitle{
     color:black;
     margin-bottom: 20px;
-    text-align: center;
-}
-.mainDive botton{
     text-align: center;
 }
 .mainDive {
@@ -62,9 +42,6 @@ form label {
     display: block;
     font-weight: normal;
     margin-bottom: 5px;
-}
-form .labl{
-    margin-left: px;
 }
 form select {
     color: black;
