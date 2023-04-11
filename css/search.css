@@ -17,7 +17,7 @@ body {
     font-family:  var(--main-font);
 }
 
-.content {
+.main-content {
     background-color: #fff;
     padding-top: 20px;
     padding-bottom: 20px;
