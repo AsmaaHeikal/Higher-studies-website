@@ -6,6 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/css/main.css">
+    <link rel="stylesheet" href="/css/addStudent.css">
     <script defer src="/js/header.js"></script>
     <script defer src="/js/footer.js"></script>
     <meta name="description" content="Add Student Page." />
@@ -17,85 +18,103 @@
     <!-- header -->
     <header id="website-header"></header>
 
-    <div>
-        <h1>Add Student</h1>
-    </div>
-    <form action="" method="post">
-        <div>
-            <label for="name">Name:</label>
-            <input type="text" id="name" name="student name" placeholder="Student Name" required autofocus>
+    <section class="page-body">
+        <div class="title">
+            <h1>Add Student</h1>
         </div>
-        <br>
-        <div>
-            <label for="id">ID:</label>
-            <input type="text" id="id" name="student id" placeholder="Student ID" required>
-        </div>
-        <br>
-        <div>
-            <label for="DateOfBirth">Date Of Birth:</label>
-            <input type="date" name="dateOfBirth" id="DateOfBirth" required>
-        </div>
-        <br>
-        <div>
-            <label for="university">University:</label>
-            <select name="university" id="university">
-                <optgroup label="University">
-                    <option value="1">Cairo University</option>
-                    <option value="2">Ain Shams University</option>
-                    <option value="3">Helwan University</option>
-                </optgroup>
-            </select>
-        </div>
-        <br>
-        <div>
-            <label>Gender:</label>
-            <input id="1" type="radio" name="gender" value="M" checked="true">
-            <label for="1">Male</label>
-            <input id="2" type="radio" name="gender" value="F">
-            <label for="2">Female</label>
-        </div>
-        <br>
-        <div>
-            <label for="department">Department:</label>
-            <select name="department" id="department">
-                <optgroup label="department">
-                    <option value="CS">Computer Science</option>
-                    <option value="IS">Information Systems</option>
-                    <option value="OR">Operations Research</option>
-                </optgroup>
-            </select>
-        </div>
-        <br>
-        <div>
-            <label>Status:</label>
-            <input id="1" type="radio" name="status" value="active" checked="true">
-            <label for="1">Active</label>
-            <input id="2" type="radio" name="status" value="inactive">
-            <label for="2">Inactive</label>
-        </div>
-        <br>
-        <div>
-            <label>Courses:</label>
-        </div>
-        <div>
-            <input id="c1" type="checkbox" name="courses" value="Course1" checked>
-            <label for="c1">Course1</label>
-        </div>
-        <div>
-            <input id="c2" type="checkbox" name="courses" value="Course2" checked>
-            <label for="c2">Course2</label>
-        </div>
-        <div>
-            <input id="c3" type="checkbox" name="courses" value="Course3" checked>
-            <label for="c3">Course3</label>
-        </div>
-        <br>
-        <div>
-            <button type="reset"> <span> Reset</span> </button>
-            <button type="submit"> <span>Submit</span></button>
-        </div>
-        </div>
-    </form>
+        <form action="" method="post">
+            <div>
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="student name" placeholder="Student Name" required autofocus>
+            </div>
+            <br>
+            <div>
+                <label for="id">ID:</label>
+                <input type="text" id="id" name="student id" placeholder="Student ID" required>
+            </div>
+            <br>
+            <div>
+                <label for="DateOfBirth">Date Of Birth:</label>
+                <input type="date" name="dateOfBirth" id="DateOfBirth" required>
+            </div>
+            <br>
+            <div>
+                <label for="university">University:</label>
+                <select name="university" id="university">
+                    <optgroup label="University">
+                        <option value="1">Cairo University</option>
+                        <option value="2">Ain Shams University</option>
+                        <option value="3">Helwan University</option>
+                    </optgroup>
+                </select>
+            </div>
+            <br>
+            <div>
+                <label>Gender:</label>
+                <input id="m" type="radio" name="gender" value="M" checked="true">
+                <label for="m">Male</label>
+                <input id="f" type="radio" name="gender" value="F">
+                <label for="f">Female</label>
+            </div>
+            <br>
+            <div>
+                <label for="department">Department:</label>
+                <select name="department" id="department">
+                    <optgroup label="department">
+                        <option value="CS">Computer Science</option>
+                        <option value="IS">Information Systems</option>
+                        <option value="OR">Operations Research</option>
+                    </optgroup>
+                </select>
+            </div>
+            <br>
+            <div>
+                <label>Status:</label>
+                <input id="a" type="radio" name="status" value="active" checked="true">
+                <label for="a">Active</label>
+                <input id="ina" type="radio" name="status" value="inactive">
+                <label for="ina">Inactive</label>
+            </div>
+            <br>
+            <div>
+                <label for="c1">Course 1</label>
+                <select name="course1" id="c1">
+                    <optgroup label="course1">
+                        <option value="CS">Data Base</option>
+                        <option value="IS">System Analysis</option>
+                        <option value="OR">Operations Research</option>
+                    </optgroup>
+                </select>
+            </div>
+            <div>
+                <label for="c2">Course 2</label>
+                <select name="course2" id="c2">
+                    <optgroup label="course2">
+                        <option value="CS"> Algorithms</option>
+                        <option value="IS">Software Engineering</option>
+                        <option value="OR">Operations Research</option>
+                    </optgroup>
+                </select>
+            </div>
+            <div>
+                <label for="c3">Course 3</label>
+                <select name="course3" id="c3">
+                    <optgroup label="course3">
+                        <option value="CS">Computer Science</option>
+                        <option value="IS">Signals</option>
+                        <option value="OR">Operations Research</option>
+                    </optgroup>
+                </select>
+            </div>
+            <br>
+            <br>
+            <div>
+                <button type="reset"> <span> Reset</span> </button>
+                <button type="submit"> <span>Submit</span></button>
+            </div>
+            </div>
+        </form>
+    </section>
 
     <!-- footer Section -->
     <footer id="website-footer"></footer>
