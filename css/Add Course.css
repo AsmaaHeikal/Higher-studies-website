@@ -1,12 +1,12 @@
 #AddC{
     margin-left: 110px;
 }
-.mainDive .pageTitle{
+.mainDiv .pageTitle{
     color:black;
     margin-bottom: 20px;
     text-align: center;
 }
-.mainDive {
+.mainDiv {
     background-color: white;
     width: 40%;
     height: 40%;
@@ -50,4 +50,3 @@ form select {
     border-radius: 3px;
     font-size: 1rem;
 }
-
