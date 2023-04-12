@@ -1,17 +1,16 @@
 
 .page-body{
     background-color: white;
-    width: 500px;
-    height: 1050px;
-    padding: 30px;
+    color: black;
+    width: 40%;
+    height: 40%;
+    padding: 60px;
     border-radius: 20px;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    margin-top: 317px;
-    margin-bottom: 40px;
+    justify-content: center;
+    margin-left: 28%;
+    margin-bottom: 50px;
     overflow: hidden;
+    font-weight: normal;
 }
 .title{
     margin-bottom: 20px;
