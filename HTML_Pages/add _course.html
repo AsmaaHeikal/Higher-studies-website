@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 
 <html lang="en" xmlns="http://www.w3.org/1999/xhtml">
 <head>
@@ -6,6 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../css/main.css">
+    <link rel="stylesheet" href="../css/Add Course.css" />
     <script defer src="../js/header.js"></script>
     <script defer src="../js/footer.js"></script>
     <title>Add Course</title>
@@ -13,57 +14,60 @@
 <body>
     <!-- header -->
     <header id="website-header"></header>
-
-    <h1><b>Add Course</b> </h1>
-    <h3>
-        <div>
-            <label for="course name">Course Name:</label>
-            <input type="text" id="course name" name="Course name" placeholder="Course Name" required autofocus>
+    <div id="main-content">
+            <div class="mainDiv">
+            <div class="pageTitle">
+                <h1><b>Add Course</b> </h1>
         </div>
-        <p></p>
-        <div>
-            <label for="course ID">Course ID:</label>
-            <input type="text" id="course ID" name="Course ID" placeholder="Course ID" required autofocus>
+            <form action="" method="post">
+            <div>
+                <label for="course name" class="labl">Course Name:</label>
+                <input type="text" id="course name" name="Course name" placeholder="Course Name" required >
+            </div>
+            <br>
+            <div>
+                <label for="course ID" class="labl">Course ID:</label>
+                <input type="text" id="course ID" name="Course ID" placeholder="Course ID" required>
+            </div>
+            <br>
+            <div>
+                <label for="course Hours"class="labl">Course Hours:</label>
+                <input type="text" id="courseHours" name="Course Hours" placeholder="Course Hours" required>
+            </div>
+            <br>
+            <div>
+                <label for="department" >Department:</label>
+                <select name="department" id="department">
+                    <optgroup label="department">
+                        <option value="G">General</option>
+                        <option value="IS">Information Systems</option>
+                        <option value="CS">Computer Science</option>
+                        <option value="AI">Artificial Intelligence</option>
+                        <option value="DS">Decision Support</option>
+                        <option value="OR">Operations Research</option>
+                        <option value="CS">cyber Security</option>
+                    </optgroup>
+                </select>
+            </div>
+            <br>
+            <div>
+                <label for="Course prerequisite" class="prereq">Course prerequisite:</label>
+                <select name="Course prerequisite" id="Course prerequisite">
+                    <optgroup label="Course prerequisite">
+                        <option value="G">None</option>
+                        <option value="M1">Math1</option>
+                        <option value="M2">Math2</option>
+                        <option value="SW1">Software Engineering-1</option>
+                    </optgroup>
+                </select>
+            </div>
+            <br>
+            <div >
+                <button type="submit" class="btn" id="AddC"> <span>Add Course</span> </button>
+            </div>
+        </form>
         </div>
-        <p></p>
-        <div>
-            <label for="course Hours">Course Hours:</label>
-            <input type="text" id="course Hours" name="Course Hours" placeholder="Course Hours" required autofocus>
-        </div>
-        <div>
-            <p></p>
-        <div>
-            <label for="department">Department:</label>
-            <select name="department" id="department">
-                <optgroup label="department">
-                    <option value="G">General</option>
-                    <option value="IS">Information Systems</option>
-                    <option value="CS">Computer Science</option>
-                    <option value="AI">Artificial Intelligence</option>
-                    <option value="DS">Decision Support</option>
-                    <option value="OR">Operations Research</option>
-                    <option value="OR">cyber Security</option>
-                </optgroup>
-            </select>
-        </div>
-        <p></p>
-        <div>
-            <label for="Course prerequisite">Course prerequisite:</label>
-            <select name="Course prerequisite" id="Course prerequisite">
-                <optgroup label="Course prerequisite">
-                    <option value="G">None</option>
-                    <option value="M1">Math1</option>
-                    <option value="M2">Math2</option>
-                    <option value="SW1">Software Engineering-1</option>
-                </optgroup>
-            </select>
-        </div>
-        <p></p>
-        <div>
-            <button type="add"> <span>Add Course</span> </button>
-        </div>
-    </h3>
-
+    </div>
     <!-- footer Section -->
     <footer id = "website-footer"></footer>
 </body>

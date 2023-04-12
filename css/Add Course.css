@@ -1,0 +1,52 @@
+#AddC{
+    margin-left: 110px;
+}
+.mainDiv .pageTitle{
+    color:black;
+    margin-bottom: 20px;
+    text-align: center;
+}
+.mainDiv {
+    background-color: white;
+    width: 40%;
+    height: 40%;
+    padding: 30px;
+    border-radius: 20px;
+    justify-content: center;
+    margin-top: 1px;
+    margin-left: 28%;
+    overflow: hidden;
+}
+form{
+    margin-left: 30px;
+}
+form input[type="text"]{
+    padding: 2px;
+    width:85%;
+    height: 25px;
+    border: 1px solid #49697d ;
+    border-radius: 3px;
+    font-size: 1rem;
+}
+
+form select {
+    padding: 2px;
+    width:87%;
+    height: 30px;
+    border: 1px solid #49697d ;
+    border-radius: 3px;
+    font-size: 1rem;
+}
+form label {
+    color:black;
+    display: block;
+    font-weight: normal;
+    margin-bottom: 5px;
+}
+form select {
+    color: black;
+    padding: 2px;
+    border: 1px solid #49697d ;
+    border-radius: 3px;
+    font-size: 1rem;
+}
