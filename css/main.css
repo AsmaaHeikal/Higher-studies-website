@@ -142,7 +142,7 @@ body{
     outline: none;
 }
 
-.btn:active, .btn:focus, .btn:hover{
+.btn:active, .btn:hover{
   box-shadow: var(--main-box-shadow);
   transition: all 0.4;
   transform: scale(1.1);
