@@ -12,26 +12,27 @@ body {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    width: 400px;
-    height: 350px;
+    width: 450px;
+    height: 700px;
     background: white;
     border-radius: 10px;
 }
 
 .center h1 {
     text-align: center;
-    padding: 0 0 20px 0;
+    padding: 0 0 70px 0;
     border-bottom: 1px sloid silver;
+    font-size: 40px;
 }
 
 .center form {
-    padding: 0 40px;
+    padding: 0 35px;
     box-sizing: border-box;
 }
 
 form .txt_field {
     position: relative;
-    border-bottom: 2px solid #adadad;
+    border-bottom: 3px solid #adadad;
     margin: 30px 0;
 }
 
@@ -39,7 +40,7 @@ form .txt_field {
     width: 100%;
     padding: 0 5px;
     height: 40px;
-    font-size: 16px;
+    font-size: 20px;
     border: none;
     background: none;
     outline: none;
@@ -86,19 +87,40 @@ form .txt_field {
     text-decoration: underline;
 }
 
-input[type = "submit"] {
+button[type="submit"], button[type="reset"] {
     width: 100%;
-    height: 50px;
+    height: 60px;
     border: 1px solid;
-    background: #3e5c6e;
     border-radius: 25px;
-    font-size: 18px;
-    color: #fffcfc;
+    font-size: 20px;
     font-weight: 700;
     cursor: pointer;
     outline: none;
-}
-input[type = "submit"]:hover {
-    background-color: #3e5c6e;
+  }
+  
+  button[type="submit"] {
+    background: linear-gradient(to right, #33658a, #427598, #5284a7, #6195b5, #71a5c4, #70a2bf, #709fbb, #6f9cb6, #5e869d, #4e7186, #3e5c6e, #2f4858);
+    color: #fffcfc;
+  }
+  
+  button[type="submit"]:hover {
+    background: linear-gradient(to right, #33658a, #427598, #5284a7, #6195b5, #71a5c4, #70a2bf, #709fbb, #6f9cb6, #5e869d, #4e7186, #3e5c6e, #2f4858);
     transition: .4s;
-}
+  }
+  
+  button[type="reset"] {
+    background: linear-gradient(to right, #33658a, #427598, #5284a7, #6195b5, #71a5c4, #70a2bf, #709fbb, #6f9cb6, #5e869d, #4e7186, #3e5c6e, #2f4858);
+    color: #f5eeee;
+  }
+  
+  button[type="reset"]:hover {
+    background: linear-gradient(to right, #33658a, #427598, #5284a7, #6195b5, #71a5c4, #70a2bf, #709fbb, #6f9cb6, #5e869d, #4e7186, #3e5c6e, #2f4858);
+    transition: .4s;
+  }
+
+.btn:focus, .btn:hover {
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+    -webkit-transform: scale(1.1);
+    transform: scale(1.1);
+  }
+  
