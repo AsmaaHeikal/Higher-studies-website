@@ -70,34 +70,3 @@ body {
     cursor: pointer;
     outline: none;
   }
-  
-  button[type="submit"] {
-    background: linear-gradient(to right, #33658a, #427598, #5284a7, #6195b5, #71a5c4, #70a2bf, #709fbb, #6f9cb6, #5e869d, #4e7186, #3e5c6e, #2f4858);
-    color: #fffcfc;
-  }
-  
-  button[type="submit"]:hover {
-    background: linear-gradient(to right, #33658a, #427598, #5284a7, #6195b5, #71a5c4, #70a2bf, #709fbb, #6f9cb6, #5e869d, #4e7186, #3e5c6e, #2f4858);
-    transition: .4s;
-  }
-  
-  button[type="reset"] {
-    background: linear-gradient(to right, #33658a, #427598, #5284a7, #6195b5, #71a5c4, #70a2bf, #709fbb, #6f9cb6, #5e869d, #4e7186, #3e5c6e, #2f4858);
-    color: #f5eeee;
-  }
-  
-  button[type="reset"]:hover {
-    background: linear-gradient(to right, #33658a, #427598, #5284a7, #6195b5, #71a5c4, #70a2bf, #709fbb, #6f9cb6, #5e869d, #4e7186, #3e5c6e, #2f4858);
-    transition: .4s;
-  }
-  
-  .btn:focus,
-  .btn:hover,
-  button[type="submit"]:focus,
-  button[type="submit"]:hover,
-  button[type="reset"]:focus,
-  button[type="reset"]:hover {
-    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
-    -webkit-transform: scale(1.1);
-    transform: scale(1.1);
-  }
