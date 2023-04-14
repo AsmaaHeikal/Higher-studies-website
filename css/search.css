@@ -91,7 +91,7 @@ tr:hover{
 }
 
 
-.edit:hover , .delete:hover , .search:hover{
+.delete:hover , .search:hover{
     /* opacity: 1; */
     transform: translateX(-4px);
     /* transform:scale(1.1); */
@@ -109,6 +109,12 @@ button {
     cursor: pointer;
 }
 
-button:hover {
-    background-color : var(--button-links-hover-color);
+
+a:hover i{
+    transform: translateX(-4px);
+    /* transform:scale(1.1); */
+    transition: all 0.3s ease-in-out;
+    justify-content: center;
 }
+
+
