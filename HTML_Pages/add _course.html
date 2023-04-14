@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="../css/Add Course.css" />
     <script defer src="../js/header.js"></script>
     <script defer src="../js/footer.js"></script>
+    
     <title>Add Course</title>
 </head>
 <body>
@@ -32,42 +33,41 @@
             <br>
             <div>
                 <label for="course Hours"class="labl">Course Hours:</label>
-                <input type="text" id="courseHours" name="Course Hours" placeholder="Course Hours" required>
+                <input type="number" id="courseHours" name="Course Hours" placeholder="Course Hours" required>
             </div>
             <br>
             <div>
                 <label for="department" >Department:</label>
                 <select name="department" id="department">
                     <optgroup label="department">
-                        <option value="G">General</option>
-                        <option value="IS">Information Systems</option>
-                        <option value="CS">Computer Science</option>
-                        <option value="AI">Artificial Intelligence</option>
-                        <option value="DS">Decision Support</option>
-                        <option value="OR">Operations Research</option>
-                        <option value="CS">cyber Security</option>
+                            <option value="" disabled selected  >Select your department</option>
+                            <option value="cs"> Computer Science </option>
+                            <option value="IT"> Information Technology </option>
+                            <option value="OR"> Operation Research </option>
+                            <option value="IS"> Information System </option>
+                            <option value="AI"> Artificial Intelligence </option>
                     </optgroup>
                 </select>
             </div>
             <br>
             <div>
-                <label for="Course prerequisite" class="prereq">Course prerequisite:</label>
-                <select name="Course prerequisite" id="Course prerequisite">
-                    <optgroup label="Course prerequisite">
-                        <option value="G">None</option>
-                        <option value="M1">Math1</option>
-                        <option value="M2">Math2</option>
-                        <option value="SW1">Software Engineering-1</option>
-                    </optgroup>
-                </select>
+                <label for="lecture Day">lecture day:</label>
+                <input type="text" id="lecDay" name="lDay" placeholder="lecture day" required>
+            </div>
+            <br>
+            <div>
+                <label for="Hall number" class="hallNumber">Hall number:</label>
+                <input type="text" id="hNumber" name="hallNumber" placeholder="Hall number" required>
             </div>
             <br>
             <div >
                 <button type="submit" class="btn" id="AddC"> <span>Add Course</span> </button>
             </div>
         </form>
+        <script defer src="../js/add_course.js"></script>
         </div>
     </div>
+    
     <!-- footer Section -->
     <footer id = "website-footer"></footer>
 </body>
