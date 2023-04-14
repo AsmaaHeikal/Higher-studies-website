@@ -2,124 +2,143 @@
 <html lang="en">
 <head>
     <!-- style for make the table mor readable and centered it on the page-->
-    <link rel="stylesheet"  href = "search.css" >
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet"  href = "search.css" >
     <link rel="stylesheet" href="../css/main.css">
+    <link rel="stylesheet"  href = "../css/search.css" >
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
     <script defer src="../js/header.js"></script>
     <script defer src="../js/footer.js"></script>
+    <script defer src="../js/search.js"></script>
     <title>Document</title>
+    
 </head>
 <body>
     <!-- this for header section (top of the page) -->
-    <header id="website-header"></header>
-    <div class ="main-content">
-        <form method="get">
-            <div class = "search-container">
-                <input type = "search" placeholder="Enter the name or ID"  name = "keyword">
-                <label>sort by</label>
-                <select id = "Students" name = "priority">
-                    <option value ="None" selected> </option>
-                    <option value ="name">Name</option>
-                    <option value ="ID">ID</option>
-                    <option value ="hours">Total hours</option>
-                    <option value ="GPA">GPA</option>
-                </select>
-            </div>
+    <header id = "website-header"></header>
+    
+    <div id ="main-content">
+        <div id = "search-box">
+            <form method="get">
+                <div class = "search-container">
+                    <button type="submit" class = "search"><i class="fa fa-search"></i></button>
+                    <input type="search" placeholder="Enter the name or ID" name="keyword">
+                    <label style = "margin-right: 5px; color: #000;">sort by</label>
+                    <select id = "Students" name = "priority">
+                        <option value ="None" selected>None</option>
+                        <option value ="name">Name</option>
+                        <option value ="ID">ID</option>
+                        <option value ="hours">Total hours</option>
+                        <option value ="GPA">GPA</option>
+                    </select>
+                </div>
 
-        <!-- table for displaying content of the Students -->
-            <div id = "table-container">
-                <table>
-                    <thead>
-                        <tr>
-                            <!-- some default data -->
-                            <th>Name</th>
-                            <th>Student ID</th>
-                            <th>Total hours</th>
-                            <th>GPA</th>
-                            <th>Email</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <!-- some examples to be showen on the page-->
-                        <tr>
-                            <td>Mohamed Ali</td>
-                            <td>001</td>
-                            <td>30</td>
-                            <td>3.5</td>
-                            <td>Mohamed@gmail.com</td>
-                            <td class="button-container">
-                                <button class="delete">Delete</button>
-                                <button class="edit">Edit</button>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>Amr yasser</td>
-                            <td>002</td>
-                            <td>37</td>
-                            <td>3.8</td>
-                            <td>Amr@gmail.com</td>
-                            <td class="button-container">
-                                <button class="delete">Delete</button>
-                                <button class="edit">Edit</button>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>abdelrahman mohamed</td>
-                            <td>003</td>
-                            <td>37</td>
-                            <td>3.7</td>
-                            <td>abdelrahman@gmail.com</td>
-                            <td class="button-container">
-                                <button class="delete">Delete</button>
-                                <button class="edit">Edit</button>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>sami ashraf</td>
-                            <td>004</td>
-                            <td>40</td>
-                            <td>3.85</td>
-                            <td>sami@gmail.com</td>
-                            <td class="button-container">
-                                <button class="delete">Delete</button>
-                                <button class="edit">Edit</button>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>omar ahmed</td>
-                            <td>005</td>
-                            <td>32</td>
-                            <td>3.7</td>
-                            <td>omar@gmail.com</td>
-                            <td class="button-container">
-                                <button class="delete">Delete</button>
-                                <button class="edit">Edit</button>
-                            </td>
-                        </tr>
+            <!-- table for displaying content of the Students -->
+                <div id = "table-container">
+                    <table>
+                        <thead>
+                            <tr>
+                                <!-- some default data -->
+                                <th>Studnet name</th>
+                                <th>Student ID</th>
+                                <th>Total hours</th>
+                                <th>GPA</th>
+                                <th>Email</th>
+                                <th></th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <!-- some examples to be showen on the page-->
+                            <tr>
+                                <td>Mohamed Ali</td>
+                                <td>001</td>
+                                <td>30</td>
+                                <td>3.5</td>
+                                <td>Mohamed@gmail.com</td>
+                                <td class="button-container">
+                                    <a href = "edit_student.html" >
+                                        <i class="fas fa-edit" ></i>
+                                    </a>
+                                    <button class="delete"><i class="fas fa-trash"></i></button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Amr yasser</td>
+                                <td>002</td>
+                                <td>37</td>
+                                <td>3.8</td>
+                                <td>Amr@gmail.com</td>
+                                <td class="button-container">
+                                    <a href = "edit_student.html" >
+                                        <i class="fas fa-edit" ></i>
+                                    </a>
+                                    <button class="delete"><i class="fas fa-trash"></i></button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>abdelrahman mohamed</td>
+                                <td>003</td>
+                                <td>37</td>
+                                <td>3.7</td>
+                                <td>abdelrahman@gmail.com</td>
+                                <td class="button-container">
+                                    <a href = "edit_student.html">
+                                        <i class="fas fa-edit" ></i>
+                                    </a>
+                                    <button class="delete"><i class="fas fa-trash"></i></button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>sami ashraf</td>
+                                <td>004</td>
+                                <td>40</td>
+                                <td>3.85</td>
+                                <td>sami@gmail.com</td>
+                                <td class="button-container">
+                                    <a href = "edit_student.html" >
+                                        <i class="fas fa-edit" ></i>
+                                    </a>
+                                    <button class="delete"><i class="fas fa-trash"></i></button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>omar ahmed</td>
+                                <td>005</td>
+                                <td>32</td>
+                                <td>3.7</td>
+                                <td>omar@gmail.com</td>
+                                <td class="button-container">
+                                    <a href = "edit_student.html">
+                                        <i class="fas fa-edit" ></i>
+                                    </a>
+                                    <button class="delete"><i class="fas fa-trash"></i></button>
+                                </td>
+                            </tr>
 
-                        <tr>
-                            <td>youssef anwar</td>
-                            <td>006</td>
-                            <td>27</td>
-                            <td>4.0</td>
-                            <td>youssef@gmail.com</td>
-                            <td class="button-container">
-                                <button class="delete">Delete</button>
-                                <button class="edit">Edit</button>
-                            </td>
-                        </tr>
-                    </tbody>
-                </table>
-            </div>
-        </form>
+                            <tr>
+                                <td>youssef anwar</td>
+                                <td>006</td>
+                                <td>27</td>
+                                <td>4.0</td>
+                                <td>youssef@gmail.com</td>
+                                <td class="button-container">
+                                    <a href = "edit_student.html">
+                                        <i class="fas fa-edit" ></i>
+                                    </a>
+                                    <button class="delete"><i class="fas fa-trash"></i></button>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </form>
+        </div>
     </div>
-   
 
-    <!-- this is for footer sections (end of the page) -->
-    <footer id ="website-footer"></footer>
+
+    <footer id = "website-footer"></footer>
+    
     
 </body>
 </html>

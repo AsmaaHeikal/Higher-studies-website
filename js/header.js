@@ -1,6 +1,6 @@
 let header = ` <nav>
 <img src="" alt="">
-<h2><span>FCAI CU</span></h2>
+<h2><a href = "home.html">FCAI CU</a></h2>
 <ul id="right">
     <li> <a href="home.html" class = "left-right-border-effect">Home</a></li>
     <li>
