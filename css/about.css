@@ -1,0 +1,51 @@
+#about h2, #about h1 {
+    color: #000;
+    /* margin-top: 50px ; */
+}
+
+#about{
+    background-color: #fff;
+    text-align: center;
+    width: 50%;
+    margin: 20px auto auto auto;
+    padding-bottom: 50px ;
+    padding-top: 30px ;
+    border-radius: 10px;
+}
+
+#member-container{
+    /* background-color: antiquewhite; */
+    display: grid;
+    margin: auto;
+    grid-template-columns: auto auto;
+    /* width: 50%; */
+    margin: 50px;
+    gap: 20px;
+    /* width: 50%;  */
+    border-radius: 10px;
+}
+
+#member-container .member-box{
+    background-color: ;
+    display: inline-grid;
+    background-color: aqua;
+    /* padding: 0px; */
+    /* width: 100%; */
+    border-radius: 10px;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+}
+
+.icons .gmail{
+    content: url(../images/gmail.svg);
+}
+.icons .github{
+    content: url(../images/github.svg);
+
+}
+
+.icons .github, .icons .gmail{
+    width: 30px;
+    height: 30px;
+}
