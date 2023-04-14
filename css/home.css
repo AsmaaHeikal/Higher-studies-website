@@ -5,3 +5,25 @@
 #main-content h1{
     padding-top: 100px;
 }
+
+.left-right-border-effect{
+    position: relative;
+}
+
+.left-right-border-effect:after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    transform: scaleX(0);
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color:#fff;
+    transform-origin: bottom right;
+    transition: transform 0.25s ease-out;
+}
+
+.left-right-border-effect:hover:after {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+}

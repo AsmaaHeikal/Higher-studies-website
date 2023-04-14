@@ -2,9 +2,9 @@ let header = ` <nav>
 <img src="" alt="">
 <h2><span>FCAI CU</span></h2>
 <ul id="right">
-    <li> <a href="home.html">Home</a></li>
+    <li> <a href="home.html" class = "left-right-border-effect">Home</a></li>
     <li>
-        <a href="">Login</a>
+        <a href="" class = "left-right-border-effect">Login</a>
         <ul class = "dropdown-content">
             <li><a href="login_student.html">Student</a></li>
             <li><a href="login_admin.html">Admin</a></li>
@@ -12,7 +12,7 @@ let header = ` <nav>
     </li>
 
     <li>
-        <a href="">Menu</a>
+        <a href="" class = "left-right-border-effect">Menu</a>
         <ul class = "dropdown-content">
             <li class = "student-only"><a href="register_in_courses.html">Register in a Course</a></li>
             <li class = "student-only"><a href="registered_courses.html">Registered Courses</a></li>
@@ -21,6 +21,9 @@ let header = ` <nav>
             <li class = "admin-only"><a href="edit_student.html">Edit Student</a></li>
             <li class = "admin-only"><a href="add _course.html">Add Course</a></li>
         </ul>
+    </li>
+    <li>
+    <a href="about.html" class = "left-right-border-effect">About</a>
     </li>
 
 </ul>
