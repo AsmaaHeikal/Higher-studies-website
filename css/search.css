@@ -1,26 +1,12 @@
-:root {
-    --main-color:#3e5c6e;
-    --main-font: 'Poppins';
-    --button-links-hover-color:#2f4858;
-    --gradient-background-color: linear-gradient(to right, #33658a, #427598, #5284a7, #6195b5, #71a5c4, #70a2bf, #709fbb, #6f9cb6, #5e869d, #4e7186, #3e5c6e, #2f4858);
-  }
 
-body {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    margin: 0;
-    padding: 0;
-    background-image: var(--gradient-background-color);
-    /* background: var(--main-color); */
-    font-family:  var(--main-font);
-}
-
-.main-content {
+#search-box {
+    border: 5px soild #000000;
+    border-radius: 10px;
     background-color: #fff;
-    padding-top: 20px;
-    padding-bottom: 20px;
+    padding-top: 35px;
+    padding-bottom: 35px;
+    margin-left: 120px;
+    margin-right: 120px;
 }
 
 #table-container {
@@ -35,35 +21,66 @@ body {
 table {
     width: 100%;
     border-collapse: collapse;
+    background-color: rgba(255,255,255,0.2);
 }
 
 thead {
-    background-color: #f7f7f7;
+    background-color: #f1f1f1;
     font-weight: bold;
+}
+tr{
+    border-bottom: 1px solid #ddd;
 }
 
 th,
 td {
-    padding: 12px 15px;
+    padding: 10px 10px;
     text-align: left;
-    border-bottom: 1px solid #ddd;
+    color: #000;
+    /* border-bottom: 1px solid #ddd; */
 }
 
+
 table tr td:first-child {
-    width: 200px;
+    width: 25%;
 }
 
 tr:hover .button-container {
-    opacity: 1;
     transform: translateX(0);
 }
 
-.button-container {
-    opacity: 0;
-    transform: translateX(10px);
-    transition: all 0.3s ease-in-out;
+tr:hover{
+    background-color: #eee;
+    transform: translateX(0);
+}
+
+
+.search-container> input[type=search]{
+    flex: 0.6;
+    margin-right: 6%;
+    border: 2px solid #ccc;
+    border-radius: 5px;
+    padding: 7px;
+    font-size: 12px;
+    font-weight: bold;
+    color: #000;
+}
+
+
+#Students {
     display: flex;
     justify-content: center;
+    align-items: center;
+    margin: 0;
+    appearance: none;
+    border: 2px solid #ccc;
+    border-radius: 5px;
+    background-color: #fff;
+    padding: 7px;
+    font-size: 12px;
+    font-weight: bold;
+    color: #000;
+
 }
 
 .search-container{
@@ -74,20 +91,12 @@ tr:hover .button-container {
 }
 
 
-.search-container> input[type=search]{
-    flex: 0.6;
-    margin-right: 10px;
-}
-
-#Students {
+.button-container {
+    /* opacity: 1; */
+    transform: translateX(10px);
+    transition: all 0.3s ease-in-out;
     display: flex;
     justify-content: center;
-    align-items: center;
-    margin: 0;
-}
-
-#Students + label {
-    margin-left: -10px;
 }
 
 
