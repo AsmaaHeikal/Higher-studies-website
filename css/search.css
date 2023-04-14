@@ -41,7 +41,7 @@ td {
 }
 
 
-table tr td:first-child {
+table tr td:first-child{
     width: 25%;
 }
 
@@ -91,11 +91,11 @@ tr:hover{
 }
 
 
-.button-container {
+.edit:hover , .delete:hover , .search:hover{
     /* opacity: 1; */
-    transform: translateX(10px);
+    transform: translateX(-4px);
+    /* transform:scale(1.1); */
     transition: all 0.3s ease-in-out;
-    display: flex;
     justify-content: center;
 }
 
