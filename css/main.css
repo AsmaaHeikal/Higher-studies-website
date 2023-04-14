@@ -27,11 +27,39 @@ body{
     min-height: 100%;
 }
 
+/* hover effect on links */
+.left-right-border-effect{
+  position: relative;
+}
+
+.left-right-border-effect:after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  transform: scaleX(0);
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color:#fff;
+  transform-origin: bottom right;
+  transition: transform 0.25s ease-out;
+}
+
+.left-right-border-effect:hover:after {
+  transform: scaleX(1);
+  transform-origin: bottom left;
+}
+
+
+
  /* Style for the header container */
 
 #website-header {
     display: flex;
     align-items: center;
+    /* border: 10px; */
+    border-bottom: 5px solid #fff;
+    background: var(--main-color);
     color: #fff;
     padding-left: 50px;
     padding-right: 50px;
@@ -94,6 +122,7 @@ body{
   width: max-content;
   box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
   background-color: var(--main-color);
+  transition: all 1s ease-in-out;
 }
 
 /* Style for the dropdown links */
@@ -152,14 +181,23 @@ body{
 
 /* Footer Styling */
 #website-footer{
+    /* border-top: 5px solid #fff; */
+    padding-top: 20px;
     text-align: center;
     height: 10%;
     position: absolute;
     bottom: 0;
     left:0;
-    right:0;
+    right:0; 
     width:100%;
     color: #fff;
     display: block;
     padding :0;
+    height: fit-content;
 }
+#website-footer p {
+  padding:30px 0 30px 0;
+  margin: auto;
+  width: fit-content;
+}
+
