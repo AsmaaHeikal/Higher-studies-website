@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="../css/main.css">
     <script defer src="../js/header.js"></script>
     <script defer src="../js/footer.js"></script>
+    <script defer src="../js/add_student.js"></script>
     <meta name="description" content="Add Student Page." />
     <title>Add Student</title>
 </head>
@@ -23,7 +24,7 @@
             <div class="title">
                 <h1>Add Student</h1>
             </div>
-            <form action="" method="post">
+            <form id ="form" action="" method="post" onsubmit=" return storeData();">
                 <div>
                     <label for="name">Name:</label>
                     <input type="text" id="name" name="student name" placeholder="Student Name" required autofocus>
@@ -36,13 +37,14 @@
                 <br>
                 <div>
                     <label for="DateOfBirth">Date Of Birth:</label>
-                    <input type="date" name="dateOfBirth" id="DateOfBirth" required>
+                    <input type="date" name="dateOfBirth" id="DateOfBirth" min='1899-01-01' max='2005-12-31' required>
                 </div>
                 <br>
                 <div>
                     <label for="university">University:</label>
-                    <select name="university" id="university">
+                    <select name="university" id="university" required>
                         <optgroup label="University">
+                            <option value="" selected disabled>Select your university</option>
                             <option value="1">Cairo University</option>
                             <option value="2">Ain Shams University</option>
                             <option value="3">Helwan University</option>
@@ -60,11 +62,14 @@
                 <br>
                 <div>
                     <label for="department">Department:</label>
-                    <select name="department" id="department">
+                    <select name="department" id="department" required>
                         <optgroup label="department">
-                            <option value="CS">Computer Science</option>
-                            <option value="IS">Information Systems</option>
-                            <option value="OR">Operations Research</option>
+                            <option value="" disabled selected  >Select your department</option>
+                            <option value="cs"> Computer Science </option>
+                            <option value="IT"> Information Technology </option>
+                            <option value="OR"> Operation Research </option>
+                            <option value="IS"> Information System </option>
+                            <option value="AI"> Artificial Intelligence </option>
                         </optgroup>
                     </select>
                 </div>
@@ -79,31 +84,37 @@
                 <br>
                 <div>
                     <label for="c1">Course 1</label>
-                    <select name="course1" id="c1">
+                    <select name="course1" id="c1" required>
                         <optgroup label="course1">
-                            <option value="CS">Data Base</option>
-                            <option value="IS">System Analysis</option>
-                            <option value="OR">Operations Research</option>
+                            <option value="" disabled selected >Select the first course</option>
+                            <option value="cs101"> Computer Organization</option>
+                            <option value="cs102"> Algorithms </option>
+                            <option value="cs103"> Software Engineering </option>
+                            <option value="cs104"> Operating Systems </option>
                         </optgroup>
                     </select>
                 </div>
                 <div>
                     <label for="c2">Course 2</label>
-                    <select name="course2" id="c2">
+                    <select name="course2" id="c2" required>
                         <optgroup label="course2">
-                            <option value="CS"> Algorithms</option>
-                            <option value="IS">Software Engineering</option>
-                            <option value="OR">Operations Research</option>
+                            <option value="" disabled selected >Select the second course</option>
+                            <option value="cs101"> Computer Organization</option>
+                            <option value="cs102"> Algorithms </option>
+                            <option value="cs103"> Software Engineering </option>
+                            <option value="cs104"> Operating Systems </option>
                         </optgroup>
                     </select>
                 </div>
                 <div>
                     <label for="c3">Course 3</label>
-                    <select name="course3" id="c3">
+                    <select name="course3" id="c3" required>
                         <optgroup label="course3">
-                            <option value="CS">Computer Science</option>
-                            <option value="IS">Signals</option>
-                            <option value="OR">Operations Research</option>
+                            <option value="" disabled selected >Select the third course</option>
+                            <option value="cs101"> Computer Organization</option>
+                            <option value="cs102"> Algorithms </option>
+                            <option value="cs103"> Software Engineering </option>
+                            <option value="cs104"> Operating Systems </option>
                         </optgroup>
                     </select>
                 </div>
@@ -111,7 +122,7 @@
                 <br>
                 <div>
                     <button type="reset" class="btn"> <span> Reset</span> </button>
-                    <button type="submit" class="btn"> <span>Submit</span></button>
+                    <button type="submit" class="btn" id="submit"> <span>Submit</span></button>
                 </div>
                 </div>
             </form>
