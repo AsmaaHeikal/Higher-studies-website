@@ -1,51 +1,65 @@
 #about h2, #about h1 {
     color: #000;
-    /* margin-top: 50px ; */
 }
 
 #about{
     background-color: #fff;
     text-align: center;
-    width: 50%;
+    width: 60%;
     margin: 20px auto auto auto;
     padding-bottom: 50px ;
     padding-top: 60px ;
-    border-radius: 10px;
+    border-radius: var(--main-radius);
     box-shadow: var(--main-box-shadow);
 }
 
 #member-container{
-    /* background-color: antiquewhite; */
     display: grid;
     margin: auto;
     grid-template-columns: auto auto;
-    /* width: 50%; */
     margin: 50px;
-    gap: 20px;
-    /* width: 50%;  */
+    gap: 30px;
     border-radius: 10px;
 }
 
 #member-container .member-box{
+    padding: 30px;
     display: inline-grid;
-    background-color: aqua;
-    /* padding: 0px; */
-    /* width: 100%; */
     border-radius: 10px;
     text-align: center;
     justify-content: center;
+    box-shadow: 0 0 10px rgba(0, 0,0, 0.5);;
     align-items: center;
 }
 
+#member-container .member-box:hover{
+    transform: scale(1.02);
+    transition: all 0.3s ease-in ;
+}
+
+.icons{
+    margin: 20px 0 0 0 ;
+}
 .icons .gmail{
     content: url(../images/gmail.svg);
 }
+
 .icons .github{
     content: url(../images/github.svg);
+}
+
+.icons .linkedin{
+    content: url(../images/linkedin.svg);
 
 }
 
-.icons .github, .icons .gmail{
+.icons img {
     width: 30px;
     height: 30px;
+    margin:0 0 0 5px;
+}
+
+.icons img:hover {
+    transform: scale(1.2);
+    transition: all 0.2s ease-in ;
 }
