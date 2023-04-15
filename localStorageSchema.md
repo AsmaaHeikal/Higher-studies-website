@@ -1,7 +1,7 @@
 
 # Schema of Data
 
-## student (key-Value pairs)
+## Student (key-Value pairs)
 <!-- <pre> -->
 ```js
 {
@@ -18,9 +18,17 @@
 }
 
 ```
+# Admin
+```js
+{
+    username:"",
+    pass: ""
+}
+
+```
 <!-- </pre> -->
 
-## course (key-calue pairs)
+## Course (key-calue pairs)
 ```js
 {
     name:" ",
@@ -43,17 +51,17 @@
     admins: "",
     coures: "",
     departments: "",
-    logged_user: 
+    logged_user: "", 
                 // "0"-> for sessionstorage   
                 // numeric -> student (8-digit number)
                 // alphanumeric -> admin 
-    saved: 
+    saved: ""
         // "0" -> for sessionstorage 
         // "1" -> localStorage
 
 }
 ```
- ## sessionstorage (Use only when remember me option is not checked )
+ ## sessionStorage (Use only when remember me option is not checked )
  ```js
  {
  id: "20210417"
