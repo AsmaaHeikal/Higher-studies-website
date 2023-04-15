@@ -9,8 +9,9 @@
     width: 50%;
     margin: 20px auto auto auto;
     padding-bottom: 50px ;
-    padding-top: 30px ;
+    padding-top: 60px ;
     border-radius: 10px;
+    box-shadow: var(--main-box-shadow);
 }
 
 #member-container{

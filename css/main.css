@@ -5,7 +5,7 @@
   --main-color:#3e5c6e;
   --main-font: 'Poppins';
   --links-hover-color:#2f4858;
-  --main-box-shadow:  0 0 7px rgba(0, 0, 0.5);
+  --main-box-shadow:  0 0 25px rgba(0, 0,0, 1);
   --gradient-background-color: linear-gradient(to right, #33658a, #427598, #5284a7, #6195b5, #71a5c4, #70a2bf, #709fbb, #6f9cb6, #5e869d, #4e7186, #3e5c6e, #2f4858);
 }
 
@@ -227,7 +227,7 @@ body{
 
 .btn:active, .btn:hover{
   box-shadow: var(--main-box-shadow);
-  transition: all 0.4;
+  transition: all 0.5s ease-in-out;
   transform: scale(1.1);
 
 }
