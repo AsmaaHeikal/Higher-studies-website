@@ -5,15 +5,23 @@ table {
 	overflow: hidden;
 	box-shadow: 0 0 20px rgba(0,0,0,0.1);
 	border-radius: 10px;
-	background-color: white;
 }
 
+
 #personal-data{
+	box-shadow:var(--main-box-shadow);
+	background-color: white;
 	margin-left: 150px;
 	margin-right: 150px;
 	border-radius: 10px;
 }
 
+h1{
+	margin: 0px;
+  	padding: 0px;
+	color: black;
+	text-align: center;
+}
 
 th,
 td {
@@ -22,18 +30,15 @@ td {
 	text-align: center;
 }
 
-thead th{
-        /* background-color: #f1f1f1; */
-		background-color: rgb(248, 248, 219);
+
+th{
+        background-color: #f1f1f1;
 		
 }
 tbody tr:hover{
-	/* color: transparent; */
-	border-left: 10px solid orange;
-	color: #111;
-    /* background-color: #5e8aa5; */
-	background-color: 	#C8C8C8	;
-	transition: all 0.8s;
+
+	background-color: #eee;
+    transform: translateX(0);
 
 }
 tr{
