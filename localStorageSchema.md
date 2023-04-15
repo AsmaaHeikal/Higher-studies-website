@@ -52,7 +52,8 @@
     coures: "",
     departments: "",
     logged_user: "", 
-                // "0"-> for sessionstorage   
+                // "0"-> for sessionstorage
+                // "-1" -> if no one is already logged in the website!
                 // numeric -> student (8-digit number)
                 // alphanumeric -> admin 
     saved: ""
