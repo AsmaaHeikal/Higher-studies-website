@@ -128,3 +128,8 @@ if (localStorage.length == 0) {
 
     localStorage.setItem("logged_user", "-1"); // no one is logged in the website(menu will be hidden)
 }
+
+if(localStorage.getItem('logged_user') == "-1"){
+    let element = document.getElementById('menu');
+    element.classList.add("hidden");
+}
