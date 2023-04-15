@@ -1,6 +1,4 @@
-#AddC{
-    margin-left: 40px;
-}
+
 .mainDiv .pageTitle{
     color:black;
     margin-bottom: 20px;
@@ -9,7 +7,7 @@
 .mainDiv {
     background-color: white;
     width: 40%;
-    height: 40%;
+    height: 45%;
     padding: 30px;
     border-radius: 20px;
     justify-content: center;
@@ -20,7 +18,7 @@
 form{
     margin-left: 30px;
 }
-form input[type="text"]{
+form input[type="text"],input[type="number"]{
     padding: 2px;
     width:85%;
     height: 25px;
@@ -31,8 +29,8 @@ form input[type="text"]{
 
 form select {
     padding: 2px;
-    width:87%;
-    height: 30px;
+    width:85%;
+    height: 25px;
     border: 1px solid #49697d ;
     border-radius: 3px;
     font-size: 1rem;
@@ -49,4 +47,12 @@ form select {
     border: 1px solid #49697d ;
     border-radius: 3px;
     font-size: 1rem;
+}
+form button[type="submit"],
+form button[type="reset"] {
+    margin-left: 52px;
+    cursor: pointer;
+    padding: 10px;
+    text-align: center;
+    margin-bottom: 20px;
 }

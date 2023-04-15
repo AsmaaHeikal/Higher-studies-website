@@ -1,16 +1,16 @@
 
 #search-box {
-    border: 5px soild #000000;
-    border-radius: 10px;
     background-color: #fff;
-    padding-top: 35px;
-    padding-bottom: 35px;
-    margin-left: 120px;
-    margin-right: 120px;
+    padding-top: 60px;
+    padding-bottom: 60px;
+    margin-left: 10%;
+    margin-right: 10%;
+    border-radius: 20px;
+    box-shadow:var(--main-box-shadow);
 }
 
 #table-container {
-    width: 90%;
+    width: 80%;
     margin: auto;
     border: 1px solid #ccc;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
@@ -46,6 +46,7 @@ table tr td:first-child{
 }
 
 tr:hover .button-container {
+    opacity: 1;
     transform: translateX(0);
 }
 
@@ -92,7 +93,7 @@ tr:hover{
 
 
 .delete:hover , .search:hover{
-    /* opacity: 1; */
+    /* opacity: 0; */
     transform: translateX(-4px);
     /* transform:scale(1.1); */
     transition: all 0.3s ease-in-out;
@@ -117,4 +118,14 @@ a:hover i{
     justify-content: center;
 }
 
+.title{
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+h1{
+    color: #000;
+    padding-bottom: 10px;
+
+}
 
