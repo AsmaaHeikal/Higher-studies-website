@@ -64,5 +64,5 @@
  ## sessionStorage (Use only when remember me option is not checked )
  ```js
  {
- id: "20210417"
+ id: ""
  }
