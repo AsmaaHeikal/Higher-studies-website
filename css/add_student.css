@@ -10,7 +10,9 @@
     margin-left: 28%;
     overflow: hidden;
     font-weight: normal;
+    box-shadow: var(--main-box-shadow);
 }
+
 .title{
     margin-bottom: 20px;
     text-align: center;
