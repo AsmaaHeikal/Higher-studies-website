@@ -125,4 +125,6 @@ if (localStorage.length == 0) {
     // [2]->DS
     // [3]->IT
     // [4]->AI
+
+    localStorage.setItem("logged_user", "-1"); // no one is logged in the website(menu will be hidden)
 }
