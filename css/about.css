@@ -1,6 +1,16 @@
-#about h2, #about h1 {
+#about h2, #about h1, #about h3{
     color: #000;
 }
+#about h3{
+    text-align: left;
+    margin-right: 10px;
+}
+
+#about  h1{
+    margin: auto;
+    width: fit-content;
+}
+
 
 #about{
     background-color: #fff;
@@ -23,43 +33,51 @@
 }
 
 #member-container .member-box{
-    padding: 30px;
+    padding: 20px 0 20px 0px;
     display: inline-grid;
     border-radius: 10px;
     text-align: center;
     justify-content: center;
     box-shadow: 0 0 10px rgba(0, 0,0, 0.5);;
-    align-items: center;
+    transition: all 0.3s cubic-bezier(.25,.8,.25,1);
 }
 
 #member-container .member-box:hover{
-    transform: scale(1.02);
-    transition: all 0.3s ease-in ;
+    /* transform: scale(1.02);
+    transition: all 0.3s ease-in ; */
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+    animation-name: example;
+    animation-duration: 0.25s;
+    border-left: 8px solid var(--main-color);
+    box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
 }
 
-.icons{
+.contact{
     margin: 20px 0 0 0 ;
+    display: flex;
+    flex-direction: row;
 }
-.icons .gmail{
+.contact .gmail{
     content: url(../images/gmail.svg);
 }
 
-.icons .github{
+.contact .github{
     content: url(../images/github.svg);
 }
 
-.icons .linkedin{
+.contact .linkedin{
     content: url(../images/linkedin.svg);
 
 }
 
-.icons img {
+.contact img {
     width: 30px;
     height: 30px;
     margin:0 0 0 5px;
 }
 
-.icons img:hover {
+.contact img:hover {
     transform: scale(1.2);
     transition: all 0.2s ease-in ;
 }
