@@ -2,13 +2,13 @@ if (localStorage.length == 0) {
 
     // Adding students data
     let course_and_marks = {
-        "IS213": "50,100"
+        "IS421": "50,100"
     };
     let course_and_marks2 = {
-        "CS213": "20,80"
+        "CS321": "20,80"
     };
     let course_and_marks3 = {
-        "DS123": "40,90"
+        "DS221": "40,90"
     };
     let student = {
         name: "Seif Ahmed Ali",
@@ -110,6 +110,7 @@ if (localStorage.length == 0) {
         hall_number: "F-6"
     };
 
+    
     localStorage.setItem('courses', JSON.stringify([course1,course2,course3,course4,course5]));
 
     // Adding Departments data 
