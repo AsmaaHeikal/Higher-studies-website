@@ -1,6 +1,12 @@
 function validate_form(){
     let name = document.getElementById("name");
     var letters = /^[A-Za-z]+$/;
+    if(name.value == ""){
+        alert("Please enter your name.");
+        document.getElementById("name").focus();
+        window.scroll({top:1});
+        return false;
+    }
     if(!name.value.match(letters) ){
         alert("Invalid Name:\nName must contain only letters"); 
         document.getElementById("name").focus();
@@ -8,7 +14,13 @@ function validate_form(){
         return false;
     }
 
-    var id=document.getElementById("id").value;  
+    var id=document.getElementById("id").value; 
+    if(id == ""){
+        alert("Please enter your ID.");
+        document.getElementById("id").focus();
+        window.scroll({top:1});
+        return false;
+    }
     if (isNaN(id)){  
         alert("Invalid ID:\nID must contain only numbers"); 
         document.getElementById("id").focus();
@@ -18,6 +30,14 @@ function validate_form(){
     if(id.length != 8){
         alert("Invalid ID:\nID must be 8 digits long");
         document.getElementById("id").focus();
+        window.scroll({top:1});
+        return false;
+    }
+
+    let dateOfBirth = document.getElementById("DateOfBirth").value;
+    if(dateOfBirth == ""){
+        alert("Please enter your date of birth.");
+        document.getElementById("DateOfBirth").focus();
         window.scroll({top:1});
         return false;
     }
@@ -109,10 +129,22 @@ function storeData() {
     }
 }  
 
+const reset = document.getElementById('reset');
+
+reset.addEventListener('click', function() {
+    document.getElementById("name").focus();
+    window.scroll({top:1});
+});
+
+
 const form = document.getElementById('form');
 
-form.addEventListener('submit', function() {
-  location.reload();
+form.addEventListener('submit', function(event) {
+    event.preventDefault(); // prevent default form submission behavior
+    if(storeData()){
+        alert("Your data has been submitted successfully.");
+        form.reset();
+    }
 });
 
 

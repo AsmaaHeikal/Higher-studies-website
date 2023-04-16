@@ -25,20 +25,20 @@
             <div class="title">
                 <h1>Add Student</h1>
             </div>
-            <form id ="form" action="" method="post" onsubmit=" return storeData();">
+            <form id ="form" action="" method="post">
                 <div>
                     <label for="name">Name:</label>
-                    <input type="text" id="name" name="student name" placeholder="Student Name" required autofocus>
+                    <input type="text" id="name" name="student name" placeholder="Student Name"  autofocus>
                 </div>
                 <br>
                 <div>
                     <label for="id">ID:</label>
-                    <input type="text" id="id" name="student id" placeholder="Student ID" required>
+                    <input type="text" id="id" name="student id" placeholder="Student ID" >
                 </div>
                 <br>
                 <div>
                     <label for="DateOfBirth">Date Of Birth:</label>
-                    <input type="date" name="dateOfBirth" id="DateOfBirth" min='1899-01-01' max='2005-12-31' required>
+                    <input type="date" name="dateOfBirth" id="DateOfBirth" min='1899-01-01' max='2005-12-31' >
                 </div>
                 <br>
                 <div>
@@ -122,8 +122,8 @@
                 <br>
                 <br>
                 <div>
-                    <button type="reset" class="btn"> <span> Reset</span> </button>
                     <button type="submit" class="btn" id="submit"> <span>Submit</span></button>
+                    <button type="reset" class="btn" id="reset"> <span> Reset</span> </button>
                 </div>
                 </div>
             </form>
