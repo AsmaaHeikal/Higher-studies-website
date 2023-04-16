@@ -1,33 +1,21 @@
-body {
-    margin: 0;
-    padding: 0;
-    font-family: 'Poppins';
-    background: #3e5c6e;
-    height: 100vh;
-    overflow: hidden;
-}
-
-.center {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 450px;
-    height: 700px;
-    background: white;
-    border-radius: 10px;
-}
-
-.center h1 {
+.mainDiv .pageTitle{
+    color:black;
+    margin-bottom: 20px;
     text-align: center;
-    padding: 0 0 70px 0;
-    border-bottom: 1px sloid silver;
-    font-size: 40px;
 }
-
-.center form {
-    padding: 0 35px;
-    box-sizing: border-box;
+.mainDiv {
+    background-color: white;
+    width: 25%;
+    height: 50%;
+    padding: 30px;
+    border-radius: 20px;
+    justify-content: center;
+    margin-top: 1px;
+    margin-left: 38%;
+    overflow: hidden;
+    box-shadow: 0 0 7px rgba(0, 0, 0.5);
+    padding-bottom: 60px;
+    padding-top: 60px;
 }
 
 form .txt_field {
@@ -68,13 +56,14 @@ form .txt_field {
     transition: .4s;
 }
 
-.txt_field input:focus ~ label,
-.txt_field input:valid ~ label {
+.txt_field input:focus~label,
+.txt_field input:valid~label {
     top: -5px;
     color: #3e5c6e;
 }
-.txt_field input:focus ~ label::before,
-.txt_field input:valid ~ label::before {
+
+.txt_field input:focus~label::before,
+.txt_field input:valid~label::before {
     width: 100%;
 }
 
@@ -83,11 +72,14 @@ form .txt_field {
     color: #3e5c6e;
     cursor: pointer;
 }
+
 .pass:hover {
     text-decoration: underline;
 }
 
-button[type="submit"], button[type="reset"] {
+/* buttton styling */
+button[type="submit"],
+button[type="reset"] {
     width: 100%;
     height: 60px;
     border: 1px solid;
@@ -96,4 +88,23 @@ button[type="submit"], button[type="reset"] {
     font-weight: 700;
     cursor: pointer;
     outline: none;
-  }
+}
+
+/* remember me checkbox styling */
+.remember-me {
+    display: flex;
+    align-items: center;
+    font-size: 14px;
+    margin-top: 10px;
+}
+
+.remember-me input[type="checkbox"] {
+    width: 20px;
+    height: 20px;
+    margin-right: 10px;
+}
+
+.remember-me label {
+    margin: 0;
+    padding: 0;
+}
