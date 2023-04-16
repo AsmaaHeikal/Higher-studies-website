@@ -29,7 +29,10 @@
     margin-bottom: 5px;
   }
   
-  form input[type="text"]{
+  form input[type="text"],
+  form input[type="email"],
+  form input[type="password"],
+  form input[type="number"]{
     padding: 2px;
     width:85%;
     height: 25px;

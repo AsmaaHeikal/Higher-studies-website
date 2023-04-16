@@ -29,16 +29,36 @@
                 <div>
                     <label for="name">Name:</label>
                     <input type="text" id="name" name="student name" placeholder="Student Name"  autofocus>
+                    <div id="name-error" style="display:none;color:red;">Name can't be empty and must contain only letters.</div>
+                </div>
+                <br>
+                <div>
+                    <label for="email">Email:</label>
+                    <input type="text" id="email" name="email" placeholder="Email">
+                    <span id="emailError" style="display: none; color: red;">Please enter a valid email.</span>
                 </div>
                 <br>
                 <div>
                     <label for="id">ID:</label>
                     <input type="text" id="id" name="student id" placeholder="Student ID" >
+                    <div id="id-error" style="display:none;color: red;">ID can't be empty. It's a numeric value of length 8.</div>
+                </div>
+                <br>
+                <div>
+                    <label for="gpa">GPA:</label>
+                    <input type="number" step="0.01" min="0" max="4" id="gpa" name="gpa" required placeholder="GPA">
+                </div>
+                <br>
+                <div>
+                    <label for="password">Password:</label>
+                    <input type="password" id="password" name="password" placeholder="Give The Student Password">
+                    <div id="passwordError" style="display:none;color: red;">Password can't be empty and must be more than 8 chars.</div>
                 </div>
                 <br>
                 <div>
                     <label for="DateOfBirth">Date Of Birth:</label>
                     <input type="date" name="dateOfBirth" id="DateOfBirth" min='1899-01-01' max='2005-12-31' >
+                    <div id="dateError" style="display:none;color: red;">Please enter the date of birth.</div>
                 </div>
                 <br>
                 <div>
@@ -49,16 +69,11 @@
                             <option value="1">Cairo University</option>
                             <option value="2">Ain Shams University</option>
                             <option value="3">Helwan University</option>
+                            <option value="4">The American University in Cairo</option>
+                            <option value="5">German University in Cairo</option>
                         </optgroup>
                     </select>
-                </div>
-                <br>
-                <div>
-                    <label>Gender:</label>
-                    <input id="m" type="radio" name="gender" value="M" checked="true">
-                    <label for="m">Male</label>
-                    <input id="f" type="radio" name="gender" value="F">
-                    <label for="f">Female</label>
+                    <div id="uniError" style="display:none;color: red;">Please enter the university.</div>
                 </div>
                 <br>
                 <div>
@@ -73,6 +88,15 @@
                             <option value="AI"> Artificial Intelligence </option>
                         </optgroup>
                     </select>
+                    <div id="depError" style="display:none;color: red;">Please enter the department.</div>
+                </div>
+                <br>
+                <div>
+                    <label>Gender:</label>
+                    <input id="m" type="radio" name="gender" value="M" checked="true">
+                    <label for="m">Male</label>
+                    <input id="f" type="radio" name="gender" value="F">
+                    <label for="f">Female</label>
                 </div>
                 <br>
                 <div>
@@ -84,7 +108,7 @@
                 </div>
                 <br>
                 <div>
-                    <label for="c1">Course 1</label>
+                    <label for="c1">Course 1:</label>
                     <select name="course1" id="c1" required>
                         <optgroup label="course1">
                             <option value="" disabled selected >Select the first course</option>
@@ -94,9 +118,10 @@
                             <option value="cs104"> Operating Systems </option>
                         </optgroup>
                     </select>
+                    <div id="c1Error" style="display:none;color: red;">Please enter course1.</div>
                 </div>
                 <div>
-                    <label for="c2">Course 2</label>
+                    <label for="c2">Course 2:</label>
                     <select name="course2" id="c2" required>
                         <optgroup label="course2">
                             <option value="" disabled selected >Select the second course</option>
@@ -106,9 +131,10 @@
                             <option value="cs104"> Operating Systems </option>
                         </optgroup>
                     </select>
+                    <div id="c2Error" style="display:none;color: red;">Please enter course2.</div>
                 </div>
                 <div>
-                    <label for="c3">Course 3</label>
+                    <label for="c3">Course 3:</label>
                     <select name="course3" id="c3" required>
                         <optgroup label="course3">
                             <option value="" disabled selected >Select the third course</option>
@@ -118,6 +144,7 @@
                             <option value="cs104"> Operating Systems </option>
                         </optgroup>
                     </select>
+                    <div id="c3Error" style="display:none;color: red;">Please enter course3.</div>
                 </div>
                 <br>
                 <br>

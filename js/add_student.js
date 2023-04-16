@@ -1,83 +1,127 @@
 function validate_form(){
-    let name = document.getElementById("name");
-    var letters = /^[A-Za-z]+$/;
-    if(name.value == ""){
-        alert("Please enter your name.");
-        document.getElementById("name").focus();
-        window.scroll({top:1});
+    const nameInput = document.getElementById("name");
+    const nameError = document.getElementById("name-error");
+
+    if (nameInput.value.trim() === "" || !/^[a-zA-Z]+$/.test(nameInput.value.trim())) {
+        nameError.style.display = "block";
+        nameInput.focus();
+        window.scroll(0,0);
         return false;
-    }
-    if(!name.value.match(letters) ){
-        alert("Invalid Name:\nName must contain only letters"); 
-        document.getElementById("name").focus();
-        window.scroll({top:1});
-        return false;
+    } else {
+        nameError.style.display = "none";
     }
 
-    var id=document.getElementById("id").value; 
-    if(id == ""){
-        alert("Please enter your ID.");
-        document.getElementById("id").focus();
-        window.scroll({top:1});
+
+    const emailInput = document.getElementById("email");
+    const emailError = document.getElementById("emailError");
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    if (!emailInput.value.trim() || !emailRegex.test(emailInput.value.trim())) {
+        emailError.style.display = "inline";
+        emailInput.focus();
+        window.scroll(0,0);
         return false;
     }
-    if (isNaN(id)){  
-        alert("Invalid ID:\nID must contain only numbers"); 
-        document.getElementById("id").focus();
-        window.scroll({top:1});
-        return false;  
-    } 
-    if(id.length != 8){
-        alert("Invalid ID:\nID must be 8 digits long");
-        document.getElementById("id").focus();
-        window.scroll({top:1});
-        return false;
+    else{
+        emailError.style.display = "none";
     }
+
+
+    const idInput = document.getElementById("id");
+    const idError = document.getElementById("id-error");
+    if (!idInput.value || idInput.value.length !== 8 || isNaN(idInput.value)) {
+        idError.style.display = "block";
+        idInput.focus();
+        window.scroll(0,0);
+        return false;
+    } else {
+        idError.style.display = "none";
+    }
+
+
+    const passwordField = document.getElementById("password");
+    const passwordError = document.getElementById("passwordError");
+    if (passwordField.value === "" || passwordField.value.length < 8) {
+        passwordError.style.display = "block";
+        passwordField.focus();
+        window.scroll(0,0);
+        return false;
+    } else {
+        passwordError.style.display = "none";
+    }  
+
 
     let dateOfBirth = document.getElementById("DateOfBirth").value;
+    const dateErorr = document.getElementById("dateError");
     if(dateOfBirth == ""){
-        alert("Please enter your date of birth.");
+        dateErorr.style.display="block";
         document.getElementById("DateOfBirth").focus();
-        window.scroll({top:1});
+        window.scroll({top:500});
         return false;
     }
+    else{
+        dateErorr.style.display="none";
+    }
+
 
     var university = document.getElementById("university").value;
+    const uniErorr=document.getElementById("uniError");
     if (university == "") {
-        alert("Please select a university.");
-        document.getElementById("university").focus();
-        window.scroll({top:1});
+        uniErorr.style.display="block";
+        window.scroll(0,300);
         return false;
     }
+    else{
+        uniErorr.style.display="none";
+    }
+
 
     var department = document.getElementById("department").value;
+    const depErorr=document.getElementById("depError");
     if (department == "") {
-        alert("Please select a department.");
-        document.getElementById("department").focus();
-        window.scroll(50,50);
+        depErorr.style.display="block";
+        window.scroll(0,300);
         return false;
     }
+    else{
+        depErorr.style.display="none";
+    }
+
 
     var course1 = document.getElementById("c1").value;
+    const cr1=document.getElementById("c1Error");
     if (course1 == "") {
-        alert("Please select a the first course.");
-        document.getElementById("c1").focus();
+        cr1.style.display="block";
+        window.scroll(0,1000);
         return false;
     }
+    else{
+        cr1.style.display="none";
+    }
+
 
     var course2 = document.getElementById("c2").value;
+    const cr2=document.getElementById("c2Error");
     if (course2 == "") {
-        alert("Please select the second course.");
-        document.getElementById("c2").focus();
+        cr2.style.display="block";
+        window.scroll(0,1000);
         return false;
+    }
+    else{
+        cr2.style.display="none";
     }
 
+
     var course3 = document.getElementById("c3").value;
+    const cr3 =document.getElementById("c3Error");
     if (course3 == "") {
-        alert("Please select the third course.");
-        document.getElementById("c3").focus();
+        cr3.style.display="block";
+        window.scroll(0,1000);
         return false;
     }
+    else{
+        cr3.style.display="none";
+    }
+
 
     var c1 = document.getElementById("c1").value;
     var c2 = document.getElementById("c2").value;
