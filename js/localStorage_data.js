@@ -134,4 +134,6 @@ if (localStorage.length == 0) {
 if(localStorage.getItem('logged_user') == "-1"){
     let element = document.getElementById('menu');
     element.classList.add("hidden");
+}else{
+    element.classList.remove("hidden");
 }
