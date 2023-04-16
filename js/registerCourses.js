@@ -65,7 +65,7 @@ function addRow(courseId, courseName, courseHours, courseMarks, finalMarks, tota
         <td>${courseMarks}</td>
         <td>${finalMarks}</td>
         <td>${totalMarks}</td>
-        <td><button class="expand-button" >Expand</button></td>
+        <td><button class="expand-button" ><i class="fa fa-plus "></i></button></td>
         <div class = "expanded-div" , style="display:none;">
             <p>Department :  ${department}</p>
             <p> Lecture Day : ${lecture_day}</p>
@@ -91,3 +91,4 @@ buttons.forEach(function(button) {
     }
   });
 });
+
