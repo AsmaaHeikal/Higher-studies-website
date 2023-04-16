@@ -11,8 +11,8 @@ let header = ` <nav>
         </ul>
     </li>
 
-    <li>
-        <a href="" class = "left-right-border-effect">Menu</a>
+    <li id = "menu">
+        <a href="" class = "left-right-border-effect" >Menu</a>
         <ul class = "dropdown-content">
             <li class = "student-only"><a href="register_in_courses.html">Register in a Course</a></li>
             <li class = "student-only"><a href="registered_courses.html">Registered Courses</a></li>

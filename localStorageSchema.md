@@ -12,7 +12,7 @@
     gender:,
     department:,
     status:,
-    courses: "id ": "12,13",//(final,coursework)
+    courses: "["id ": "12,13"]",//(final,coursework)
     pass: "",
     gpa:""
 }
@@ -28,7 +28,7 @@
 ```
 <!-- </pre> -->
 
-## Course (key-calue pairs)
+## Course (key-value pairs)
 ```js
 {
     name:" ",

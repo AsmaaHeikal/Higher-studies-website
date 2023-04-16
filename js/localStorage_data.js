@@ -13,8 +13,9 @@ if (localStorage.length == 0) {
         date_of_birth: "03/03/2003",
         university: "CU",
         gender: "Male",
+        email :"Seif@gmail.com",
         department: "Computer Science",
-        Status: "active",
+        Status: "Active",
         courses: JSON.stringify([course_and_marks, course_and_marks2]),
         pass: "123456789_aa",
         gpa: "3.7",
@@ -34,8 +35,9 @@ if (localStorage.length == 0) {
         date_of_birth: "12/10/2002",
         university: "AUC",
         gender: "Male",
+        email :"AhmedGhaly@gmail.com",
         department: "Information Systems",
-        Status: "active",
+        Status: "Active",
         courses: JSON.stringify([course_and_marks, course_and_marks2]),
         pass: "0000_BB",
         gpa: "2.8",
@@ -127,4 +129,9 @@ if (localStorage.length == 0) {
     // [4]->AI
 
     localStorage.setItem("logged_user", "-1"); // no one is logged in the website(menu will be hidden)
+}
+
+if(localStorage.getItem('logged_user') == "-1"){
+    let element = document.getElementById('menu');
+    element.classList.add("hidden");
 }

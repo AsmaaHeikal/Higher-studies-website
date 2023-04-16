@@ -1,42 +1,54 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <meta charset="UTF-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" href="../css/Login_Student.css">
-        <link rel="stylesheet" href="../css/main.css">
-        <script defer src="../js/header.js"></script>
-        <script defer src="../js/footer.js"></script>
-        <script defer src="../js/localStorage_data.js"></script>
-        <title> Login Student </title>
-    </head>
 
-    <body>
-         <!-- header -->
-        <header id="website-header"></header>
-        <!-- ID -->
-        <div class = "center">
-            <h1> Login </h1>
-            <form method = "post" > 
-                <div class = "txt_field">
-                    <input type = "text" required>
-                    <span></span>
-                    <label> ID </label>
-                </div>
-        <!-- Password -->
-        <div class = "txt_field">
-            <input type = "password" required>
-            <span></span>
-            <label> Password </label>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/Login_Student.css">
+    <link rel="stylesheet" href="../css/main.css">
+    <script defer src="../js/header.js"></script>
+    <script defer src="../js/footer.js"></script>
+    <title> Login Student </title>
+</head>
+
+<body>
+    <!-- header -->
+    <header id="website-header"></header>
+    <div id="main-content">
+        <div class="mainDiv">
+            <div class="pageTitle">
+                <h1> <b> Login </b></h1>
+            </div>
+
+            <div>
+                <form method="post">
+                    <div class="txt_field">
+                        <input type="text" required>
+                        <span></span>
+                        <label> ID </label>
+                    </div>
+                    <!-- Password -->
+                    <div class="txt_field">
+                        <input type="password" required>
+                        <label> Password </label>
+                    </div>
+                    <!-- Remember me checkbox -->
+                    <div class="remember-me">
+                        <input type="checkbox" id="remember-me">
+                        <label for="remember-me" style="color: black;"> Remember me</label>
+                    </div>
+                    <!-- buttons -->
+                    <br> <br>
+                    <button type="submit" class="btn">Submit</button>
+                    <br> <br> <br> <br>
+                    <button type="reset" class="btn">Reset</button>
+                </form>
+            </div>
         </div>
-        <br> <br>
-        <button type="submit" class="btn">Submit</button>
-        <br> <br> <br> <br>
-        <button type="reset" class="btn">Reset</button>
-        </form>
-        </div>
-        <!-- footer Section -->
-        <footer id = "website-footer"></footer>
-    </body>
+    </div>
+    <!-- footer Section -->
+    <footer id="website-footer"></footer>
+</body>
+
 </html>
