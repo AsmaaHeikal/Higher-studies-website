@@ -23,19 +23,34 @@ students.forEach(function(student) {
       <button class="delete" data-studentid="${student.id}"><i class="fas fa-trash"></i></button>
     </td>
   `;
-
   // Add the new row to the table body
   tableBody.appendChild(newRow);
+});
 
-  const editLink = newRow.querySelector('a');
-  editLink.addEventListener('click', function(event) {
-    const studentData = JSON.parse(event.currentTarget.dataset.student);
-    localStorage.setItem('studentData', JSON.stringify(studentData));
-  });
+document.addEventListener('click', function(event) {
+    // Check if the clicked element is the edit button
+    if (event.target.classList.contains('fa-edit')) {
+      // Get the student data from the data-student attribute
+      const editStudent = JSON.parse(event.target.parentElement.dataset.student);
+      // Save the student data to localStorage
+      localStorage.setItem('editStudent', JSON.stringify(editStudent));
+    }
+});
 
-  const deleteButton = newRow.querySelector('.delete');
-  deleteButton.addEventListener('click', function(event) {
-    localStorage.removeItem('students'.indexOf(student));
-    newRow.remove();
-  });
+document.addEventListener('click', function(event) {
+      // Check if the clicked element is the delete button
+  if (event.target.classList.contains('fa-trash')) {
+    // Get the student id from the data-studentid attribute
+    const studentId = event.target.parentElement.dataset.studentid;
+    // Get the students array from localStorage
+    let students = JSON.parse(localStorage.getItem('students'));
+    // Filter out the student with the matching id
+    students = students.filter(function(student) {
+      return student.id !== studentId;
+    });
+    // Save the updated students array to localStorage
+    localStorage.setItem('students', JSON.stringify(students));
+    // Remove the row from the table
+    event.target.parentElement.parentElement.parentElement.remove();
+  }
 });
