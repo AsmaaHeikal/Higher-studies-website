@@ -17,10 +17,10 @@ table {
 }
 
 h1{
-	margin: 0px;
-  	padding: 0px;
+  	padding: 40px 0 30px 0; 
 	color: black;
 	text-align: center;
+	
 }
 
 th,
@@ -44,3 +44,5 @@ tbody tr:hover{
 tr{
 	border-bottom: 1px solid #ddd;
 }
+
+
