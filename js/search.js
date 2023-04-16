@@ -35,11 +35,7 @@ students.forEach(function(student) {
 
   const deleteButton = newRow.querySelector('.delete');
   deleteButton.addEventListener('click', function(event) {
-    const studentId = event.currentTarget.dataset.studentid;
-    // Delete student data from local storage
-    // Your code to delete student data from local storage goes here
-    // ...
-    // Remove the row from the table
-    // newRow.remove();
+    localStorage.removeItem('students'.indexOf(student));
+    newRow.remove();
   });
 });
