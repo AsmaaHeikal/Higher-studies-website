@@ -46,3 +46,16 @@ tr{
 }
 
 
+.expand-button {
+	margin: 0 5px;
+    padding: 5px 10px;
+    border: none;
+    border-radius: 4px;
+    background-color: var(--gradient-background-color);
+    cursor: pointer;
+  }
+
+  .expanded-div p {
+	color: black;
+	padding-left: 40px;
+  }

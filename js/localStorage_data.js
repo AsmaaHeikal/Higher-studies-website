@@ -2,10 +2,13 @@ if (localStorage.length == 0) {
 
     // Adding students data
     let course_and_marks = {
-        "IS213": "50,100"
+        "IS421": "50,100"
     };
     let course_and_marks2 = {
-        "CS213": "20,80"
+        "CS321": "20,80"
+    };
+    let course_and_marks3 = {
+        "DS221": "40,90"
     };
     let student = {
         name: "Seif Ahmed Ali",
@@ -16,7 +19,7 @@ if (localStorage.length == 0) {
         email :"Seif@gmail.com",
         department: "Computer Science",
         Status: "Active",
-        courses: JSON.stringify([course_and_marks, course_and_marks2]),
+        courses: JSON.stringify([course_and_marks, course_and_marks2,course_and_marks3]),
         pass: "123456789_aa",
         gpa: "3.7",
 
@@ -107,6 +110,7 @@ if (localStorage.length == 0) {
         hall_number: "F-6"
     };
 
+    
     localStorage.setItem('courses', JSON.stringify([course1,course2,course3,course4,course5]));
 
     // Adding Departments data 
@@ -131,8 +135,8 @@ if (localStorage.length == 0) {
     localStorage.setItem("logged_user", "-1"); // no one is logged in the website(menu will be hidden)
 }
 
+let element = document.getElementById('menu');
 if(localStorage.getItem('logged_user') == "-1"){
-    let element = document.getElementById('menu');
     element.classList.add("hidden");
 }else{
     element.classList.remove("hidden");
