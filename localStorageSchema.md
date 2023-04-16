@@ -10,6 +10,7 @@
     date_of_birth:,
     university:,
     gender:,
+    email :"",
     department:,
     status:,
     courses: "["id ": "12,13"]",//(final,coursework)
