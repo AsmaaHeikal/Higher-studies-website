@@ -17,13 +17,29 @@ students.forEach(function(student) {
     <td>${student.gpa}</td>
     <td>${student.email}</td>
     <td class="button-container">
-      <a href="edit_student.html">
+      <a href="edit_student.html" data-student='${JSON.stringify(student)}'>
         <i class="fas fa-edit"></i>
       </a>
-      <button class="delete"><i class="fas fa-trash"></i></button>
+      <button class="delete" data-studentid="${student.id}"><i class="fas fa-trash"></i></button>
     </td>
   `;
 
   // Add the new row to the table body
   tableBody.appendChild(newRow);
+
+  const editLink = newRow.querySelector('a');
+  editLink.addEventListener('click', function(event) {
+    const studentData = JSON.parse(event.currentTarget.dataset.student);
+    localStorage.setItem('studentData', JSON.stringify(studentData));
+  });
+
+  const deleteButton = newRow.querySelector('.delete');
+  deleteButton.addEventListener('click', function(event) {
+    const studentId = event.currentTarget.dataset.studentid;
+    // Delete student data from local storage
+    // Your code to delete student data from local storage goes here
+    // ...
+    // Remove the row from the table
+    // newRow.remove();
+  });
 });
