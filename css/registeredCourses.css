@@ -46,3 +46,11 @@ tr{
 }
 
 
+.expand-button:hover {
+	background-color: #3e8e41;
+  }
+
+  .expanded-div p {
+	color: black;
+	padding-left: 40px;
+  }
