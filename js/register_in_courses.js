@@ -72,7 +72,7 @@ departmentDropdown.dispatchEvent(event);
 
 // Retrieve the user's ID from either session or local storage
 let userId;
-if (logged_user != -1) {
+if (logged_user == 0) {
   userId = sessionStorage.getItem('userId');
 } else {
   userId = localStorage.getItem('userId');
