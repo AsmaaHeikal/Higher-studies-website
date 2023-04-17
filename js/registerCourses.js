@@ -17,7 +17,7 @@ function getStudentCourses(){
     let data = localStorage.getItem('students');
     let students = JSON.parse(data);
     for(i = 0; i < students.length; i++){
-        if(students[i]['name'] == getCurrentName){ // TBD untill they add login session
+        if(students[i]['name'] == getCurrentName()){ // TBD untill they add login session
             return (JSON.parse(students[i].courses));
         }
     }
