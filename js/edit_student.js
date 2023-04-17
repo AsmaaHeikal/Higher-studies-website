@@ -1,7 +1,7 @@
 let students =JSON.parse(localStorage.getItem('students')) || []
 
-let selectedS = localStorage.getItem('editStudent');
-
+let selectedS = JSON.parse(localStorage.getItem('editStudent'));
+// alert(localStorage.getItem('editStudent'));
 function retrieveData(){
 document.getElementById('name').value = selectedS.name;
 document.getElementById('id').value = selectedS.id;
@@ -16,7 +16,7 @@ document.querySelector('input[name="gender"]:checked').value = selectedS.gender;
 function modify(){
     var indx=0;
     for(var i=0;i<length;i++){
-        if(students[i].id==selectedS.id){
+        if(students[i].id == selectedS.id){
             indx = i;
             break;
         }
@@ -30,11 +30,11 @@ function modify(){
     students[indx].status= document.querySelector('input[name="status"]:checked').value;
     students[indx].gender= document.querySelector('input[name="gender"]:checked').value;
     localStorage.setItem('students',JSON.stringify(students));
-
 }
 
 let myButton = document.getElementById('edit');
 myButton.addEventListener("click", function(e){
+    alert("123123213");
     modify();
 });
 
