@@ -108,3 +108,17 @@ button[type="reset"] {
     margin: 0;
     padding: 0;
 }
+
+
+ion-icon {
+    color: black;
+    float: right;
+    transform: scale(1.8);
+    margin: -30px 0 0 0;
+    cursor: pointer;
+    opacity: 0.4;
+}
+input[type='password']::-ms-reveal,
+input[type='password']::-ms-clear {
+    display: none;
+}

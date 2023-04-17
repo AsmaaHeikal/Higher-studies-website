@@ -42,7 +42,7 @@ if (localStorage.length == 0) {
         department: "IS",
         status: "active",
         courses: JSON.stringify([course_and_marks, course_and_marks2]),
-        pass: "000880_BB",
+        pass: "000880aBB",
         gpa: "2.8",
 
     };
