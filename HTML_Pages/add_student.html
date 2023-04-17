@@ -66,11 +66,11 @@
                     <select name="university" id="university" required>
                         <optgroup label="University">
                             <option value="" selected disabled>Select your university</option>
-                            <option value="1">Cairo University</option>
-                            <option value="2">Ain Shams University</option>
-                            <option value="3">Helwan University</option>
-                            <option value="4">The American University in Cairo</option>
-                            <option value="5">German University in Cairo</option>
+                            <option value="CU">Cairo University</option>
+                            <option value="ASU">Ain Shams University</option>
+                            <option value="HU">Helwan University</option>
+                            <option value="AUC">The American University in Cairo</option>
+                            <option value="GUC">German University in Cairo</option>
                         </optgroup>
                     </select>
                     <div id="uniError" style="display:none;color: red;">Please enter the university.</div>
@@ -83,7 +83,7 @@
                             <option value="" disabled selected  >Select your department</option>
                             <option value="cs"> Computer Science </option>
                             <option value="IT"> Information Technology </option>
-                            <option value="OR"> Operation Research </option>
+                            <option value="OR"> Decision Support </option>
                             <option value="IS"> Information System </option>
                             <option value="AI"> Artificial Intelligence </option>
                         </optgroup>
@@ -93,9 +93,9 @@
                 <br>
                 <div>
                     <label>Gender:</label>
-                    <input id="m" type="radio" name="gender" value="M" checked="true">
+                    <input id="m" type="radio" name="gender" value="Male" checked="true">
                     <label for="m">Male</label>
-                    <input id="f" type="radio" name="gender" value="F">
+                    <input id="f" type="radio" name="gender" value="Female">
                     <label for="f">Female</label>
                 </div>
                 <br>
@@ -116,6 +116,11 @@
                             <option value="cs102"> Algorithms </option>
                             <option value="cs103"> Software Engineering </option>
                             <option value="cs104"> Operating Systems </option>
+                            <option value="DS221"> Linear Programming </option>
+                            <option value="CS321"> Data Structures and Algorithms </option>
+                            <option value="IS421"> Database Systems </option>
+                            <option value="IT521"> Computer Networks </option>
+                            <option value="AI621"> Machine Learning </option>
                         </optgroup>
                     </select>
                     <div id="c1Error" style="display:none;color: red;">Please enter course1.</div>
@@ -129,6 +134,11 @@
                             <option value="cs102"> Algorithms </option>
                             <option value="cs103"> Software Engineering </option>
                             <option value="cs104"> Operating Systems </option>
+                            <option value="DS221"> Linear Programming </option>
+                            <option value="CS321"> Data Structures and Algorithms </option>
+                            <option value="IS421"> Database Systems </option>
+                            <option value="IT521"> Computer Networks </option>
+                            <option value="AI621"> Machine Learning </option>
                         </optgroup>
                     </select>
                     <div id="c2Error" style="display:none;color: red;">Please enter course2.</div>
@@ -142,7 +152,11 @@
                             <option value="cs102"> Algorithms </option>
                             <option value="cs103"> Software Engineering </option>
                             <option value="cs104"> Operating Systems </option>
-                        </optgroup>
+                            <option value="DS221"> Linear Programming </option>
+                            <option value="CS321"> Data Structures and Algorithms </option>
+                            <option value="IS421"> Database Systems </option>
+                            <option value="IT521"> Computer Networks </option>
+                            <option value="AI621"> Machine Learning </option>
                     </select>
                     <div id="c3Error" style="display:none;color: red;">Please enter course3.</div>
                 </div>

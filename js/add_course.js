@@ -56,6 +56,42 @@ function store() {
             hall_number: JSON.stringify(hlNumber)
         };
 
+        // -----add the new course to add student page courses-----
+
+        // create new option and make 3 of the same option to add it to the 3 select menus
+        // if i try to make one  option and add it to the three select field ,
+        // the option will be added only in the last select field.
+        var newOption1 = document.createElement("option");
+        var newOption2 = document.createElement("option");
+        var newOption3 = document.createElement("option");
+
+        // give value and text to the option
+        newOption1.value = cID;
+        newOption1.text = cName;
+
+        newOption2.value = cID;
+        newOption2.text = cName;
+
+        newOption3.value = cID;
+        newOption3.text = cName;
+
+        // get the select fields
+        let course1 = document.getElementById("c1");
+        let course2 = document.getElementById("c2");
+        let course3 = document.getElementById("c3");
+
+        // get the option groups in the select fields
+        var optionGroup1 = course1.querySelector('optgroup[label="course1"]');
+        var optionGroup2 = course2.querySelector('optgroup[label="course2"]');
+        var optionGroup3 = course3.querySelector('optgroup[label="course3"]');
+
+        // add the new option to the existed option group
+        optionGroup1.appendChild(newOption1);
+        optionGroup2.appendChild(newOption2);
+        optionGroup3.appendChild(newOption3);
+        // ------------------------------------------
+        
+
         storedCourses.push(newCourse);
         localStorage.setItem("courses", JSON.stringify(storedCourses));
         

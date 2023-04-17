@@ -141,31 +141,62 @@ function storeData() {
         let id = document.getElementById("id").value;
         let dateOfBirth = document.getElementById("DateOfBirth").value;
         let university = document.getElementById("university").value;
+        let email=document.getElementById("email").value;
         let gender = document.querySelector('input[name="gender"]:checked').value;
         let department = document.getElementById("department").value;
         let status = document.querySelector('input[name="status"]:checked').value;
         let course1 = document.getElementById("c1").value;
         let course2 = document.getElementById("c2").value;
         let course3 = document.getElementById("c3").value;
-    
-        let data = JSON.parse(localStorage.getItem("data")) || [];
-    
+        let pass=document.getElementById("password").value;
+        let gpa=document.getElementById("gpa").value;
+
+        
+        let data = JSON.parse(localStorage.getItem("students"));
+         
+        // check if id exists
+        for(j = 0; j < data.length; j++){
+            if(data[j]['id'] == id){
+                alert("This ID already exists. Enter another one.")
+                document.getElementById("id").focus();
+                window.scroll(0,0);
+                return false;
+            }
+        }
+        // check if email exists
+        for(j = 0; j < data.length; j++){
+            if(data[j]['email'] == email){
+                alert("This email already exists. Enter another one.")
+                document.getElementById("email").focus();
+                window.scroll(0,0);
+                return false;
+            }
+        }
+
+        let course_and_marks = {};
+        course_and_marks[course1]="0,0";
+        let course_and_marks2 = {};
+        course_and_marks2[course2]="0,0";
+        let course_and_marks3 = {};
+        course_and_marks3[course3]="0,0";
+        
         let studentData = {
-        name,
-        id,
-        dateOfBirth,
-        university,
-        gender,
-        department,
-        status,
-        course1,
-        course2,
-        course3,
+            name,
+            id,
+            dateOfBirth,
+            university,
+            gender,
+            email,
+            department,
+            status,
+            courses: JSON.stringify([course_and_marks, course_and_marks2,course_and_marks3]),
+            pass,
+            gpa,
         };
     
         data.push(studentData);
     
-        localStorage.setItem("data", JSON.stringify(data));
+        localStorage.setItem("students", JSON.stringify(data));
         return true;
     }   
     else{
@@ -187,10 +218,6 @@ form.addEventListener('submit', function(event) {
     event.preventDefault(); // prevent default form submission behavior
     if(storeData()){
         alert("Your data has been submitted successfully.");
-        form.reset();
     }
 });
-
-
-
   
