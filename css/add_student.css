@@ -20,7 +20,8 @@
   
   /* Form */
   form{
-    margin-left: 45px;
+    margin-left: 17px;
+    margin-top: 50px;
   }
   
   form label {
@@ -28,55 +29,110 @@
     font-weight: normal;
     margin-bottom: 5px;
   }
+
+form .txt_field {
+    position: relative;
+    border-bottom: 3px solid #adadad;
+    margin-bottom: 10px;
+    margin-top: 5px;
+}
+
+.txt_field input {
+  width: 100%;
+  padding: 0;
+  height: 40px;
+  font-size: 20px;
+  border: none;
+  background: none;
+  outline: none;
+}
+
+.txt_field label {
+  position: absolute;
+  top: 50%;
+  left: 5px;
+  color: #adadad;
+  transform: translateY(-50%);
+  font-size: 16px;
+  pointer-events: none;
+  transition: .4s;
+}
+
+.txt_field span::before {
+  content: '';
+  position: absolute;
+  top: 40px;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background: #3e5c6e;
+  transition: .4s;
+}
+
+.txt_field input:focus~label,
+.txt_field input:valid~label {
+  top: -5px;
+  color: #3e5c6e;
+}
+
+.txt_field input:focus~label::before,
+.txt_field input:valid~label::before {
+  width: 100%;
+}
   
-  form input[type="text"],
+  /* form input[type="text"],
   form input[type="email"],
   form input[type="password"],
   form input[type="number"]{
     padding: 2px;
-    width:85%;
+    width:100%;
     height: 25px;
     border: 1px solid #49697d ;
     border-radius: 3px;
     font-size: 1rem;
-  }
+    border:none;
+  } */
 
-  form select {
+  /* form select {
     padding: 2px;
     width:87%;
     height: 30px;
     border: 1px solid #49697d ;
     border-radius: 3px;
     font-size: 1rem;
-  }
+  } */
   
   form input[type="date"] {
     padding: 2px;
+    background-color: #587c94;
+    color:#fff;
     border: 1px solid #49697d;
-    border-radius: 3px;
+    border-radius: 6px;
     font-size: 1rem;
-    width: 85%;
-    height: 25px;
-    color:rgb(138, 136, 136);
+    width: 100%;
+    height: 35px;
   }
- 
+  
   
   form input[type="radio"],
   form input[type="checkbox"] {
     margin-right: 5px;
+    margin-left:20px;
+    accent-color: #4b6f86;
   }
-  
+
   form button[type="submit"],
   form button[type="reset"] {
     border-radius: 30px;
-    background-color:#3e5c6e;
+    background-color:#436479;
     margin-right: 10px;
+    margin-left: 80px;
     cursor: pointer;
     font-size: 1rem;
     padding: 10px;
     text-align: center;
-    width: 85%;
-    height:40px;
+    width: 50%;
+    height:50px;
     display: block;
     margin-bottom: 20px;
     color: white;
@@ -88,9 +144,13 @@
     opacity: 0.8;
   }
 
+  /* form button[type="reset"]{
+    background-color:#587c94 ;
+  } */
+
   label[for="m"], label[for="f"],label[for="a"] ,label[for="ina"]{
     margin-top: -24px;
-    margin-left: 20px;  
+    margin-left: 40px;  
     margin-bottom: -4px;
   }
   label[for="c1"], label[for="c2"],label[for="c3"]{
@@ -100,4 +160,71 @@
     margin-top:15px;
   }
 
+  .custom-dropdown {
+    position: relative;
+    /* display: inline-block; */
+    vertical-align: middle;
+    margin-bottom: 8px;
+  }
+  
+  .custom-dropdown select {
+    appearance: none;
+    background-color:#587c94 ;
+    color: #fff;
+    font-size: inherit;
+    padding: .5em;
+    padding-right: 2em; 
+    border: 0;
+    margin: 0;
+    border-radius: 6px;
+    text-indent: 0.01px;
+    text-overflow: '';
+    width:100%;
+    -webkit-appearance: none; /* hide default arrow in chrome OSX */
+  }
+  
+  .custom-dropdown::before,
+  .custom-dropdown::after {
+    content: "";
+    position: absolute;
+    pointer-events: none;
+  }
+  
+  .custom-dropdown::after { /*  Custom dropdown arrow */
+    content: "\25BC";
+    height: 1em;
+    font-size: .625em;
+    line-height: 1;
+    right: 2em;
+    top: 50%;
+    margin-top: -.5em;
+  }
+  
+  .custom-dropdown::before { /*  Custom dropdown arrow cover */
+    width: 2.5em;
+    right: 4px;
+    top: 0;
+    bottom: 0;
+    border-radius: 0 3px 3px 0;
+    height: 35px;
+    margin-top: -6px;
+    margin-left: -10px;
+  }
+  
+  .custom-dropdown select[disabled] {
+    color: rgba(0,0,0,.3);
+  }
+  
+  .custom-dropdown select[disabled]::after {
+    color: rgba(0,0,0,.1);
+  }
+  
+  .custom-dropdown::before {
+    background-color: rgba(0,0,0,.15);
+  }
+  
+  .custom-dropdown::after {
+    color: rgba(0,0,0,.4);
+  }
+  
   

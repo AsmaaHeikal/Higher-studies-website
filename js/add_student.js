@@ -38,6 +38,19 @@ function validate_form(){
     }
 
 
+    const gpaInput = document.getElementById('gpa');
+    const gpaError = document.getElementById("gpaError");
+    const gpa = parseFloat(gpaInput.value);
+    if (isNaN(gpa) || gpa < 0 || gpa > 4) {
+        gpaError.style.display = "block";
+        gpaInput.focus();
+        window.scroll(0,0);
+        return false;
+    } else {
+        gpaError.style.display = "none";
+    }
+
+
     const passwordField = document.getElementById("password");
     const passwordError = document.getElementById("passwordError");
     if (passwordField.value === "" || passwordField.value.length < 8) {
