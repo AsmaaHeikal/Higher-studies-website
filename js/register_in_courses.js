@@ -69,8 +69,18 @@ departmentDropdown.addEventListener("change", (event) => {
 
 const event = new Event("change");
 departmentDropdown.dispatchEvent(event);
-
-
 // local storage
-localStorage.setItem("selectedDepartment", selectedDepartment);
-localStorage.setItem("selectedCourses", JSON.stringify(coursesList));
+// Retrieve the user's ID from localStorage
+const userId = localStorage.getItem('userId');
+
+// Retrieve the user's profile from localStorage
+const users = JSON.parse(localStorage.getItem('students'));
+const userIndex = users.findIndex(user => user.id === userId);
+const user = users[userIndex];
+
+// Update the courses array in the user's profile with the selected courses
+courses = [course_and_marks, course_and_marks2, course_and_marks3];
+user.courses = JSON.stringify(courses);
+
+users[userIndex] = user;
+localStorage.setItem('students', JSON.stringify(users));

@@ -58,7 +58,7 @@ if (localStorage.length == 0) {
 
     let admin1 = {
         username: "wafaa87",
-        pass: "000_123a"
+        pass: "000asd123a"
     };
     localStorage.setItem('admins', JSON.stringify([admin, admin1]))
 

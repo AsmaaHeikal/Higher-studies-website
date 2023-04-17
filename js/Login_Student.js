@@ -1,6 +1,6 @@
 // validate ID and Password
 // logged_user = -1;
-var loggedUser = 1;
+// var loggedUser = 1;
 function validateLoginForm() {
     const form = document.querySelector('form');
     const idField = document.querySelector('input[type="text"]');
@@ -84,13 +84,15 @@ const passwordField = document.querySelector('input[type="password"]');
 var check = rememberMeCheckbox.checked;
 
 form.addEventListener('submit', (event) => {
+    event.preventDefault();
+    let idValue1 = document.querySelector('input[type="text"]').value;
     if (check == 1) {
-        alert(idValue);
-        localStorage.setItem('logged_user', idValue);
+        alert(idValue1);
+        localStorage.setItem('logged_user', idValue1);
     } else {
         localStorage.setItem('logged_user', 0);
-        sessionStorage.setItem('logged_user', idValue);
+        sessionStorage.setItem('logged_user', idValue1);
     }
-    
-    window.location.replace("../HTML_Pages/home.html");
+
+    // window.location.replace("../HTML_Pages/home.html");
 });
