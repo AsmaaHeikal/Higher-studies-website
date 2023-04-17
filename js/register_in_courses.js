@@ -1,3 +1,4 @@
+// validate choosing 3 different courses and department 
 const form = document.querySelector('form');
 
 form.addEventListener('submit', (event) => {
@@ -35,8 +36,10 @@ const course1Dropdown = document.getElementById("course1");
 const course2Dropdown = document.getElementById("course2");
 const course3Dropdown = document.getElementById("course3");
 
+// const selectedDepartment = event.target.value;
+
 departmentDropdown.addEventListener("change", (event) => {
-    const selectedDepartment = event.target.value;
+    selectedDepartment = event.target.value;
     const coursesList = courses[selectedDepartment];
 
     course1Dropdown.innerHTML = '<option value="">Select Course</option>';
@@ -46,39 +49,28 @@ departmentDropdown.addEventListener("change", (event) => {
     // set new options
     for (let i = 0; i < coursesList.length; i++) {
         const course = coursesList[i];
-        const option = document.createElement("option");
-        option.value = course;
-        option.text = course;
-        course1Dropdown.appendChild(option);
-        course2Dropdown.appendChild(option.cloneNode(true));
-        course3Dropdown.appendChild(option.cloneNode(true));
+        const option1 = document.createElement("option");
+        const option2 = document.createElement("option");
+        const option3 = document.createElement("option");
+        option1.value = course;
+        option1.text = course;
+        option2.value = course;
+        option2.text = course;
+        option3.value = course;
+        option3.text = course;
+        course1Dropdown.appendChild(option1);
+        course2Dropdown.appendChild(option2);
+        course3Dropdown.appendChild(option3);
     }
     option1.style.display = "block";
     option2.style.display = "block";
     option3.style.display = "block";
 });
 
-// trigger department change event on page load
 const event = new Event("change");
 departmentDropdown.dispatchEvent(event);
 
 
-
 // local storage
-function storeSelectedCourses() {
-    const course1 = document.getElementById("course1").value;
-    const course2 = document.getElementById("course2").value;
-    const course3 = document.getElementById("course3").value;
-    const department = document.getElementById("department").value;
-
-    const departments = JSON.parse(localStorage.getItem("departments"));
-
-    // Find the index of the selected department in the departments array
-    const departmentIndex = departments.findIndex(
-        (dept) => dept[0].startsWith(department)
-    );
-
-    departments[departmentIndex].push(course1, course2, course3);
-
-    localStorage.setItem("departments", JSON.stringify(departments));
-}
+localStorage.setItem("selectedDepartment", selectedDepartment);
+localStorage.setItem("selectedCourses", JSON.stringify(coursesList));
