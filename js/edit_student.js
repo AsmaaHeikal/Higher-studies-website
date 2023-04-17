@@ -9,25 +9,9 @@ document.getElementById('department').value = selectedS.department;
 document.getElementById('university').value = selectedS.university;
 document.getElementById('email').value = selectedS.email;
 document.getElementById('GPA').value = selectedS.gpa;
-document.querySelector('input[name="status"]:checked').value = selectedS.Status;
+document.querySelector('input[name="status"]:checked').value = selectedS.status;
 document.querySelector('input[name="gender"]:checked').value = selectedS.gender;
 
-/*
-let student1 = {
-    name: "Ahmed Ghaly Yousse",
-    id: "20211100",
-    date_of_birth: "12/10/2002",
-    university: "AUC",
-    gender: "Male",
-    email :"AhmedGhaly@gmail.com",
-    department: "Information Systems",
-    Status: "Active",
-    courses: JSON.stringify([course_and_marks, course_and_marks2]),
-    pass: "0000_BB",
-    gpa: "2.8",
-
-};
-*/
 }
 function modify(){
     var indx=0;
@@ -43,7 +27,7 @@ function modify(){
     students[indx].university= document.getElementById('university').value;
     students[indx].email= JSON.stringify(document.getElementById('email').value);
     students[indx].gpa= document.getElementById('GPA').value ;
-    students[indx].Status= document.querySelector('input[name="status"]:checked').value;
+    students[indx].status= document.querySelector('input[name="status"]:checked').value;
     students[indx].gender= document.querySelector('input[name="gender"]:checked').value;
     localStorage.setItem('students',JSON.stringify(students));
 
