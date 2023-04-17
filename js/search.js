@@ -43,6 +43,7 @@ function filterStudentsByNameOrId(students, searchText) {
   });
 }
 
+
 let students = JSON.parse(localStorage.getItem('students'));
 renderStudentsTable(students);
 
@@ -53,7 +54,8 @@ searchButton.addEventListener('click', function() {
   event.preventDefault();
   const keyword = searchInput.value.trim();
   if (keyword !== '') {
-    students = filterStudentsByNameOrId(students, keyword); // Use filterStudentsByNameOrId instead of filterStudentsByKeyword
+    // Use filterStudentsByNameOrId
+    students = filterStudentsByNameOrId(students, keyword); 
   } else {
     students = JSON.parse(localStorage.getItem('students'));
   }
