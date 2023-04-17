@@ -7,7 +7,6 @@ table {
 	border-radius: 10px;
 }
 
-
 #personal-data{
 	box-shadow:var(--main-box-shadow);
 	background-color: white;
@@ -43,6 +42,7 @@ tbody tr:hover{
 }
 tr{
 	border-bottom: 1px solid #ddd;
+	width: 100%;
 }
 
 
@@ -55,7 +55,6 @@ tr{
     cursor: pointer;
   }
 
-  .expanded-div p {
-	color: black;
-	padding-left: 40px;
+  .expandedRow p{
+	text-align: left;
   }
