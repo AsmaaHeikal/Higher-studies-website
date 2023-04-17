@@ -1,3 +1,40 @@
+
+let storedCourses = JSON.parse(localStorage.getItem("courses")) || [];
+const myButton = document.getElementById("add");
+
+myButton.addEventListener("click", function(e) {
+    e.preventDefault();
+    
+    // Get form values
+    const courseName = document.getElementById("course name").value;
+    const courseID = document.getElementById("course ID").value;
+    const courseHours = document.getElementById("courseHours").value;
+    const department = document.getElementById("department").value;
+    const lectureDay = document.getElementById("lecDay").value;
+    const hallNumber = document.getElementById("hNumber").value;
+    
+    // Create an object to store the form data
+    let course3 = {
+        name: courseName,
+        id: courseID,
+        department: department,
+        number_of_hours: JSON.stringify(courseHours),
+        lecture_day: lectureDay,
+        hall_number: hallNumber
+    };
+    storedCourses.push(course);
+    // Save the form data to local storage
+    localStorage.setItem("courses", JSON.stringify(storedCourses));
+    
+    alert("Course added successfully!");
+    
+    // Reload the page
+    location.reload();
+});
+
+
+
+/*
 let storedCourses = JSON.parse(localStorage.getItem("courses")) || [];
 let coursesID=[];
 for(let i=0;i<storedCourses.length;i++){
@@ -8,7 +45,8 @@ function validInputs(){
     const cName = document.getElementById("courseName").value;
     var letters = /^[A-Za-z]+[0-9]?$/;
     if(!cName.match(letters) ){
-        alert("Invalid Name:\nThe name must start with letters "); 
+        document.getElementById("cNameError").innerText="Invalid Name:\nThe name must start with letters "; 
+        document.getElementById("cNameError").style.display = "block";
         document.getElementById("courseName").focus();
         return false;
     }
@@ -16,21 +54,22 @@ function validInputs(){
     var id=document.getElementById("courseID").value; 
     var m =/^([a-zA-Z])+([0-9])+$/
     if (!id.match(m)){  
-        //document.getElementById("wrongInput").innerText=
-        alert("Invalid ID:\nID must start with letters followed by numbers"); 
+        document.getElementById("idError").innerText="Invalid ID:\nID must start with letters followed by numbers"; 
+        document.getElementById("idError")
         document.getElementById("courseID").focus();
         return false;  
     } 
     if(coursesID.includes(id)){
-        //document.getElementById("wrongInput").innerText=
-        alert("Invalid ID:\nThere is a course with this ID"); 
+        document.getElementById("idError").innerText="Invalid ID:\nThere is a course with this ID"; 
+        document.getElementById("idError").style.display = "block";
         document.getElementById("courseID").focus();
         return false;
     }
 
     var department = document.getElementById("department").value;
     if (department == null) {
-        alert("Please select a department.");
+        document.getElementById("departmentError").innerText="Please select a department.";
+        document.getElementById("departmentError").style.display = "block";
         document.getElementById("department").focus();
         window.scroll(10,10);
         return false;
@@ -40,7 +79,7 @@ function validInputs(){
 
 function store() {
     var form=document.getElementById("form");
-    if(validInputs()){
+    if(1){
         const cName = document.getElementById("courseName").value;
         const cID = document.getElementById("courseID").value;
         const cHours = document.getElementById("courseHours");
@@ -55,42 +94,6 @@ function store() {
             lecture_day: lecDay,
             hall_number: JSON.stringify(hlNumber)
         };
-
-        // -----add the new course to add student page courses-----
-
-        // create new option and make 3 of the same option to add it to the 3 select menus
-        // if i try to make one  option and add it to the three select field ,
-        // the option will be added only in the last select field.
-        var newOption1 = document.createElement("option");
-        var newOption2 = document.createElement("option");
-        var newOption3 = document.createElement("option");
-
-        // give value and text to the option
-        newOption1.value = cID;
-        newOption1.text = cName;
-
-        newOption2.value = cID;
-        newOption2.text = cName;
-
-        newOption3.value = cID;
-        newOption3.text = cName;
-
-        // get the select fields
-        let course1 = document.getElementById("c1");
-        let course2 = document.getElementById("c2");
-        let course3 = document.getElementById("c3");
-
-        // get the option groups in the select fields
-        var optionGroup1 = course1.querySelector('optgroup[label="course1"]');
-        var optionGroup2 = course2.querySelector('optgroup[label="course2"]');
-        var optionGroup3 = course3.querySelector('optgroup[label="course3"]');
-
-        // add the new option to the existed option group
-        optionGroup1.appendChild(newOption1);
-        optionGroup2.appendChild(newOption2);
-        optionGroup3.appendChild(newOption3);
-        // ------------------------------------------
-        
 
         storedCourses.push(newCourse);
         localStorage.setItem("courses", JSON.stringify(storedCourses));
@@ -125,21 +128,16 @@ function store() {
     }
 }  
 
-const myButton = document.getElementById("submit");
+const myButton = document.getElementById("add");
 
 myButton.addEventListener("click", function(e) {
+    alert("added");
     e.preventDefault();
     if(store()){
-        location.reload();
+        alert("added");
+        //location.reload();
     }
 });
 
 
-/**
-form.addEventListener('submit',function(e){
-    e.preventDefault();
-    if(cName == "sama"){
-        
-    }
- */
-
+*/
