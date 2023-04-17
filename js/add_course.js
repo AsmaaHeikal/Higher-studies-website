@@ -31,7 +31,7 @@ myButton.addEventListener("click", function(e) {
 
     var departments =JSON.parse(localStorage.getItem('departments'));
         
-    if(depart=="cs"){
+    if(depart=="CS"){
         departments[0].push(courseID);
     }
     if(depart=="IS"){
