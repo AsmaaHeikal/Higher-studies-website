@@ -70,10 +70,16 @@ departmentDropdown.addEventListener("change", (event) => {
 const event = new Event("change");
 departmentDropdown.dispatchEvent(event);
 // local storage
-// Retrieve the user's ID from localStorage
-const userId = localStorage.getItem('userId');
+// local storage
+// Retrieve the user's ID from either session or local storage
+let userId;
+if (logged_user === 0) {
+  userId = sessionStorage.getItem('userId');
+} else {
+  userId = localStorage.getItem('userId');
+}
 
-// Retrieve the user's profile from localStorage
+// Retrieve the user's profile from local storage
 const users = JSON.parse(localStorage.getItem('students'));
 const userIndex = users.findIndex(user => user.id === userId);
 const user = users[userIndex];

@@ -22,7 +22,7 @@ function renderStudentsTable(students) {
     newRow.innerHTML = `
       <td>${student.name}</td>
       <td>${student.id}</td>
-      <td>${student.Status}</td>
+      <td>${student.status}</td>
       <td>${student.gpa}</td>
       <td>${student.email}</td>
       <td class="button-container">

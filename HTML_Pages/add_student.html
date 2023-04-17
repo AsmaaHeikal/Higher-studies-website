@@ -26,68 +26,78 @@
                 <h1>Add Student</h1>
             </div>
             <form id ="form" action="" method="post">
-                <div>
+                <div class="txt_field">
+                    <span></span>
+                    <input type="text" id="name" name="student name"  autofocus>
                     <label for="name">Name:</label>
-                    <input type="text" id="name" name="student name" placeholder="Student Name"  autofocus>
-                    <div id="name-error" style="display:none;color:red;">Name can't be empty and must contain only letters.</div>
                 </div>
+                <div id="name-error" style="display:none;color:red;">Name can't be empty and must contain only letters.</div>
                 <br>
-                <div>
+                <div class="txt_field">
+                    <span></span>
+                    <input type="text" id="email" name="email">
                     <label for="email">Email:</label>
-                    <input type="text" id="email" name="email" placeholder="Email">
-                    <span id="emailError" style="display: none; color: red;">Please enter a valid email.</span>
                 </div>
+                <span id="emailError" style="display: none; color: red;">Please enter a valid email.</span>
                 <br>
-                <div>
+                <div class="txt_field">
+                    <span></span>
+                    <input type="text" id="id" name="student id"  >
                     <label for="id">ID:</label>
-                    <input type="text" id="id" name="student id" placeholder="Student ID" >
-                    <div id="id-error" style="display:none;color: red;">ID can't be empty. It's a numeric value of length 8.</div>
                 </div>
+                <div id="id-error" style="display:none;color: red;">ID can't be empty. It's a numeric value of length 8.</div>
                 <br>
-                <div>
+                <div class="txt_field">
+                    <span></span>
+                    <input type="number" step="0.01" min="0" max="4" id="gpa" name="gpa" >
                     <label for="gpa">GPA:</label>
-                    <input type="number" step="0.01" min="0" max="4" id="gpa" name="gpa" required placeholder="GPA">
                 </div>
+                <span id="gpaError" style="display: none; color: red;">Please enter a valid GPA.</span>
                 <br>
-                <div>
+                <div class="txt_field">
+                    <span></span>
+                    <input type="password" id="password" name="password" >
                     <label for="password">Password:</label>
-                    <input type="password" id="password" name="password" placeholder="Give The Student Password">
-                    <div id="passwordError" style="display:none;color: red;">Password can't be empty and must be more than 8 chars.</div>
                 </div>
+                <div id="passwordError" style="display:none;color: red;">Password can't be empty and must be more than 8 chars.</div>
                 <br>
                 <div>
                     <label for="DateOfBirth">Date Of Birth:</label>
                     <input type="date" name="dateOfBirth" id="DateOfBirth" min='1899-01-01' max='2005-12-31' >
-                    <div id="dateError" style="display:none;color: red;">Please enter the date of birth.</div>
                 </div>
+                <div id="dateError" style="display:none;color: red;">Please enter the date of birth.</div>
                 <br>
                 <div>
                     <label for="university">University:</label>
-                    <select name="university" id="university" required>
-                        <optgroup label="University">
-                            <option value="" selected disabled>Select your university</option>
-                            <option value="CU">Cairo University</option>
-                            <option value="ASU">Ain Shams University</option>
-                            <option value="HU">Helwan University</option>
-                            <option value="AUC">The American University in Cairo</option>
-                            <option value="GUC">German University in Cairo</option>
-                        </optgroup>
-                    </select>
+                    <span class="custom-dropdown">
+                        <select name="university" id="university" required>
+                            <optgroup label="University">
+                                <option value="" selected disabled>Select your university</option>
+                                <option value="CU">Cairo University</option>
+                                <option value="ASU">Ain Shams University</option>
+                                <option value="HU">Helwan University</option>
+                                <option value="AUC">The American University in Cairo</option>
+                                <option value="GUC">German University in Cairo</option>
+                            </optgroup>
+                        </select>
+                    </span>
                     <div id="uniError" style="display:none;color: red;">Please enter the university.</div>
                 </div>
                 <br>
                 <div>
                     <label for="department">Department:</label>
-                    <select name="department" id="department" required>
-                        <optgroup label="department">
-                            <option value="" disabled selected  >Select your department</option>
-                            <option value="cs"> Computer Science </option>
-                            <option value="IT"> Information Technology </option>
-                            <option value="DS"> Decision Support </option>
-                            <option value="IS"> Information System </option>
-                            <option value="AI"> Artificial Intelligence </option>
-                        </optgroup>
-                    </select>
+                    <span class="custom-dropdown">
+                        <select name="department" id="department" required>
+                            <optgroup label="department">
+                                <option value="" disabled selected >Select your department</option>
+                                <option value="cs"> Computer Science </option>
+                                <option value="IT"> Information Technology </option>
+                                <option value="DS"> Decision Support </option>
+                                <option value="IS"> Information System </option>
+                                <option value="AI"> Artificial Intelligence </option>
+                            </optgroup>
+                        </select>
+                    </span>
                     <div id="depError" style="display:none;color: red;">Please enter the department.</div>
                 </div>
                 <br>
@@ -109,55 +119,61 @@
                 <br>
                 <div>
                     <label for="c1">Course 1:</label>
-                    <select name="course1" id="c1" required>
-                        <optgroup label="course1">
-                            <option value="" disabled selected >Select the first course</option>
-                            <option value="cs101"> Computer Organization</option>
-                            <option value="cs102"> Algorithms </option>
-                            <option value="cs103"> Software Engineering </option>
-                            <option value="cs104"> Operating Systems </option>
-                            <option value="DS221"> Linear Programming </option>
-                            <option value="CS321"> Data Structures and Algorithms </option>
-                            <option value="IS421"> Database Systems </option>
-                            <option value="IT521"> Computer Networks </option>
-                            <option value="AI621"> Machine Learning </option>
-                        </optgroup>
-                    </select>
+                    <span class="custom-dropdown">
+                        <select name="course1" id="c1" required>
+                            <optgroup label="course1">
+                                <option value="" disabled selected >Select the first course</option>
+                                <option value="cs101"> Computer Organization</option>
+                                <option value="cs102"> Algorithms </option>
+                                <option value="cs103"> Software Engineering </option>
+                                <option value="cs104"> Operating Systems </option>
+                                <option value="DS221"> Linear Programming </option>
+                                <option value="CS321"> Data Structures and Algorithms </option>
+                                <option value="IS421"> Database Systems </option>
+                                <option value="IT521"> Computer Networks </option>
+                                <option value="AI621"> Machine Learning </option>
+                            </optgroup>
+                        </select>
+                    </span>
                     <div id="c1Error" style="display:none;color: red;">Please enter course1.</div>
                 </div>
                 <div>
                     <label for="c2">Course 2:</label>
-                    <select name="course2" id="c2" required>
-                        <optgroup label="course2">
-                            <option value="" disabled selected >Select the second course</option>
-                            <option value="cs101"> Computer Organization</option>
-                            <option value="cs102"> Algorithms </option>
-                            <option value="cs103"> Software Engineering </option>
-                            <option value="cs104"> Operating Systems </option>
-                            <option value="DS221"> Linear Programming </option>
-                            <option value="CS321"> Data Structures and Algorithms </option>
-                            <option value="IS421"> Database Systems </option>
-                            <option value="IT521"> Computer Networks </option>
-                            <option value="AI621"> Machine Learning </option>
-                        </optgroup>
-                    </select>
+                    <span class="custom-dropdown">
+                        <select name="course2" id="c2" required>
+                            <optgroup label="course2">
+                                <option value="" disabled selected >Select the second course</option>
+                                <option value="cs101"> Computer Organization</option>
+                                <option value="cs102"> Algorithms </option>
+                                <option value="cs103"> Software Engineering </option>
+                                <option value="cs104"> Operating Systems </option>
+                                <option value="DS221"> Linear Programming </option>
+                                <option value="CS321"> Data Structures and Algorithms </option>
+                                <option value="IS421"> Database Systems </option>
+                                <option value="IT521"> Computer Networks </option>
+                                <option value="AI621"> Machine Learning </option>
+                            </optgroup>
+                        </select>
+                    </span>
                     <div id="c2Error" style="display:none;color: red;">Please enter course2.</div>
                 </div>
                 <div>
                     <label for="c3">Course 3:</label>
-                    <select name="course3" id="c3" required>
-                        <optgroup label="course3">
-                            <option value="" disabled selected >Select the third course</option>
-                            <option value="cs101"> Computer Organization</option>
-                            <option value="cs102"> Algorithms </option>
-                            <option value="cs103"> Software Engineering </option>
-                            <option value="cs104"> Operating Systems </option>
-                            <option value="DS221"> Linear Programming </option>
-                            <option value="CS321"> Data Structures and Algorithms </option>
-                            <option value="IS421"> Database Systems </option>
-                            <option value="IT521"> Computer Networks </option>
-                            <option value="AI621"> Machine Learning </option>
-                    </select>
+                    <span class="custom-dropdown">
+                        <select name="course3" id="c3" required>
+                            <optgroup label="course3">
+                                <option value="" disabled selected >Select the third course</option>
+                                <option value="cs101"> Computer Organization</option>
+                                <option value="cs102"> Algorithms </option>
+                                <option value="cs103"> Software Engineering </option>
+                                <option value="cs104"> Operating Systems </option>
+                                <option value="DS221"> Linear Programming </option>
+                                <option value="CS321"> Data Structures and Algorithms </option>
+                                <option value="IS421"> Database Systems </option>
+                                <option value="IT521"> Computer Networks </option>
+                                <option value="AI621"> Machine Learning </option>
+                        </select>
+                    </span>
                     <div id="c3Error" style="display:none;color: red;">Please enter course3.</div>
                 </div>
                 <br>

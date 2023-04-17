@@ -31,26 +31,26 @@
         <br>
         <div>
             <label for="id">ID:</label>
-            <input type="text" id="id" name="student id" placeholder="Student ID" required>
+            <input id='edit' type="text" id="id" name="student id" placeholder="Student ID" required>
         </div>
         <br>
         <div>
             <label for="gpa">GPA</label>
             <input type="text" id="GPA" name="GPA" placeholder="GPA" required>
         </div>
-        <br>
         <div>
             <label for="university">University:</label>
             <select name="university" id="university" required>
                 <optgroup label="University">
                     <option value="" selected disabled>Select your university</option>
-                    <option value="1">Cairo University</option>
-                    <option value="2">Ain Shams University</option>
-                    <option value="3">Helwan University</option>
-                    <option value="4">The American University in Cairo</option>
-                    <option value="5">German University in Cairo</option>
+                    <option value="CU">Cairo University</option>
+                    <option value="ASU">Ain Shams University</option>
+                    <option value="HU">Helwan University</option>
+                    <option value="AUC">The American University in Cairo</option>
+                    <option value="GUC">German University in Cairo</option>
                 </optgroup>
             </select>
+            <div id="uniError" style="display:none;color: red;">Please enter the university.</div>
         </div>
         <br>
         <div>
@@ -58,13 +58,14 @@
             <select name="department" id="department" required>
                 <optgroup label="department">
                     <option value="" disabled selected  >Select your department</option>
-                    <option value="cs"> Computer Science </option>
+                    <option value="CS"> Computer Science </option>
                     <option value="IT"> Information Technology </option>
-                    <option value="OR"> Operation Research </option>
+                    <option value="DS"> Decision Support </option>
                     <option value="IS"> Information System </option>
                     <option value="AI"> Artificial Intelligence </option>
                 </optgroup>
             </select>
+            <div id="depError" style="display:none;color: red;">Please enter the department.</div>
         </div>
         <br>
         <div>
@@ -84,7 +85,7 @@
             </div>
         <br> 
         <div>
-            <button type="edit" class ="btn"> <span> Edit</span> </button>
+            <button type="edit" class ="btn" id = "edit"> <span> Edit</span> </button>
         </div>
     </div>
         </div>

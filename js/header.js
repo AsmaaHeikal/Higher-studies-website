@@ -30,7 +30,18 @@ let header = ` <nav>
 </nav>`;
 
 document.getElementById('website-header').innerHTML = header;
-
+let logged_user_value = localStorage.logged_user;
+alert(logged_user_value);
+let menu = document.getElementById('menu');
+// alert(menu);
+if(logged_user_value == "-1"){
+    menu.classList.add('hidden');
+    // window.location.reload();
+}else if(isNaN(logged_user_value) && logged_user_value.length == 8){
+    menu.classList.remove('hidden');
+    window.location.reload();
+}
+    
 // let studentMenuOptions = document.getElementsByClassName('student-only');
 // let adminMenuOptions = document.getElementsByClassName('student-only');
 
