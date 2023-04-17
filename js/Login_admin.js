@@ -1,10 +1,10 @@
-window.onload = function() {
+// window.onload = function() {
     // username and password checking
-localStorage.setItem('logged_user', '-1');
 // var loggedUser = 2;
 // const form = document.querySelector('form');
 // const userField = document.querySelector('input[type="text"]');
 // const passField = document.querySelector('input[type="password"]');
+
 function validateLoginForm() {
     const form = document.querySelector('form');
     const userField = document.querySelector('input[type="text"]');
@@ -90,26 +90,36 @@ submitBtn.addEventListener('click', (event) => {
 // const passwordField = document.querySelector('input[type="password"]');
 // var check = rememberMeCheckbox.checked;
 // alert(Object.keys(localStorage));
-form.addEventListener('submit', (event) => {
+let red = false;
+submitBtn.addEventListener('click', (event) => {
+    event.preventDefault();
     let rememberMeCheckbox = document.getElementById('remember-me');
     let check = rememberMeCheckbox.checked;
     const userValue1 = document.querySelector('input[type="text"]').value;
     // alert(check);
     if (check) {
-        alert(check);
-        alert(typeof(userValue1));
+        // alert(check);
+        // alert(typeof(userValue1));
         localStorage.setItem('logged_user', userValue1);
         // localStorage.setItem('logged_user', use)
-        alert(ocalStorage.logged_user  + '231');
-        alert(userValue1);
+        // alert(ocalStorage.logged_user  + '231');
+        // alert(userValue1);
     } else {
         localStorage.setItem('logged_user', 0);
         sessionStorage.setItem('logged_user', userValue1);
     }
-    
+    // event.preventDefault();
 
+    // location.replace("https://www.w3schools.com");
+
+    
 });
 
+// if(red){
+//     location.replace("https://www.w3schools.com");
+
+// }
 
 
-};
+
+// };
