@@ -1,9 +1,23 @@
 addData();
+
+function getCurrentName(){
+    let currentId;
+    if(localStorage.getItem('logged_user') == '0')
+        currentId = sessionStorage.getItem('logged_user');
+        
+    else
+        currentId = localStorage.getItem('logged_user');
+    let students = JSON.parse(localStorage.getItem('students'));
+    for(k = 0; k <students.length; k++){
+        if(students[k]['id'] == currentId)
+            return students[k]['name'];
+    }
+}
 function getStudentCourses(){
     let data = localStorage.getItem('students');
     let students = JSON.parse(data);
     for(i = 0; i < students.length; i++){
-        if(students[i]['name'] == "Ahmed Ghaly Yousse"){ // TBD untill they add login session
+        if(students[i]['name'] == getCurrentName){ // TBD untill they add login session
             return (JSON.parse(students[i].courses));
         }
     }
