@@ -50,6 +50,7 @@ const searchInput = document.querySelector('input[name="keyword"]');
 const searchButton = document.querySelector('.search');
 
 searchButton.addEventListener('click', function() {
+  event.preventDefault();
   const keyword = searchInput.value.trim();
   if (keyword !== '') {
     students = filterStudentsByNameOrId(students, keyword); // Use filterStudentsByNameOrId instead of filterStudentsByKeyword
@@ -69,6 +70,7 @@ searchButton.addEventListener('click', function() {
     students = students;
   }
   renderStudentsTable(students);
+  students = JSON.parse(localStorage.getItem('students'));
 });
 
 
