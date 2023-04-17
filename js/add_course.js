@@ -5,6 +5,10 @@ let coursesID=[];
 for(let i=0;i<storedCourses.length;i++){
     coursesID.push(storedCourses[i].id);
 }
+
+
+
+
 const myButton = document.getElementById("add");
 myButton.addEventListener("click", function(e) {
     e.preventDefault();
@@ -17,7 +21,7 @@ myButton.addEventListener("click", function(e) {
     const lectureDay = document.getElementById("lecDay").value;
     const hallNumber = document.getElementById("hNumber").value;
     // Create an object to store the form data
-    const course = {
+    let course = {
         name: courseName,
         id: courseID,
         hours: courseHours,
