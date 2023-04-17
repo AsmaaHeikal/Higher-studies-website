@@ -1,5 +1,6 @@
 // validate ID and Password
 logged_user = -1;
+var loggedUser = 1;
 function validateLoginForm() {
     const form = document.querySelector('form');
     const idField = document.querySelector('input[type="text"]');
@@ -33,33 +34,48 @@ function validateLoginForm() {
 const submitBtn = document.querySelector('button[type="submit"]');
 submitBtn.addEventListener('click', (event) => {
     if (!validateLoginForm()) {
+        logged_user = -1;
         event.preventDefault();
+        return;
     }
 });
 
 
-// check if the id and password exist in local storage
-// if the student logged data is stored, set "logged_user" = ?
-function searchLocalStorage(id, password) {
-    let students = JSON.parse(localStorage.getItem('students'));
+// // check if the id and password exist in local storage
+// // if the student logged data is stored, set "logged_user" = ?
+const form = document.querySelector('form');
+const idField = document.querySelector('input[type="text"]');
+const passField = document.querySelector('input[type="password"]');
+const idValue = idField.value;
+const passValue = passField.value;
+function searchLocalStorage(idValue, passValue) {
+    if (validateLoginForm()) {
+        let students = JSON.parse(localStorage.getItem('students'));
 
-    for (let i = 0; i < students.length; i++) {
-        if (students[i].id === id && students[i].pass === password) {
-            return true;
+        for (let i = 0; i < students.length; i++) {
+            if (students[i].id === idValue && students[i].pass === passValue) {
+                return true;
+            }
         }
+        return false;
     }
-    return false;
 }
 
-// if student data is not stored, prevent them from login
+// // if student data is not stored, prevent them from login
 submitBtn.addEventListener('click', (event) => {
-    if (!searchLocalStorage()) {
+    
+    if (!searchLocalStorage(idField.value, passField.value)) {
         alert('ID does not match password');
         event.preventDefault();
+        return;
+    }
+    else {
+        loggedUser = 1;
     }
 });
 
-// if login is valid and user clicks on "remember me" button
+
+// // if login is valid and user clicks on "remember me" button
 var check = 0;
 const rememberMeCheckbox = document.querySelector('#remember-me');
 rememberMeCheckbox.addEventListener('click', () => {
