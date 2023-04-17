@@ -21,7 +21,7 @@ function validateLoginForm() {
             isValid = false;
         }
 
-        if (passValue.length < 8 || !/^(?=.*[A-Za-z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*_?&]{8,}$/.test(passValue)) {
+        if (passValue.length < 8 || !/^[a-zA-Z0-9!@#$%^&*()_+\-=\[\]{};':"\\|,.<>\/?]*$/.test(passValue)) {
             alert('Please enter a valid password.');
             isValid = false;
         }
