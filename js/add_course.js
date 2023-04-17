@@ -8,7 +8,7 @@ for(let i=0;i<storedCourses.length;i++){
 const myButton = document.getElementById("add");
 myButton.addEventListener("click", function(e) {
     e.preventDefault();
-    
+    alert("Course added successfully!");
     // Get form values
     const courseName = document.getElementById("courseName").value;
     const courseID = document.getElementById("courseID").value;
@@ -48,10 +48,9 @@ myButton.addEventListener("click", function(e) {
         departments[4].push(courseID);
     }
     localStorage.setItem('departments', JSON.stringify(departments));
-    alert("Course added successfully!");
     
     // Reload the page
-    location.reload();
+    //location.reload();
 });
 
 
