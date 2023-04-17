@@ -48,7 +48,7 @@ form select {
     border-radius: 3px;
     font-size: 1rem;
 }
-form button[type="submit"],
+form button[type="add"],
 form button[type="reset"] {
     margin-left: 52px;
     cursor: pointer;
