@@ -16,15 +16,14 @@ myButton.addEventListener("click", function(e) {
     const department = document.getElementById("department").value;
     const lectureDay = document.getElementById("lecDay").value;
     const hallNumber = document.getElementById("hNumber").value;
-    
     // Create an object to store the form data
-    let course3 = {
+    const course = {
         name: courseName,
         id: courseID,
+        hours: courseHours,
         department: department,
-        number_of_hours: JSON.stringify(courseHours),
-        lecture_day: lectureDay,
-        hall_number: hallNumber
+        day: lectureDay,
+        hall: hallNumber
     };
     storedCourses.push(course);
     // Save the form data to local storage
