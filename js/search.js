@@ -73,7 +73,6 @@ searchButton.addEventListener('click', function() {
     students = students;
   }
   renderStudentsTable(students);
-  // students = JSON.parse(localStorage.getItem('students'));
 });
 
 
