@@ -21,20 +21,22 @@
             <div class="pageTitle">
                 <h1><b>Add Course</b> </h1>
         </div>
-            <form action="" method="post">
+            <form >
             <div>
                 <label for="course name" class="labl">Course Name:</label>
                 <input type="text" id="course name" name="Course name" placeholder="Course Name" required >
+                <div id="cNameError" style="display:none;color:red;"></div>
             </div>
             <br>
             <div>
                 <label for="course ID" class="labl">Course ID:</label>
                 <input type="text" id="course ID" name="Course ID" placeholder="Course ID" required>
+                <div id="idError" style="display:none;color:red;"></div>
             </div>
             <br>
             <div>
                 <label for="course Hours"class="labl">Course Hours:</label>
-                <input type="number" id="courseHours" name="Course Hours" placeholder="Course Hours" required>
+                <input type="number" id="courseHours" name="Course Hours" placeholder="Course Hours" min="1" required>
             </div>
             <br>
             <div>
@@ -49,6 +51,7 @@
                             <option value="AI"> Artificial Intelligence </option>
                     </optgroup>
                 </select>
+                <div id="departmentError" style="display:none;color:red;"></div>
             </div>
             <br>
             <div>
@@ -63,7 +66,7 @@
             <br>
             <div>
                 <button type="reset" class="btn"id="reset"> <span> Reset</span> </button>
-                <button type="submit" class="btn" id="submit"> <span>Submit</span></button>
+                <button type="add" class="btn" id="add"> <span>Submit</span></button>
             </div>
         </form>
         </div>
