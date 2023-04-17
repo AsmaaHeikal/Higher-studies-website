@@ -1,10 +1,3 @@
-// window.onload = function() {
-    // username and password checking
-// var loggedUser = 2;
-// const form = document.querySelector('form');
-// const userField = document.querySelector('input[type="text"]');
-// const passField = document.querySelector('input[type="password"]');
-
 function validateLoginForm() {
     const form = document.querySelector('form');
     const userField = document.querySelector('input[type="text"]');
@@ -79,47 +72,29 @@ submitBtn.addEventListener('click', (event) => {
 });
 
 
-// // if login is valid and user clicks on "remember me" button
 
-// rememberMeCheckbox.addEventListener('click', () => {
-    //     check = 1;
-    // });
-    // alert(check);
-    
-// const userField = document.querySelector('input[type="text"]');
-// const passwordField = document.querySelector('input[type="password"]');
-// var check = rememberMeCheckbox.checked;
-// alert(Object.keys(localStorage));
 let red = false;
 submitBtn.addEventListener('click', (event) => {
     event.preventDefault();
     let rememberMeCheckbox = document.getElementById('remember-me');
     let check = rememberMeCheckbox.checked;
     const userValue1 = document.querySelector('input[type="text"]').value;
-    // alert(check);
+
     if (check) {
-        // alert(check);
-        // alert(typeof(userValue1));
+
         localStorage.setItem('logged_user', userValue1);
-        // localStorage.setItem('logged_user', use)
-        // alert(ocalStorage.logged_user  + '231');
-        // alert(userValue1);
+
     } else {
         localStorage.setItem('logged_user', 0);
         sessionStorage.setItem('logged_user', userValue1);
     }
-    // event.preventDefault();
 
-    // location.replace("https://www.w3schools.com");
-
+    document.getElementById('log_out').classList.remove('hidden');
+    document.getElementById('menu').classList.remove('hidden');
     
+    let studentMenuOptions = document.getElementsByClassName('student-only');
+    for(let i = 0; i < studentMenuOptions.length; i++){
+        studentMenuOptions[i].style.display = "none";
+    }
 });
 
-// if(red){
-//     location.replace("https://www.w3schools.com");
-
-// }
-
-
-
-// };

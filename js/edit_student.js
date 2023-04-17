@@ -1,7 +1,6 @@
 let students =JSON.parse(localStorage.getItem('students')) || []
 
 let selectedS = JSON.parse(localStorage.getItem('editStudent'));
-// alert(localStorage.getItem('editStudent'));
 function retrieveData(){
 document.getElementById('name').value = selectedS.name;
 document.getElementById('id').value = selectedS.id;

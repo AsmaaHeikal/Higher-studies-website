@@ -74,10 +74,7 @@ submitBtn.addEventListener('click', (event) => {
 
 // // if login is valid and user clicks on "remember me" button
 let rememberMeCheckbox = document.getElementById('remember-me');
-// rememberMeCheckbox.addEventListener('click', () => {
-    //     check = 1;
-    // });
-    // alert(check);
+
     
 const IdField = document.querySelector('input[type="text"]');
 const passwordField = document.querySelector('input[type="password"]');
@@ -88,13 +85,25 @@ form.addEventListener('submit', (event) => {
     let idValue1 = document.querySelector('input[type="text"]').value;
     var check = rememberMeCheckbox.checked;
     if (check == 1) {
-        alert(check);
-        alert(idValue1);
+
         localStorage.setItem('logged_user', idValue1);
     } else {
         localStorage.setItem('logged_user', 0);
         sessionStorage.setItem('logged_user', idValue1);
     }
 
-    // window.location.replace("../HTML_Pages/home.html");
+    // let log_out_button = document.getElementById('log_out');
+    document.getElementById('log_out').classList.remove('hidden');
+    // document.getElementById('log_out').classList.remove('hidden');
+    document.getElementById('menu').classList.remove('hidden');
+
+    document.getElementById('menu').classList.remove('hidden');
+    alert(menu.innerHTML);
+    let adminMenuOptions1 = Array.from(document.getElementsByClassName('admin-only'));   
+    alert(adminMenuOptions1);
+    for(let i = 0; i < adminMenuOptions1.length; i++){
+        console.log(i);
+        adminMenuOptions1[i].classList.add('hidden');
+    }
+   
 });
