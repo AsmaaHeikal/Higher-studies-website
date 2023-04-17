@@ -81,12 +81,14 @@ let rememberMeCheckbox = document.getElementById('remember-me');
     
 const IdField = document.querySelector('input[type="text"]');
 const passwordField = document.querySelector('input[type="password"]');
-var check = rememberMeCheckbox.checked;
 
 form.addEventListener('submit', (event) => {
     event.preventDefault();
+    let rememberMeCheckbox = document.getElementById('remember-me');
     let idValue1 = document.querySelector('input[type="text"]').value;
+    var check = rememberMeCheckbox.checked;
     if (check == 1) {
+        alert(check);
         alert(idValue1);
         localStorage.setItem('logged_user', idValue1);
     } else {
