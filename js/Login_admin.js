@@ -94,7 +94,7 @@ submitBtn.addEventListener('click', (event) => {
     
     let studentMenuOptions = document.getElementsByClassName('student-only');
     for(let i = 0; i < studentMenuOptions.length; i++){
-        studentMenuOptions[i].style.display = "none";
+        studentMenuOptions[i].classList.add('hidden');
     }
 });
 

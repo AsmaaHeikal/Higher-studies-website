@@ -31,6 +31,47 @@ let header = ` <nav>
 
 </ul>
 </nav>`;
-
-
 document.getElementById('website-header').innerHTML = header;
+let log_out_button = document.getElementById('log_out')
+
+if(localStorage.logged_user != "-1"){
+    document.getElementById('log_out').classList.remove('hidden');
+}
+
+
+
+// !(/^[a-zA-Z0-9]+$/.test(localStorage.logged_user))
+if(localStorage.logged_user != 0 && (/^[a-zA-Z0-9]+$/.test(localStorage.logged_user))){
+    // document.getElementById('menu').classList.remove('hidden');
+    
+    let studentMenuOptions = document.getElementsByClassName('student-only');
+    for(let i = 0; i < studentMenuOptions.length; i++){
+        studentMenuOptions[i].classList.add('hidden');
+    }
+
+}else if(localStorage.logged_user != 0 && (!isNaN(localStorage.logged_user) && localStorage.logged_user.length == 8)){
+
+    let adminMenuOptions = document.getElementsByClassName('admin-only');
+        for(let i = 0; i < adminMenuOptions.length; i++){
+            adminMenuOptions[i].classList.add('hidden');
+        }
+
+}else if(localStorage.logged_user == 0 && (/^[a-zA-Z0-9]+$/.test(sessionStorage.logged_user))){
+    let studentMenuOptions = document.getElementsByClassName('student-only');
+    for(let i = 0; i < studentMenuOptions.length; i++){
+        studentMenuOptions[i].classList.add('hidden');
+    }
+
+}else if(localStorage.logged_user == 0 &&  (!isNaN(sessionStorage) && sessionStorage.length == 8)){
+    let adminMenuOptions = document.getElementsByClassName('admin-only');
+    for(let i = 0; i < adminMenuOptions.length; i++){
+        adminMenuOptions[i].classList.add('hidden');
+    }
+}
+
+log_out_button.addEventListener('click', () => {
+
+    localStorage.logged_user = '-1';
+    document.getElementById('log_out').classList.add('hidden');
+    document.getElementById('menu').classList.add('hidden');
+});

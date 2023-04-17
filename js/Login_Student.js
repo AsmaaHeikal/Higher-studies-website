@@ -98,9 +98,7 @@ form.addEventListener('submit', (event) => {
     document.getElementById('menu').classList.remove('hidden');
 
     document.getElementById('menu').classList.remove('hidden');
-    alert(menu.innerHTML);
     let adminMenuOptions1 = Array.from(document.getElementsByClassName('admin-only'));   
-    alert(adminMenuOptions1);
     for(let i = 0; i < adminMenuOptions1.length; i++){
         console.log(i);
         adminMenuOptions1[i].classList.add('hidden');
