@@ -36,9 +36,9 @@ input[type="text"],[type='email']{
 .btn{
     margin-left: 50px;
 }
-form select {
+select {
     padding: 2px;
-    width:90%;
+    width:85%;
     height: 25px;
     border: 1px solid #49697d ;
     border-radius: 3px;
