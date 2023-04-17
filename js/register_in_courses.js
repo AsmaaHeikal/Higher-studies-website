@@ -69,24 +69,29 @@ departmentDropdown.addEventListener("change", (event) => {
 
 const event = new Event("change");
 departmentDropdown.dispatchEvent(event);
-// local storage
-// local storage
+
 // Retrieve the user's ID from either session or local storage
 let userId;
-if (logged_user === 0) {
+if (logged_user != -1) {
   userId = sessionStorage.getItem('userId');
 } else {
   userId = localStorage.getItem('userId');
 }
-
 // Retrieve the user's profile from local storage
 const users = JSON.parse(localStorage.getItem('students'));
 const userIndex = users.findIndex(user => user.id === userId);
 const user = users[userIndex];
 
-// Update the courses array in the user's profile with the selected courses
+// Update the courses 
 courses = [course_and_marks, course_and_marks2, course_and_marks3];
 user.courses = JSON.stringify(courses);
 
 users[userIndex] = user;
 localStorage.setItem('students', JSON.stringify(users));
+
+// Retrieve the name and ID of the user from local storage and display them 
+const userIdField = document.getElementById('userIdField');
+const nameField = document.getElementById('nameField');
+
+userIdField.textContent = 'ID: ' + user.id;
+nameField.textContent = 'Name: ' + user.name;
