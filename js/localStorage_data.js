@@ -20,7 +20,7 @@ if (localStorage.length == 0) {
         department: "Computer Science",
         Status: "Active",
         courses: JSON.stringify([course_and_marks, course_and_marks2,course_and_marks3]),
-        pass: "123456789_aa",
+        pass: "123456789aa",
         gpa: "3.7",
 
     };
@@ -42,7 +42,7 @@ if (localStorage.length == 0) {
         department: "Information Systems",
         Status: "Active",
         courses: JSON.stringify([course_and_marks, course_and_marks2]),
-        pass: "0000_BB",
+        pass: "000880_BB",
         gpa: "2.8",
 
     };
@@ -53,7 +53,7 @@ if (localStorage.length == 0) {
     // Adding students data
     let admin = {
         username: "ahmedsamir12",
-        pass: "123_123a"
+        pass: "12312443a"
     };
 
     let admin1 = {
