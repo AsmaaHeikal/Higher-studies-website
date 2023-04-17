@@ -13,14 +13,14 @@ if (localStorage.length == 0) {
     let student = {
         name: "Seif Ahmed Ali",
         id: "20210048",
-        date_of_birth: "03/03/2003",
+        dateOfBirth: "03/03/2003",
         university: "CU",
         gender: "Male",
         email :"Seif@gmail.com",
-        department: "Computer Science",
-        Status: "Active",
+        department: "CS",
+        status: "active",
         courses: JSON.stringify([course_and_marks, course_and_marks2,course_and_marks3]),
-        pass: "123456789_aa",
+        pass: "123456789aa",
         gpa: "3.7",
 
     };
@@ -35,14 +35,14 @@ if (localStorage.length == 0) {
     let student1 = {
         name: "Ahmed Ghaly Yousse",
         id: "20211100",
-        date_of_birth: "12/10/2002",
+        dateOfBirth: "12/10/2002",
         university: "AUC",
         gender: "Male",
         email :"AhmedGhaly@gmail.com",
-        department: "Information Systems",
-        Status: "Active",
+        department: "IS",
+        status: "active",
         courses: JSON.stringify([course_and_marks, course_and_marks2]),
-        pass: "0000_BB",
+        pass: "000880aBB",
         gpa: "2.8",
 
     };
@@ -53,12 +53,12 @@ if (localStorage.length == 0) {
     // Adding students data
     let admin = {
         username: "ahmedsamir12",
-        pass: "123_123a"
+        pass: "12312443a"
     };
 
     let admin1 = {
         username: "wafaa87",
-        pass: "000_123a"
+        pass: "000asd123a"
     };
     localStorage.setItem('admins', JSON.stringify([admin, admin1]))
 

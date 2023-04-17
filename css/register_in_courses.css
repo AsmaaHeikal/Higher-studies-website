@@ -1,34 +1,21 @@
-  /* Body Styling */
-body {
-    margin: 0;
-    padding: 0;
-    font-family: 'Poppins';
-    background: #3e5c6e;
-    height: 100vh;
-    overflow: hidden;
-  }
-
-.center {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 600px;
-    height: 750px;
-    background: white;
-    border-radius: 10px;
+.mainDiv .pageTitle{
+  color:black;
+  margin-bottom: 20px;
+  text-align: center;
 }
-
-.center h1 {
-    text-align: center;
-    padding: 0 0 20px 0;
-    border-bottom: 1px sloid silver;
-}
-
-.center form {
-    width: 100%;
-    padding: 0 40px;
-    box-sizing: border-box;
+.mainDiv {
+  background-color: white;
+  width: 35%;
+  height: 15%;
+  padding: 30px;
+  border-radius: 20px;
+  justify-content: center;
+  margin-top: 1px;
+  margin-left: 32%;
+  overflow: hidden;
+  box-shadow: 0 0 7px rgba(0, 0, 0.5);
+  padding-bottom: 60px;
+  padding-top: 60px;
 }
 
   /* Form Group Styling */

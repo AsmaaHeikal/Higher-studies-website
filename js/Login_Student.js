@@ -1,6 +1,6 @@
 // validate ID and Password
-logged_user = -1;
-var loggedUser = 1;
+// logged_user = -1;
+// var loggedUser = 1;
 function validateLoginForm() {
     const form = document.querySelector('form');
     const idField = document.querySelector('input[type="text"]');
@@ -12,7 +12,7 @@ function validateLoginForm() {
         const idValue = idField.value;
         const passValue = passField.value;
 
-        if (isNaN(idValue) || idValue.length !== 8) {
+        if (isNaN(idValue) || idValue.length != 8) {
             alert('Please enter a valid ID.');
             isValid = false;
         }
@@ -69,21 +69,32 @@ submitBtn.addEventListener('click', (event) => {
         event.preventDefault();
         return;
     }
-    else {
-        loggedUser = 1;
-    }
 });
 
 
 // // if login is valid and user clicks on "remember me" button
-var check = 0;
-const rememberMeCheckbox = document.querySelector('#remember-me');
-rememberMeCheckbox.addEventListener('click', () => {
-    check = 1;
-});
+let rememberMeCheckbox = document.getElementById('remember-me');
+// rememberMeCheckbox.addEventListener('click', () => {
+    //     check = 1;
+    // });
+    // alert(check);
+    
+const IdField = document.querySelector('input[type="text"]');
+const passwordField = document.querySelector('input[type="password"]');
 
-if (check == 1) {
-    localStorage.setItem('logged_user', 1);
-} else {
-    sessionStorage.setItem('logged_user', 0);
-}
+form.addEventListener('submit', (event) => {
+    event.preventDefault();
+    let rememberMeCheckbox = document.getElementById('remember-me');
+    let idValue1 = document.querySelector('input[type="text"]').value;
+    var check = rememberMeCheckbox.checked;
+    if (check == 1) {
+        alert(check);
+        alert(idValue1);
+        localStorage.setItem('logged_user', idValue1);
+    } else {
+        localStorage.setItem('logged_user', 0);
+        sessionStorage.setItem('logged_user', idValue1);
+    }
+
+    // window.location.replace("../HTML_Pages/home.html");
+});

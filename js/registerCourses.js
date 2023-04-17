@@ -1,9 +1,23 @@
 addData();
+
+function getCurrentName(){
+    let currentId;
+    if(localStorage.getItem('logged_user') == '0')
+        currentId = sessionStorage.getItem('logged_user');
+        
+    else
+        currentId = localStorage.getItem('logged_user');
+    let students = JSON.parse(localStorage.getItem('students'));
+    for(k = 0; k <students.length; k++){
+        if(students[k]['id'] == currentId)
+            return students[k]['name'];
+    }
+}
 function getStudentCourses(){
     let data = localStorage.getItem('students');
     let students = JSON.parse(data);
     for(i = 0; i < students.length; i++){
-        if(students[i]['name'] == "Ahmed Ghaly Yousse"){ // TBD untill they add login session
+        if(students[i]['name'] == getCurrentName()){ // TBD untill they add login session
             return (JSON.parse(students[i].courses));
         }
     }
@@ -58,37 +72,39 @@ function addRow(courseId, courseName, courseHours, courseMarks, finalMarks, tota
 
     body.innerHTML += 
     `
-    <tr class = "parent">
+    <tr class = "parentRow">
         <td>${courseId}</td>
         <td>${courseName}</td>
         <td>${courseHours}</td>
         <td>${courseMarks}</td>
         <td>${finalMarks}</td>
         <td>${totalMarks}</td>
-        <td><button class="expand-button" ><i class="fa fa-plus "></i></button></td>
-        <div class = "expanded-div" , style="display:none;">
-            <p>Department :  ${department}</p>
-            <p> Lecture Day : ${lecture_day}</p>
-            <p>Hall Number : ${hall_number}</p>
-        </div>
+        <td><button class="expand-button" ><i class="fa fa-plus"></i></button></td>
     </tr>
-    
+    <tr class="expandedRow" style="display: none;">
+        <td colspan="7" class = "test">
+            <p><strong>Department</strong> : ${department}</p>
+            <p><strong>Lecture Day</strong> : ${lecture_day}</p>
+            <p><strong>Hall Number</strong> : ${hall_number}</p>
+        </td>
+    </tr>
     `;
  }
 
-// Select all buttons with class "expand-button"
 var buttons = document.querySelectorAll('.expand-button');
 
-// Loop through all buttons and add event listeners
 buttons.forEach(function(button) {
   button.addEventListener('click', function() {
-    // Find the next div and toggle its display style property
-    var div = this.parentNode.parentNode.nextSibling;
-    if (div.style.display === 'block') {
+    var div = this.parentNode.parentNode.nextSibling.nextSibling;
+    var btn = this.firstChild;
+    console.log(this.firstChild);
+    if (div.style.display === 'table-row') {
       div.style.display = 'none';
+      btn.classList.replace('fa-minus', 'fa-plus')
     } else {
-      div.style.display = 'block';
+        div.style.display = 'table-row';
+        btn.classList.replace('fa-plus', 'fa-minus')
     }
+    
   });
 });
-

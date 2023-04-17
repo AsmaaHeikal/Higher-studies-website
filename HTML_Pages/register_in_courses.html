@@ -8,6 +8,7 @@
         <link rel="stylesheet" href="../css/main.css">
         <script defer src="../js/header.js"></script>
         <script defer src="../js/footer.js"></script>
+        <script defer src="../js/register_in_courses.js"></script>
         <script defer src="../js/localStorage_data.js"></script>
         <title> Register in Courses </title>
     </head>
@@ -15,71 +16,65 @@
   <body>
     <!-- header -->
     <header id="website-header"></header>
-    <div class="center">
-    <div class="container">
-      <form>
-        <h1> Register in Courses </h1>
+    <div id = "main-content">
+      <div class = "mainDiv">
 
-        <!-- Name -->
-        <div class="form-group">
-          <label for="name"> <b> Name:</b></label>
-          <input type="text" id="name" name="name" value = "Hend Ahmed" required>
+        <div class = "pageTitle">
+          <h1> <b> Register Courses </b></h1>
         </div>
-        <!-- ID -->
-        <div class="form-group">
-          <label for="id">ID:</label>
-          <input type="text" id="id" name="id" value = "20211111" required>
-        </div>
-        <!-- Departments -->
-        <div class="form-group">
-          <label for="department">Department:</label>
-          <select id="department" name="department" required>
-            <option value="select">Select Department</option>
-            <option value="cs"> Computer Science </option>
-            <option value="IT"> Information Technology </option>
-            <option value="OR"> Operation Research </option>
-            <option value="IS"> Information System </option>
-            <option value="AI"> Artificial Intelligence </option>
-          </select>
-        </div>
-        <!-- Courses -->
-        <div class="form-group">
-          <label for="course1">Course 1:</label>
-          <select id="course1" name="course1" required>
-            <option value="select">Select Course</option>
-            <option value="cs101"> Computer Organization</option>
-            <option value="cs102"> Algorithms </option>
-            <option value="cs103"> Software Engineering </option>
-            <option value="cs104"> Operating Systems </option>
-          </select>
-        </div>
-        <div class="form-group">
-          <label for="course2">Course 2:</label>
-          <select id="course2" name="course2" required>
-            <option value="select">Select Course</option>
-            <option value="cs101"> Computer Organization</option>
-            <option value="cs102"> Algorithms </option>
-            <option value="cs103"> Software Engineering </option>
-            <option value="cs104"> Operating Systems </option>
-          </select>
-        </div>
-        <div class="form-group">
-          <label for="course3">Course 3:</label>
-          <select id="course3" name="course3" required>
-            <option value="select">Select Course</option>
-            <option value="cs101"> Computer Organization</option>
-            <option value="cs102"> Algorithms </option>
-            <option value="cs103"> Software Engineering </option>
-            <option value="cs104"> Operating Systems </option>
-          </select>
-        </div>
-        <br>
-        <button type="submit" class="btn">Save</button>
-        <br><br>
-        <button type="reset" class="btn">Reset</button>
-      </form>
+
+        <form>
+          <!-- Name -->
+          <div class="form-group">
+            <label for="name"> <b> Name:</b></label>
+            <input type="text" id="name" name="name" value = "Student Name" required>
+          </div>
+          <!-- ID -->
+          <div class="form-group">
+            <label for="id">ID:</label>
+            <input type="text" id="id" name="id" value = "Student ID" required>
+          </div>
+          <!-- Departments -->
+          <div class="form-group">
+            <label for="department" style="color: black;">Department:</label>
+            <select id="department" name="department" required>
+              <option value="select">Select Department</option>
+              <option value="CS"> Computer Science </option>
+              <option value="IT"> Information Technology </option>
+              <option value="DS"> Decision Support </option>
+              <option value="IS"> Information System </option>
+              <option value="AI"> Artificial Intelligence </option>
+            </select>
+          </div>
+          <!-- Courses -->
+          <div class="form-group">
+            <label for="course1" style="color: black;">Course 1:</label>
+            <select id="course1" name="course1" required>
+              <option value="select">Select Course</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="course2" style="color: black;">Course 2:</label>
+            <select id="course2" name="course2" required>
+              <option value="select">Select Course</option>
+
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="course3" style="color: black;">Course 3:</label>
+            <select id="course3" name="course3" required>
+              <option value="select">Select Course</option>
+            </select>
+          </div>
+          <br>
+          <button type="submit" class="btn">Save</button>
+          <br><br>
+          <button type="reset" class="btn">Reset</button>
+        </form>
+
+       </div>
     </div>
-  </div>
+
   <!-- footer Section -->
   <footer id = "website-footer"></footer>
   </body>

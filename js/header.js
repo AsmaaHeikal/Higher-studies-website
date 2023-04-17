@@ -30,3 +30,15 @@ let header = ` <nav>
 </nav>`;
 
 document.getElementById('website-header').innerHTML = header;
+let logged_user_value = localStorage.logged_user;
+alert(logged_user_value);
+
+// let studentMenuOptions = document.getElementsByClassName('student-only');
+// let adminMenuOptions = document.getElementsByClassName('student-only');
+
+// function checkIfStudent(id){
+//    return(isNaN(id) || id.length != 8);
+// }
+// if(checkIfStudent(localStorage.getItem('logged_user'))){
+//     alert("lol");
+// }

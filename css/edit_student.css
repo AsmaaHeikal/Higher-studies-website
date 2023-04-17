@@ -20,12 +20,12 @@ label{
     margin-bottom: 3px;
 }
 
-label[for="1"], label[for="2"],label[for="a"] ,label[for="ina"]{
+label[for="m"], label[for="f"],label[for="a"] ,label[for="ina"]{
     margin-top: -24px;
     margin-left: 20px;  
     margin-bottom: -4px;
 }
-input[type="text"]{
+input[type="text"],[type='email']{
     padding: 2px;
     width:85%;
     height: 25px;
@@ -35,4 +35,12 @@ input[type="text"]{
 }
 .btn{
     margin-left: 50px;
+}
+form select {
+    padding: 2px;
+    width:90%;
+    height: 25px;
+    border: 1px solid #49697d ;
+    border-radius: 3px;
+    font-size: 1rem;
 }
