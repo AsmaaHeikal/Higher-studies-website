@@ -51,6 +51,7 @@ const searchInput = document.querySelector('input[name="keyword"]');
 const searchButton = document.querySelector('.search');
 
 searchButton.addEventListener('click', function() {
+  students = JSON.parse(localStorage.getItem('students'));
   event.preventDefault();
   const keyword = searchInput.value.trim();
   if (keyword !== '') {
@@ -72,7 +73,7 @@ searchButton.addEventListener('click', function() {
     students = students;
   }
   renderStudentsTable(students);
-  students = JSON.parse(localStorage.getItem('students'));
+  // students = JSON.parse(localStorage.getItem('students'));
 });
 
 
