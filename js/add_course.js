@@ -1,13 +1,17 @@
 
 let storedCourses = JSON.parse(localStorage.getItem("courses")) || [];
-const myButton = document.getElementById("add");
 
+let coursesID=[];
+for(let i=0;i<storedCourses.length;i++){
+    coursesID.push(storedCourses[i].id);
+}
+const myButton = document.getElementById("add");
 myButton.addEventListener("click", function(e) {
     e.preventDefault();
     
     // Get form values
-    const courseName = document.getElementById("course name").value;
-    const courseID = document.getElementById("course ID").value;
+    const courseName = document.getElementById("courseName").value;
+    const courseID = document.getElementById("courseID").value;
     const courseHours = document.getElementById("courseHours").value;
     const department = document.getElementById("department").value;
     const lectureDay = document.getElementById("lecDay").value;
@@ -25,7 +29,25 @@ myButton.addEventListener("click", function(e) {
     storedCourses.push(course);
     // Save the form data to local storage
     localStorage.setItem("courses", JSON.stringify(storedCourses));
-    
+
+    var departments =JSON.parse(localStorage.getItem('departments'));
+        
+    if(depart=="cs"){
+        departments[0].push(courseID);
+    }
+    if(depart=="IS"){
+        departments[1].push(courseID);
+    }
+    if(depart=="OR"){
+        departments[2].push(courseID);
+    }
+    if(depart=="IT"){
+        departments[3].push(courseID);
+    }
+    if(depart=="AI"){
+        departments[4].push(courseID);
+    }
+    localStorage.setItem('departments', JSON.stringify(departments));
     alert("Course added successfully!");
     
     // Reload the page
@@ -36,10 +58,6 @@ myButton.addEventListener("click", function(e) {
 
 /*
 let storedCourses = JSON.parse(localStorage.getItem("courses")) || [];
-let coursesID=[];
-for(let i=0;i<storedCourses.length;i++){
-    coursesID.push(storedCourses[i].id);
-}
 
 function validInputs(){
     const cName = document.getElementById("courseName").value;
@@ -95,27 +113,9 @@ function store() {
             hall_number: JSON.stringify(hlNumber)
         };
 
-        storedCourses.push(newCourse);
-        localStorage.setItem("courses", JSON.stringify(storedCourses));
         
-        var departments =JSON.parse(localStorage.getItem('departments'));
         
-        if(depart=="Computer Science"){
-            departments[0].push(cID);
-        }
-        if(depart=="Information System"){
-            departments[1].push(cID);
-        }
-        if(depart=="Operation Research"){//in local storage = DS?
-            departments[2].push(cID);
-        }
-        if(depart=="Information Technology"){
-            departments[3].push(cID);
-        }
-        if(depart=="Artificial Intelligence"){
-            departments[4].push(cID);
-        }
-        localStorage.setItem('departments', JSON.stringify(departments));
+       
     // array_of_department[0]->CS which is an 1d array of strings(IDs of courses)
     // [1]->IS 
     // [2]->DS
