@@ -71,23 +71,24 @@ myButton.addEventListener("click", function(e) {
 
     var departments =JSON.parse(localStorage.getItem('departments'));
         
-    if(depart=="CS"){
+    if(department=="CS"){
         departments[0].push(courseID);
     }
-    if(depart=="IS"){
+    if(department=="IS"){
         departments[1].push(courseID);
     }
-    if(depart=="OR"){
+    if(department=="OR"){
         departments[2].push(courseID);
     }
-    if(depart=="IT"){
+    if(department=="IT"){
         departments[3].push(courseID);
     }
-    if(depart=="AI"){
+    if(department=="AI"){
         departments[4].push(courseID);
     }
     localStorage.setItem('departments', JSON.stringify(departments));
     location.reload();
+    
     }
 });
 
