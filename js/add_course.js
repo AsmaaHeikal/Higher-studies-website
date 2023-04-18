@@ -32,7 +32,7 @@ function validInputs(){
     }
 
     var department = document.getElementById("department").value;
-    if (department == null) {
+    if (department == "") {
         document.getElementById('departmentError').innerHTML = "Please select a department.";
         document.getElementById('departmentError').style.display = "block";
         document.getElementById("department").focus();
