@@ -2,23 +2,23 @@ let students =JSON.parse(localStorage.getItem('students')) || []
 
 let selectedS = JSON.parse(localStorage.getItem('editStudent'));
 function retrieveData(){
-document.getElementById('name').value = selectedS.name;
-document.getElementById('id').value = selectedS.id;
-document.getElementById('department').value = selectedS.department;
-document.getElementById('university').value = selectedS.university;
-document.getElementById('email').value = selectedS.email;
-document.getElementById('GPA').value = selectedS.gpa;
-//document.querySelector('input[name="status"]:checked').value = selectedS.status;
-if (selectedS.gender=="Female"){
-    document.getElementById('f').checked =true;
-}else{
-    document.getElementById('m').checked =true;
-}
-if (selectedS.status=="active"){
-    document.getElementById('a').checked =true;
-}else{
-    document.getElementById('ina').checked =true;
-}
+    document.getElementById('name').value = selectedS.name;
+    document.getElementById('id').value = selectedS.id;
+    document.getElementById('department').value = selectedS.department;
+    document.getElementById('university').value = selectedS.university;
+    document.getElementById('email').value = selectedS.email;
+    document.getElementById('GPA').value = selectedS.gpa;
+    //document.querySelector('input[name="status"]:checked').value = selectedS.status;
+    if (selectedS.gender=="Female"){
+        document.getElementById('f').checked =true;
+    }else{
+        document.getElementById('m').checked =true;
+    }
+    if (selectedS.status=="active"){
+        document.getElementById('a').checked =true;
+    }else{
+        document.getElementById('ina').checked =true;
+    }
 }
 function modify(){
     var indx=0;
