@@ -1,5 +1,22 @@
-// validate choosing 3 different courses and department 
-
+// Retrieve the user's ID from either session or local storage
+let userId =localStorage.getItem("logged_user");
+if (userId == 0) {
+  userId = sessionStorage.getItem('logged_user');
+} 
+// Retrieve the user's profile from local storage
+const users = JSON.parse(localStorage.getItem('students'));
+let user =0;
+for(var indx=0;indx< users.length;indx++){
+    if(users[indx].id == userId){
+        user = indx;
+    }
+}
+function retrieveData(){
+    document.getElementById('name').value = users[user].name;
+    document.getElementById('id').value = users[user].id;
+    document.getElementById('department').value = users[user].department;
+}
+const form = document.querySelector('form');
 
 const departmentDropdown = document.getElementById("department");
 const course1Dropdown = document.getElementById("course1");
@@ -10,17 +27,17 @@ const course3Dropdown = document.getElementById("course3");
 
 departmentDropdown.addEventListener("change", (event) => {
     //users[user].department
-    selectedDepartment = event.target.value;
+    selectedDepartment = users[user].department;
     var ind;
-    if(selectedDepartment=='CS'){
+    if(selectedDepartment=='Computer Science'){
         ind =0;
     }
-    else if(selectedDepartment=='IS'){
+    else if(selectedDepartment=='Information Systems'){
         ind = 1;
-    }else if(selectedDepartment =='DS'){
+    }else if(selectedDepartment =='Decision Support'){
         ind =2;
     }
-    else if(selectedDepartment =='AI'){
+    else if(selectedDepartment =='Artificial Intelligence'){
         ind =4;
     }
     else{
@@ -59,24 +76,7 @@ departmentDropdown.addEventListener("change", (event) => {
 const event = new Event("change");
 departmentDropdown.dispatchEvent(event);
 
-// Retrieve the user's ID from either session or local storage
-let userId =localStorage.getItem("logged_user");
-if (userId == 0) {
-  userId = sessionStorage.getItem('logged_user');
-} 
-// Retrieve the user's profile from local storage
-const users = JSON.parse(localStorage.getItem('students'));
-let user =0;
-for(var indx=0;indx< users.length;indx++){
-    if(users[indx].id == userId){
-        user = indx;
-    }
-}
-function retrieveData(){
-    document.getElementById('name').value = users[user].name;
-    document.getElementById('id').value = users[user].id;
-}
-const form = document.querySelector('form');
+
 
 form.addEventListener('submit', (event) => {
     event.preventDefault();
@@ -103,39 +103,19 @@ form.addEventListener('submit', (event) => {
     console.log(JSON.stringify(newCourses));
     console.log("jg");
     if(validCh) {
-        
         let course_and_marks1 = {
-            course1: "0,0"
+            [course1]: "0,0"
         };
         let course_and_marks2 = {
-            course2: "0,0"
+            [course2]: "0,0"
         };
         let course_and_marks3 = {
-            course3: "0,0"
+            [course3]: "0,0"
         };
-        
-        newCourses.push(course_and_marks1);
+        newCourses.push(JSON.stringify(course_and_marks1));
         newCourses.push(course_and_marks2);
         newCourses.push(course_and_marks3);
         users[user].courses=JSON.stringify(newCourses);
         localStorage.setItem('students',JSON.stringify(users));
     }
-    
 });
-
-/*
-// Update the courses 
-courses = [course_and_marks, course_and_marks2, course_and_marks3];
-user.courses = JSON.stringify(courses);
-
-users[userIndex] = user;
-localStorage.setItem('students', JSON.stringify(users));
-
-// Retrieve the name and ID of the user from local storage and display them 
-const userIdField = document.getElementById('userIdField');
-const nameField = document.getElementById('nameField');
-
-userIdField.textContent = 'ID: ' + user.id;
-nameField.textContent = 'Name: ' + user.name;
-
-*/
