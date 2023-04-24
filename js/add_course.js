@@ -8,7 +8,7 @@ for(let i=0;i<storedCourses.length;i++){
 
 function validInputs(){
     const cName = document.getElementById("courseName").value;
-    var letters = /^[A-Za-z]+[0-9]?$/;
+    var letters = /^[A-Za-z\s]+[0-9]?$/; // added space to regex
     if(!cName.match(letters) ){
         document.getElementById('cNameError').innerHTML="Invalid Name:\nThe name must start with letters "; 
         document.getElementById('cNameError').style.display = "block";

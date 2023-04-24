@@ -2,7 +2,7 @@ function validate_form(){
     const nameInput = document.getElementById("name");
     const nameError = document.getElementById("name-error");
 
-    if (nameInput.value.trim() === "" || !/^[a-zA-Z]+$/.test(nameInput.value.trim())) {
+    if (nameInput.value.trim() === "" || !/^[a-zA-Z\s]+$/.test(nameInput.value.trim())) { // added space to regex
         nameError.style.display = "block";
         nameInput.focus();
         window.scroll(0,0);
