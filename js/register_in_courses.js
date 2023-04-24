@@ -29,15 +29,15 @@ departmentDropdown.addEventListener("change", (event) => {
     //users[user].department
     selectedDepartment = users[user].department;
     var ind;
-    if(selectedDepartment=='Computer Science'){
+    if(selectedDepartment=='CS'){
         ind =0;
     }
-    else if(selectedDepartment=='Information Systems'){
+    else if(selectedDepartment=='IS'){
         ind = 1;
-    }else if(selectedDepartment =='Decision Support'){
+    }else if(selectedDepartment =='DS'){
         ind =2;
     }
-    else if(selectedDepartment =='Artificial Intelligence'){
+    else if(selectedDepartment =='AI'){
         ind =4;
     }
     else{
