@@ -70,6 +70,9 @@ if(localStorage.logged_user != 0 && (/^[a-zA-Z0-9]+$/.test(localStorage.logged_u
 }
 
 log_out_button.addEventListener('click', () => {
+    // Redirecting to the home page
+    let current = window.location.href;
+    window.location.href = current.substring(0,current.lastIndexOf('/')) + '/home.html';
 
     localStorage.logged_user = '-1';
     document.getElementById('log_out').classList.add('hidden');
