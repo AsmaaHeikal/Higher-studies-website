@@ -3,7 +3,7 @@ let header = ` <nav>
 <h2><a href = "home.html">FCAI CU</a></h2>
 <ul id="right">
     <li> <a href="home.html" class = "left-right-border-effect">Home</a></li>
-    <li>
+    <li id = "login-button">
         <a href="" class = "left-right-border-effect">Login</a>
         <ul class = "dropdown-content">
             <li><a href="login_student.html">Student</a></li>
@@ -32,43 +32,65 @@ let header = ` <nav>
 </ul>
 </nav>`;
 document.getElementById('website-header').innerHTML = header;
-let log_out_button = document.getElementById('log_out')
 
-if(localStorage.logged_user != "-1"){
+let log_out_button = document.getElementById('log_out');
+
+// clearing sessionStorage if no one is logged in
+if(localStorage.logged_user == "-1")
+    sessionStorage.clear();
+
+// if there is someone is logged in (show logout & hide login)
+if(localStorage.logged_user != "-1" || sessionStorage.length != 0){
     document.getElementById('log_out').classList.remove('hidden');
+    document.getElementById('login-button').classList.add('hidden');
+}
+
+// if user is logging in is not remebered and the browser is closed
+if(localStorage.logged_user == '0' && sessionStorage.length == 0){
+    localStorage.logged_user = '-1';
+    document.getElementById('log_out').classList.add('hidden');
+    document.getElementById('login-button').classList.remove('hidden');
 }
 
 
+let studentMenuOptions = document.getElementsByClassName('student-only');
+let adminMenuOptions = document.getElementsByClassName('admin-only');
 
-// !(/^[a-zA-Z0-9]+$/.test(localStorage.logged_user))
-if(localStorage.logged_user != 0 && (/^[a-zA-Z0-9]+$/.test(localStorage.logged_user))){
-    // document.getElementById('menu').classList.remove('hidden');
-    
-    let studentMenuOptions = document.getElementsByClassName('student-only');
-    for(let i = 0; i < studentMenuOptions.length; i++){
-        studentMenuOptions[i].classList.add('hidden');
-    }
-
-}else if(localStorage.logged_user != 0 && (!isNaN(localStorage.logged_user) && localStorage.logged_user.length == 8)){
-
-    let adminMenuOptions = document.getElementsByClassName('admin-only');
-        for(let i = 0; i < adminMenuOptions.length; i++){
+// Hiding Menu Option based on logged in user
+if(localStorage.logged_user != '0' && localStorage.logged_user != "-1"){
+    // if logged_user is admin
+    if(!isNaN(localStorage.logged_user) && localStorage.logged_user.length >= 8){
+         for(let i = 0; i < adminMenuOptions.length; i++){
             adminMenuOptions[i].classList.add('hidden');
         }
 
-}else if(localStorage.logged_user == 0 && (/^[a-zA-Z0-9]+$/.test(sessionStorage.logged_user))){
-    let studentMenuOptions = document.getElementsByClassName('student-only');
-    for(let i = 0; i < studentMenuOptions.length; i++){
-        studentMenuOptions[i].classList.add('hidden');
+
+    }
+    else {
+        for(let i = 0; i < studentMenuOptions.length; i++){
+            studentMenuOptions[i].classList.add('hidden');
+        }
     }
 
-}else if(localStorage.logged_user == 0 &&  (!isNaN(sessionStorage) && sessionStorage.length == 8)){
-    let adminMenuOptions = document.getElementsByClassName('admin-only');
-    for(let i = 0; i < adminMenuOptions.length; i++){
-        adminMenuOptions[i].classList.add('hidden');
+}
+
+if(localStorage.logged_user == '0'){
+    if(!isNaN(sessionStorage.logged_user) && sessionStorage.logged_user.length >= 8){
+         for(let i = 0; i < adminMenuOptions.length; i++){
+            adminMenuOptions[i].classList.add('hidden');
+        }
+
+
+    }
+    else {
+        for(let i = 0; i < studentMenuOptions.length; i++){
+            studentMenuOptions[i].classList.add('hidden');
+        }
     }
 }
 
+
+// if logout button is clicked
 log_out_button.addEventListener('click', () => {
     // Redirecting to the home page
     let current = window.location.href;

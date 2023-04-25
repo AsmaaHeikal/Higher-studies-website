@@ -94,19 +94,9 @@ form.addEventListener('submit', (event) => {
             localStorage.setItem('logged_user', 0);
             sessionStorage.setItem('logged_user', idValue1);
         }
+        // Moving to home page
         let current = window.location.href;
         window.location.href = current.substring(0,current.lastIndexOf('/')) + '/home.html';
-        let log_out_button = document.getElementById('log_out');
-        // document.getElementById('log_out').classList.remove('hidden');
-        // // document.getElementById('log_out').classList.remove('hidden');
-        // document.getElementById('menu').classList.remove('hidden');
-        //
-        // document.getElementById('menu').classList.remove('hidden');
-        // let adminMenuOptions1 = Array.from(document.getElementsByClassName('admin-only'));
-        // for(let i = 0; i < adminMenuOptions1.length; i++){
-        //     console.log(i);
-        //     // alert("123123");
-        //     adminMenuOptions1[i].classList.add('hidden');
-        // }
+
     }
 });
