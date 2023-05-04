@@ -30,6 +30,15 @@
     margin-bottom: 5px;
   }
 
+  .text_field{
+      position: relative;
+      padding: 15px 0 0;
+      margin-top: 10px;
+      width: 50%;
+   }
+
+  
+
 form .txt_field {
     position: relative;
     border-bottom: 3px solid #adadad;
@@ -50,7 +59,7 @@ form .txt_field {
 .txt_field label {
   position: absolute;
   top: 50%;
-  left: 5px;
+  left: 0px;
   color: #adadad;
   transform: translateY(-50%);
   font-size: 16px;
@@ -68,17 +77,61 @@ form .txt_field {
   background: #3e5c6e;
   transition: .4s;
 }
+.form__field {
+    font-family: inherit;
+    width: 100%;
+    border: 0;
+    border-bottom: 2px solid #9b9b9b;
+    outline: 0;
+    color: black;
+    padding: 7px 0;
+    background: transparent;
+    transition: border-color 0.2s;
+ }
+  .form__field::placeholder {
+    color: transparent;
+ }
+  .form__field:not(placeholder-shown) ~ .form__label {
+    cursor: text;
+    top: 0px;
+    display: block;
+    transition: 0.2s;
+    color: #3e5c6e;
+ }
+ .form__field:placeholder-shown ~ .form__label {
+    cursor: text;
+    top: 20px;
+    color: #9b9b9b;
+  
+}
+  .form__label {
+    position: absolute;
+    top: 0;
+    display: block;
+    transition: 0.2s;
+    color: #9b9b9b;
+ }
+  /* .form__field:focus {
+    padding-bottom: 6px;
+    border-width: 3px;
+    border-image-slice: 1;
+ } */
+  .form__field:focus ~ .form__label {
+    position: absolute;
+    top: 0;
+    display: block;
+    transition: 0.2s;
+    color: #3e5c6e;
+ }
 
-.txt_field input:focus~label,
-.txt_field input:valid~label {
+/* .txt_field input:focus~label{
   top: -5px;
   color: #3e5c6e;
-}
+} */
 
-.txt_field input:focus~label::before,
-.txt_field input:valid~label::before {
-  width: 100%;
-}
+
+
+
   
   /* form input[type="text"],
   form input[type="email"],

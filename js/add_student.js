@@ -63,9 +63,9 @@ function validate_form(){
     }  
 
 
-    let dateOfBirth = document.getElementById("DateOfBirth").value;
+    const dateOfBirthField = document.getElementById("DateOfBirth").value;
     const dateErorr = document.getElementById("dateError");
-    if(dateOfBirth == ""){
+    if(dateOfBirthField == ""){
         dateErorr.style.display="block";
         document.getElementById("DateOfBirth").focus();
         window.scroll({top:500});
@@ -76,9 +76,9 @@ function validate_form(){
     }
 
 
-    var university = document.getElementById("university").value;
+    const universityField = document.getElementById("university").value;
     const uniErorr=document.getElementById("uniError");
-    if (university == "") {
+    if (universityField == "") {
         uniErorr.style.display="block";
         window.scroll(0,300);
         return false;
@@ -88,9 +88,9 @@ function validate_form(){
     }
 
 
-    var department = document.getElementById("department").value;
+    const departmentField = document.getElementById("department").value;
     const depErorr=document.getElementById("depError");
-    if (department == "") {
+    if (departmentField == "") {
         depErorr.style.display="block";
         window.scroll(0,300);
         return false;
@@ -100,7 +100,7 @@ function validate_form(){
     }
 
 
-    var course1 = document.getElementById("c1").value;
+    const course1 = document.getElementById("c1").value;
     const cr1=document.getElementById("c1Error");
     if (course1 == "") {
         cr1.style.display="block";
@@ -112,7 +112,7 @@ function validate_form(){
     }
 
 
-    var course2 = document.getElementById("c2").value;
+    const course2 = document.getElementById("c2").value;
     const cr2=document.getElementById("c2Error");
     if (course2 == "") {
         cr2.style.display="block";
@@ -124,7 +124,7 @@ function validate_form(){
     }
 
 
-    var course3 = document.getElementById("c3").value;
+    const course3 = document.getElementById("c3").value;
     const cr3 =document.getElementById("c3Error");
     if (course3 == "") {
         cr3.style.display="block";
@@ -136,9 +136,9 @@ function validate_form(){
     }
 
 
-    var c1 = document.getElementById("c1").value;
-    var c2 = document.getElementById("c2").value;
-    var c3 = document.getElementById("c3").value;
+    const c1 = document.getElementById("c1").value;
+    const c2 = document.getElementById("c2").value;
+    const c3 = document.getElementById("c3").value;
 
     if (c1 == c2 || c1 == c3 || c2 == c3) {
         alert("Please select different courses for each option.");
@@ -148,7 +148,7 @@ function validate_form(){
 }
 
 function storeData() {
-    var form=document.getElementById("form");
+    let form=document.getElementById("form");
     if(validate_form()){
         let name = document.getElementById("name").value;
         let id = document.getElementById("id").value;
