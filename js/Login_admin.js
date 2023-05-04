@@ -88,13 +88,9 @@ submitBtn.addEventListener('click', (event) => {
         localStorage.setItem('logged_user', 0);
         sessionStorage.setItem('logged_user', userValue1);
     }
+    // Moving to home page
+    let current = window.location.href;
+    window.location.href = current.substring(0,current.lastIndexOf('/')) + '/home.html';
 
-    document.getElementById('log_out').classList.remove('hidden');
-    document.getElementById('menu').classList.remove('hidden');
-    
-    let studentMenuOptions = document.getElementsByClassName('student-only');
-    for(let i = 0; i < studentMenuOptions.length; i++){
-        studentMenuOptions[i].classList.add('hidden');
-    }
 });
 
