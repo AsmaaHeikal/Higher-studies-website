@@ -5,12 +5,15 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
     <link rel="stylesheet" href="../css/add_student.css">
     <link rel="stylesheet" href="../css/main.css">
     <script defer src="../js/header.js"></script>
     <script defer src="../js/footer.js"></script>
     <script defer src="../js/add_student.js"></script>
     <script defer src="../js/localStorage_data.js"></script>
+    <script defer src="../js/eyeIcon.js"></script>
     <meta name="description" content="Add Student Page." />
     <title>Add Student</title>
 </head>
@@ -57,6 +60,7 @@
                 <div class="txt_field">
                     <span></span>
                     <input type="password" id="password" name="password" class="form__field" placeholder="password">
+                    <ion-icon name="eye-off-outline" ></ion-icon>
                     <label for="password" class="form__label">Password:</label>
                 </div>
                 <div id="passwordError" style="display:none;color: red;">Password can't be empty and must be more than 8 chars.</div>

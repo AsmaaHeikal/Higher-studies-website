@@ -279,5 +279,18 @@ form .txt_field {
   .custom-dropdown::after {
     color: rgba(0,0,0,.4);
   }
+
+  ion-icon {
+    color: black;
+    float: right;
+    transform: scale(1.8);
+    margin: -30px 0 0 0;
+    cursor: pointer;
+    opacity: 0.4;
+}
+input[type='password']::-ms-reveal,
+input[type='password']::-ms-clear {
+    display: none;
+}
   
   
