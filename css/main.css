@@ -125,6 +125,7 @@ body{
 /* Style for the navigation bar */
 #website-header nav {
   display: flex;
+ justify-content: center;
   align-items: center;
   width: 100%;
 
@@ -134,24 +135,27 @@ body{
 #website-header nav ul {
   list-style: none;
   display: flex;
-  /* padding: 0; */
+     justify-content: space-between;
+
 }
 
 #website-header  ul{
   margin-left: auto;
   justify-content: space-between;
-  margin-right:150px;
-  width: 300px;
+}
+
+#website-header  ul li +li, li:first-child  {
+  margin-right: 40px;
 }
 
 /* Style for the main navigation links */
-#website-header nav ul li a {
+#website-header  ul li a  {
   display: block;
-  /* color: #fff; */
   color: var(--main-color);
   text-decoration: none;
   padding: 10px;
 }
+
 
 
 /* Style for the dropdown content */
@@ -160,6 +164,10 @@ body{
   position: absolute;
   /* color: #fff; */
   color: var(--main-color);
+}
+
+#website-header .dropdown-content li {
+  margin: 0;
 }
 
 /* Style for the dropdown menus */

@@ -25,7 +25,7 @@
 
 #member-container{
     display: grid;
-    margin: auto;
+    /*margin: auto;*/
     grid-template-columns: auto auto;
     margin: 50px;
     gap: 30px;

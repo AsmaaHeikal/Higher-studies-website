@@ -23,12 +23,15 @@ let header = ` <nav>
         </ul>
     </li>
     <li>
-    <a href="about.html" class = "left-right-border-effect">About</a>
+        <a href="about.html" class = "left-right-border-effect">About</a>
     </li>
     <li  class="hidden" id="log_out">
         <a class = "left-right-border-effect" >Logout</a>
     </li>
 
+    <li class="">
+        <a href="profile.html" class = "left-right-border-effect" id = "profile"style="padding: 10px;">username</a>
+    </li>
 </ul>
 </nav>`;
 document.getElementById('website-header').innerHTML = header;
