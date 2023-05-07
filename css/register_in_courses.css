@@ -1,8 +1,9 @@
-.mainDiv .pageTitle{
-  color:black;
+.mainDiv .pageTitle {
+  color: black;
   margin-bottom: 20px;
   text-align: center;
 }
+
 .mainDiv {
   background-color: white;
   width: 35%;
@@ -18,42 +19,59 @@
   padding-top: 60px;
 }
 
-  /* Form Group Styling */
-  .form-group {
-    margin-bottom: 10px;
-    font-family: 'Poppins';
-    font-size: 20px;
-    font-weight: bold;
-  }
-  
-  /* Label Styling */
-  label {
-    display: inline-block;
-    width: 100px;
-    margin-right: 10px;
-    margin-bottom: 5px;
-    vertical-align: top;
-  }
-  
-  /* Input Styling */
-  input,
-  select {
-    display: inline-block;
-    width: 100%;
-    padding: 10px;
-    border-radius: 5px;
-    border: 1px solid #6e99b4;
-    font-size: 16px;
-  }
+/* Form Group Styling */
+.form-group {
+  margin-bottom: 10px;
+  font-family: 'Poppins';
+  font-size: 19px;
+}
 
-  /* Button Styling*/
-  button[type="submit"], button[type="reset"] {
-    width: 100%;
-    height: 50px;
-    border: 1px solid #6e99b4;
-    border-radius: 25px;
-    font-size: 20px;
-    font-weight: 700;
-    cursor: pointer;
-    outline: none;
-  }
+/* Label Styling */
+label {
+  display: inline-block;
+  width: 100px;
+  margin-right: 10px;
+  margin-bottom: 5px;
+  vertical-align: top;
+  text-decoration: none;
+}
+
+/* Input Styling */
+input[name="name"],
+input[name="id"],
+input[name="department"] {
+  display: inline-block;
+  width: 100%;
+  padding: 10px;
+  border: none;
+  border-bottom: 1px solid #6e99b4;
+  font-size: 16px;
+}
+
+/* Select Styling */
+select[name="course1"],
+select[name="course2"],
+select[name="course3"] {
+  display: inline-block;
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #2a6285;
+  border-radius: 6px;
+  font-size: 18px;
+  color: aliceblue;
+  background-color: #587c94;
+}
+
+
+/* Button Styling*/
+button[type="submit"],
+button[type="reset"] {
+  width: 100%;
+  height: 50px;
+  border: 1px solid #6e99b4;
+  border-radius: 25px;
+  font-size: 20px;
+  font-weight: 700;
+  cursor: pointer;
+  outline: none;
+}
