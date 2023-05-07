@@ -78,7 +78,6 @@ form .txt_field {
   transition: .4s;
 }
 .form__field {
-    font-family: inherit;
     width: 100%;
     border: 0;
     border-bottom: 2px solid #9b9b9b;
